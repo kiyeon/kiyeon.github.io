@@ -26,6 +26,16 @@ sudo dpkg -i sqlite3_3.9.2-1_amd64.deb 의존성 관련 패키지가 필요하�
     </item>
     
     <item>
+      <title>Changing the shell prompt</title>
+      <link>http://blog.kiyeon.net/2015/06/25/changing-the-shell-prompt/</link>
+      <pubDate>Thu, 25 Jun 2015 10:33:58 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/06/25/changing-the-shell-prompt/</guid>
+      <description>쉘 프롬프트를 변경해보자. 여기서는 Bash를 기준으로 한다.
+ Bash Prompt HOWTO 8 Useful and Interesting Bash Prompts What is your favorite Bash prompt? Status line in linux shell Crazy POWERFUL Bash Prompt  </description>
+    </item>
+    
+    <item>
       <title>Change locale in linux</title>
       <link>http://blog.kiyeon.net/2015/06/24/change-locale-in-linux/</link>
       <pubDate>Wed, 24 Jun 2015 09:28:08 +0000</pubDate>
@@ -54,6 +64,24 @@ LC_MEASUREMENT=&amp;quot;en_US.utf8&amp;quot;    # Measurement units (Metric or 
 LC_IDENTIFICATION=&amp;quot;en_US.utf8&amp;quot; # Metadata about the locale information.
 LC_ALL=                        # LC_*의 값들이 override 된다.
 &lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>Tmux</title>
+      <link>http://blog.kiyeon.net/draft/2015-06-23-tmux/</link>
+      <pubDate>Tue, 23 Jun 2015 17:22:51 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/draft/2015-06-23-tmux/</guid>
+      <description>  A tmux Crash Course  tmux manager  tmuxp Using Tmux and Tmuxinator http://zanshin.net/2014/07/02/using-teamocil-to-manage-tmux-sessions/ Using Tmux and Tmuxinator  </description>
+    </item>
+    
+    <item>
+      <title>ZSH</title>
+      <link>http://blog.kiyeon.net/2015/06/23/zsh/</link>
+      <pubDate>Tue, 23 Jun 2015 17:19:42 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/06/23/zsh/</guid>
+      <description> Why Zsh is cooler than your shell My Extravagant Zsh Prompt A Beautifully Productive Terminal Experience Hey Prezto - Zsh for Command Line Heaven  </description>
     </item>
     
     <item>
@@ -91,7 +119,7 @@ hkp             11371/tcp                       # OpenPGP HTTP Keyserver
       <pubDate>Thu, 04 Jun 2015 10:01:51 +0000</pubDate>
       
       <guid>http://blog.kiyeon.net/2015/06/04/linux-package-management/</guid>
-      <description>&lt;p&gt;리눅스에서 프로그램을 설치하는 방법은 2가지가 있다.&lt;/p&gt;
+      <description>&lt;p&gt;e눅스에서 프로그램을 설치하는 방법은 2가지가 있다.&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;소스코드를 직접 컴파일하여 설치하는 방법&lt;/li&gt;

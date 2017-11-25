@@ -255,7 +255,7 @@ hkp             11371/tcp                       # OpenPGP HTTP Keyserver
       <pubDate>Thu, 04 Jun 2015 10:01:51 +0000</pubDate>
       
       <guid>http://blog.kiyeon.net/2015/06/04/linux-package-management/</guid>
-      <description>&lt;p&gt;리눅스에서 프로그램을 설치하는 방법은 2가지가 있다.&lt;/p&gt;
+      <description>&lt;p&gt;e눅스에서 프로그램을 설치하는 방법은 2가지가 있다.&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;소스코드를 직접 컴파일하여 설치하는 방법&lt;/li&gt;
@@ -263,6 +263,16 @@ hkp             11371/tcp                       # OpenPGP HTTP Keyserver
 &lt;/ol&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>*nix Timezone 변경하기(Changing the timezone in *nix)</title>
+      <link>http://blog.kiyeon.net/2015/06/04/star-nix-timezone-byeongyeonghagi-changing-the-timezone-in-star-nix/</link>
+      <pubDate>Thu, 04 Jun 2015 09:25:19 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/06/04/star-nix-timezone-byeongyeonghagi-changing-the-timezone-in-star-nix/</guid>
+      <description> *nix시스템의 시간대를 변경해보자.
+References  Changing the timezone, date, and time 협정 세계시 그리니치 평균시 한국 표준시 - UTC보다 9시간 빠른 동경 135도를 기준 Standard time zones of the world Greenwich Mean Time 우분투 NTP 시간동기화  </description>
     </item>
     
     <item>

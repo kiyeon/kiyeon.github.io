@@ -8,6 +8,21 @@
   </url>
   
   <url>
+    <loc>http://blog.kiyeon.net/draft/new/</loc>
+    <lastmod>2017-11-19T01:34:26+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.kiyeon.net/draft/installing-starcraft-on-macos/</loc>
+    <lastmod>2017-03-07T19:00:13+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.kiyeon.net/draft/%ED%95%9C%EA%B8%80%EC%9D%80-%EC%95%88%EB%90%98%EB%82%98/</loc>
+    <lastmod>2017-02-13T10:37:15+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://blog.kiyeon.net/2016/02/10/jekyll/</loc>
     <lastmod>2016-02-10T14:28:00+00:00</lastmod>
   </url>
@@ -43,8 +58,28 @@
   </url>
   
   <url>
+    <loc>http://blog.kiyeon.net/2015/06/25/changing-the-shell-prompt/</loc>
+    <lastmod>2015-06-25T10:33:58+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://blog.kiyeon.net/2015/06/24/change-locale-in-linux/</loc>
     <lastmod>2015-06-24T09:28:08+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.kiyeon.net/draft/2015-06-23-tmux/</loc>
+    <lastmod>2015-06-23T17:22:51+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.kiyeon.net/2015/06/23/zsh/</loc>
+    <lastmod>2015-06-23T17:19:42+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.kiyeon.net/2015/06/23/regular-expression/</loc>
+    <lastmod>2015-06-23T09:06:39+00:00</lastmod>
   </url>
   
   <url>
@@ -85,6 +120,16 @@
   <url>
     <loc>http://blog.kiyeon.net/2015/06/04/linux-package-management/</loc>
     <lastmod>2015-06-04T10:01:51+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.kiyeon.net/2015/06/04/star-nix-timezone-byeongyeonghagi-changing-the-timezone-in-star-nix/</loc>
+    <lastmod>2015-06-04T09:25:19+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.kiyeon.net/2015/06/03/git/</loc>
+    <lastmod>2015-06-03T12:50:26+00:00</lastmod>
   </url>
   
   <url>
@@ -135,6 +180,12 @@
   </url>
   
   <url>
+    <loc>http://blog.kiyeon.net/tags/cli-shell/</loc>
+    <lastmod>2015-06-25T10:33:58+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.kiyeon.net/draft/</loc>
     <lastmod>2017-11-20T14:15:59+09:00</lastmod>
     <priority>0</priority>
@@ -143,6 +194,12 @@
   <url>
     <loc>http://blog.kiyeon.net/categories/etc/</loc>
     <lastmod>2015-11-10T23:56:57+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.kiyeon.net/tags/hugo/</loc>
+    <lastmod>2017-02-13T10:37:15+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -183,6 +240,18 @@
   </url>
   
   <url>
+    <loc>http://blog.kiyeon.net/tags/markdown/</loc>
+    <lastmod>2017-02-13T10:37:15+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.kiyeon.net/categories/nix/</loc>
+    <lastmod>2015-06-04T09:25:19+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.kiyeon.net/tags/octopress-blog-yaml-how-to/</loc>
     <lastmod>2015-05-26T20:39:26+00:00</lastmod>
     <priority>0</priority>
@@ -195,14 +264,38 @@
   </url>
   
   <url>
+    <loc>http://blog.kiyeon.net/categories/programming/</loc>
+    <lastmod>2015-06-23T09:06:39+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.kiyeon.net/categories/programming-java/</loc>
     <lastmod>2015-06-25T14:27:21+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>http://blog.kiyeon.net/tags/shell/</loc>
+    <lastmod>2015-06-23T17:19:42+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.kiyeon.net/tags/</loc>
     <lastmod>2017-11-20T14:15:59+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.kiyeon.net/tags/tool/</loc>
+    <lastmod>2015-06-23T09:06:39+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.kiyeon.net/tags/tools/</loc>
+    <lastmod>2015-06-23T17:22:51+00:00</lastmod>
     <priority>0</priority>
   </url>
   

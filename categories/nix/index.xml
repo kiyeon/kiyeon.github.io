@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nix on Kiyeon&#39;s Blog</title>
+    <link>http://blog.kiyeon.net/categories/nix/</link>
+    <description>Recent content in Nix on Kiyeon&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Thu, 04 Jun 2015 09:25:19 +0000</lastBuildDate>
+    
+	<atom:link href="http://blog.kiyeon.net/categories/nix/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>*nix Timezone 변경하기(Changing the timezone in *nix)</title>
+      <link>http://blog.kiyeon.net/2015/06/04/star-nix-timezone-byeongyeonghagi-changing-the-timezone-in-star-nix/</link>
+      <pubDate>Thu, 04 Jun 2015 09:25:19 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/06/04/star-nix-timezone-byeongyeonghagi-changing-the-timezone-in-star-nix/</guid>
+      <description> *nix시스템의 시간대를 변경해보자.
+References  Changing the timezone, date, and time 협정 세계시 그리니치 평균시 한국 표준시 - UTC보다 9시간 빠른 동경 135도를 기준 Standard time zones of the world Greenwich Mean Time 우분투 NTP 시간동기화  </description>
+    </item>
+    
+  </channel>
+</rss>

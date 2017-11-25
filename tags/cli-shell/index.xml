@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cli Shell on Kiyeon&#39;s Blog</title>
+    <link>http://blog.kiyeon.net/tags/cli-shell/</link>
+    <description>Recent content in Cli Shell on Kiyeon&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Thu, 25 Jun 2015 10:33:58 +0000</lastBuildDate>
+    
+	<atom:link href="http://blog.kiyeon.net/tags/cli-shell/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Changing the shell prompt</title>
+      <link>http://blog.kiyeon.net/2015/06/25/changing-the-shell-prompt/</link>
+      <pubDate>Thu, 25 Jun 2015 10:33:58 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/06/25/changing-the-shell-prompt/</guid>
+      <description>쉘 프롬프트를 변경해보자. 여기서는 Bash를 기준으로 한다.
+ Bash Prompt HOWTO 8 Useful and Interesting Bash Prompts What is your favorite Bash prompt? Status line in linux shell Crazy POWERFUL Bash Prompt  </description>
+    </item>
+    
+  </channel>
+</rss>

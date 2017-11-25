@@ -21,5 +21,91 @@
 메시지를 주고받을때 타이핑하기가 굉장히 불편한데 그래서 대안으로 블루투스 키보드를 사용한다. 그런데 사용하다보니 불편한점이 있었다. 앱의 다른버튼을 선택하거나 화면을 전환하거나 할때 키보드만으로는 제어가 안되서 손가락을 이용해 터치가 필요했던 것이다.</description>
     </item>
     
+    <item>
+      <title>New</title>
+      <link>http://blog.kiyeon.net/draft/new/</link>
+      <pubDate>Sun, 19 Nov 2017 01:34:26 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/draft/new/</guid>
+      <description>Kiss Kiss is a stupidly simple blog theme for Hugo. It&amp;rsquo;s a fork of Hemingway theme - read why.
+Getting Started Clone this repository to your hugo theme directory.
+mkdir themes cd themes git clone https://github.com/ribice/kiss.git  Site Configuration Take a look in the exampleSite folder.
+This directory contains an example config file and the content for the demo. It serves as an example setup for your documentation.
+Copy the config.</description>
+    </item>
+    
+    <item>
+      <title>macOS에 스타크래프트 설치하고 실행하기</title>
+      <link>http://blog.kiyeon.net/draft/installing-starcraft-on-macos/</link>
+      <pubDate>Tue, 07 Mar 2017 19:00:13 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/draft/installing-starcraft-on-macos/</guid>
+      <description>&lt;p&gt;블리자드 스타크래프트를 macOS(Sierra Version 10.12.3)에 설치하고 실행하는 방법이다.&lt;/p&gt;
+
+&lt;p&gt;과거 맥에 PowerPC를 사용할때는 &lt;a href=&#34;https://kr.battle.net/shop/ko/product/game/legacy-games&#34;&gt;블리자드에서 스타크래프트 맥버전을 지원&lt;/a&gt;했으나 &lt;a href=&#34;https://kr.battle.net/support/ko/article/starcraft-system-requirements&#34;&gt;PowerPC지원이 끊기면서 Windows 버전만 지원&lt;/a&gt;하게되어 많은 맥 유저들이 스타크래프트를 맥에서 실행하는 방법에 대한 글들이 많았으나 나에게 적용되는 글을 찾기도 힘들고 보안상 위험해 보여 내가 직접 성공한 내용에 대해 기록해봤다.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>HUGO?</title>
+      <link>http://blog.kiyeon.net/draft/%ED%95%9C%EA%B8%80%EC%9D%80-%EC%95%88%EB%90%98%EB%82%98/</link>
+      <pubDate>Mon, 13 Feb 2017 10:37:15 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/draft/%ED%95%9C%EA%B8%80%EC%9D%80-%EC%95%88%EB%90%98%EB%82%98/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://gohugo.io/&#34;&gt;HUGO&lt;/a&gt;&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:2&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:2&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;는 &lt;a href=&#34;https://golang.org/&#34;&gt;Go언어&lt;/a&gt;로 만들어진 Octopress나 jekyll과 비슷한 &lt;a href=&#34;http://nilclass.com/courses/what-is-a-static-website/#1&#34;&gt;Static website&lt;/a&gt;(&lt;a href=&#34;https://en.wikipedia.org/wiki/Static_web_page&#34;&gt;wiki&lt;/a&gt;) generator 로 현재 Jekyll과 더불러 급속도로 인기를 얻고 있다. &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Changing the shell prompt</title>
+      <link>http://blog.kiyeon.net/2015/06/25/changing-the-shell-prompt/</link>
+      <pubDate>Thu, 25 Jun 2015 10:33:58 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/06/25/changing-the-shell-prompt/</guid>
+      <description>쉘 프롬프트를 변경해보자. 여기서는 Bash를 기준으로 한다.
+ Bash Prompt HOWTO 8 Useful and Interesting Bash Prompts What is your favorite Bash prompt? Status line in linux shell Crazy POWERFUL Bash Prompt  </description>
+    </item>
+    
+    <item>
+      <title>Tmux</title>
+      <link>http://blog.kiyeon.net/draft/2015-06-23-tmux/</link>
+      <pubDate>Tue, 23 Jun 2015 17:22:51 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/draft/2015-06-23-tmux/</guid>
+      <description>  A tmux Crash Course  tmux manager  tmuxp Using Tmux and Tmuxinator http://zanshin.net/2014/07/02/using-teamocil-to-manage-tmux-sessions/ Using Tmux and Tmuxinator  </description>
+    </item>
+    
+    <item>
+      <title>ZSH</title>
+      <link>http://blog.kiyeon.net/2015/06/23/zsh/</link>
+      <pubDate>Tue, 23 Jun 2015 17:19:42 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/06/23/zsh/</guid>
+      <description> Why Zsh is cooler than your shell My Extravagant Zsh Prompt A Beautifully Productive Terminal Experience Hey Prezto - Zsh for Command Line Heaven  </description>
+    </item>
+    
+    <item>
+      <title>Regular Expression</title>
+      <link>http://blog.kiyeon.net/2015/06/23/regular-expression/</link>
+      <pubDate>Tue, 23 Jun 2015 09:06:39 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/06/23/regular-expression/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;정규 표현식(正規表現式, 영어: regular expression, 간단히 regexp 또는 regex)은 특정한 규칙을 가진 문자열의 집합을 표현하는 데 사용하는 형식 언어이다. 정규 표현식은 많은 텍스트 편집기와 프로그래밍 언어에서 문자열의 검색과 치환을 위해 지원하고 있으며, 특히 펄과 Tcl은 언어 자체에 강력한 정규 표현식을 구현하고 있다.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>GIT</title>
+      <link>http://blog.kiyeon.net/2015/06/03/git/</link>
+      <pubDate>Wed, 03 Jun 2015 12:50:26 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/06/03/git/</guid>
+      <description> Git .gitignore로 관리되던 파일 제거하려면 http://stackoverflow.com/a/11451731 git rm -r --cached .
+References  Getting Git Right  </description>
+    </item>
+    
   </channel>
 </rss>
