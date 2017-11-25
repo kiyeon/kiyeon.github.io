@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kiyeon&#39;s Blog</title>
+    <link rel="stylesheet" type="text/css" href="/css/ybasic.css" />
+</head>
+<body>
+
+
+
+<div class="content">
+    <h1 class="title" title="December 4, 2015">리눅스 패키지 설치하기</h1>
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#ubuntu">Ubuntu</a>
+<ul>
+<li><a href="#기본">기본</a></li>
+<li><a href="#최신-버전-설치">최신 버전 설치</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    
+
+<h2 id="ubuntu">Ubuntu</h2>
+
+<h3 id="기본">기본</h3>
+
+<p>Something along the lines of:
+dpkg &ndash;&gt; apt-get, aptitude &ndash;&gt; Synaptic, Software Center
+<a href="http://askubuntu.com/a/40781">http://askubuntu.com/a/40781</a></p>
+
+<h3 id="최신-버전-설치">최신 버전 설치</h3>
+
+<ol>
+<li>최신 패키지 검색<br />
+<a href="https://launchpad.net/ubuntu">Ubuntu package building and hosting</a>에서 최신 패키지를 검색한다.</li>
+<li><strong>Binary packages built by this source</strong>에서 설치할 Binary package를 선택한다.</li>
+<li><strong>Published versions</strong>에서 시스템에 맞는 버전을 선택한다.<br />
+ex) <a href="https://launchpad.net/ubuntu/xenial/amd64/sqlite3/3.9.2-1">sqlite3 3.9.2-1(amd64 binary) in ubuntu xenial</a></li>
+<li><strong>Downloadable files</strong>에서 deb파일을 다운로드 한다.<br />
+<code>wget http://launchpadlibrarian.net/225502540/sqlite3_3.9.2-1_amd64.deb</code></li>
+<li>다운로드한 deb을 설치한다.<br />
+<code>sudo dpkg -i sqlite3_3.9.2-1_amd64.deb</code></li>
+<li>의존성 관련 패키지가 필요하면 <strong>Package relationships</strong>에서 deb을 받아 설치한다.</li>
+<li>설치 완료한 패키지를 실행해본다.<br />
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">% sqlite3
+SQLite version <span style="color:#ae81ff">3</span>.9.2 <span style="color:#ae81ff">2015</span>-11-02 <span style="color:#ae81ff">18</span>:31:45
+Enter <span style="color:#e6db74">&#34;.help&#34;</span> <span style="color:#66d9ef">for</span> usage hints.
+Connected to a transient in-memory database.
+Use <span style="color:#e6db74">&#34;.open FILENAME&#34;</span> to reopen on a persistent database.
+sqlite&gt;</code></pre></div></li>
+</ol>
+
+</div>
+
+
+<footer>Kiyeon&#39;s Blog</footer>
+</body>
+</html>
+

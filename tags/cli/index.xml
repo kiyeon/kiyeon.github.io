@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cli on Kiyeon&#39;s Blog</title>
+    <link>http://blog.kiyeon.net/tags/cli/</link>
+    <description>Recent content in Cli on Kiyeon&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Tue, 09 Jun 2015 10:27:57 +0000</lastBuildDate>
+    
+	<atom:link href="http://blog.kiyeon.net/tags/cli/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>프로그래머를 위한 ack(like-grep)</title>
+      <link>http://blog.kiyeon.net/2015/06/09/peurogeuraemeoreul-wihan-ack-like-grep/</link>
+      <pubDate>Tue, 09 Jun 2015 10:27:57 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/06/09/peurogeuraemeoreul-wihan-ack-like-grep/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://unixhelp.ed.ac.uk/CGI/man-cgi?grep&#34;&gt;grep&lt;/a&gt;은 텍스트에서 키워드를 찾아내는 툴이다. 다음과 같이 사용한다.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;% lsb_release --all | grep -i desc
+Description:    Ubuntu 14.04.2 LTS
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;데이터가 많으면 해당 키워드를 찾기가 힘든데 이때 컬러옵션&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:grep-color&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:grep-color&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;을 사용할 수 있다.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;% cat /etc/services | grep --color=auto -i http
+# Updated from http://www.iana.org/assignments/port-numbers and other
+# sources like http://www.freebsd.org/cgi/cvsweb.cgi/src/etc/services .
+http            80/tcp          www             # WorldWideWeb HTTP
+http            80/udp                          # HyperText Transfer Protocol
+https           443/tcp                         # http protocol over TLS/SSL
+https           443/udp
+http-alt        8080/tcp        webcache        # WWW caching service
+http-alt        8080/udp
+hkp             11371/tcp                       # OpenPGP HTTP Keyserver
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

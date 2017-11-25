@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Octopress Blog Yaml How To on Kiyeon&#39;s Blog</title>
+    <link>http://blog.kiyeon.net/tags/octopress-blog-yaml-how-to/</link>
+    <description>Recent content in Octopress Blog Yaml How To on Kiyeon&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Tue, 26 May 2015 20:39:26 +0000</lastBuildDate>
+    
+	<atom:link href="http://blog.kiyeon.net/tags/octopress-blog-yaml-how-to/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Octopress Start</title>
+      <link>http://blog.kiyeon.net/2015/05/26/octopress-and-start/</link>
+      <pubDate>Tue, 26 May 2015 20:39:26 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/05/26/octopress-and-start/</guid>
+      <description>&lt;h1 id=&#34;intro&#34;&gt;Intro&lt;/h1&gt;
+
+&lt;p&gt;세상에는 매우 다양한 CMS&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:cms&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:cms&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;가 있다.&lt;br /&gt;
+인터넷이 국내에 막 대중에게 보급되기 시작한 1999년부터 지금(2015년)까지 블로깅을 하기위해 다양한 시도를 해봤다. 정적페이지에 직접 C로 작성한 CGI를 이용해 방명록과 게시판을 달아보기도 했고&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:cgi&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:cgi&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; PHP로 사용자인증을 적용한 게시판을 만들어 사용해보기도 했다.  당시엔 직접만들어 쓰거나 아니면 누군가 만들어 놓은 CMS를 이용하기도 했는데 그땐 그런 툴이 몇 안되었기 때문에 선택이 쉬웠다. 사용하는 언어도 C, PHP, JAVA, JSP정도였고 DB도 Oracle아니면 MySQL정도였다.  운동도 보는것보다는 직접하는걸 더 좋아하는데 이런 성향은 개발에서도 나타난다. 누군가 만든걸 가져다 쓰는것보다는 직접 만들어 쓰는걸 더 선호한다.&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:preference&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:preference&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;
+
+어쨋거나&amp;hellip; 컨텐츠보다는 프레임에 더 집착하다보니 유행과 관심사에 따라 뒤엎기를 반복하여 제대로 운영되는 블로그 하나 제대로 없다.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Kiyeon&#39;s Blog</title>
+    <link>http://blog.kiyeon.net/categories/</link>
+    <description>Recent content in Categories on Kiyeon&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Sat, 28 Nov 2015 18:40:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://blog.kiyeon.net/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Aws</title>
+      <link>http://blog.kiyeon.net/categories/aws/</link>
+      <pubDate>Sat, 28 Nov 2015 18:40:00 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/categories/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cli</title>
+      <link>http://blog.kiyeon.net/categories/cli/</link>
+      <pubDate>Fri, 12 Jun 2015 11:35:51 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/categories/cli/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cli Library</title>
+      <link>http://blog.kiyeon.net/categories/cli-library/</link>
+      <pubDate>Fri, 19 Jun 2015 11:10:32 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/categories/cli-library/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Etc</title>
+      <link>http://blog.kiyeon.net/categories/etc/</link>
+      <pubDate>Tue, 10 Nov 2015 23:56:57 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/categories/etc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jekyll</title>
+      <link>http://blog.kiyeon.net/categories/jekyll/</link>
+      <pubDate>Wed, 10 Feb 2016 14:28:00 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/categories/jekyll/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>http://blog.kiyeon.net/categories/linux/</link>
+      <pubDate>Fri, 04 Dec 2015 14:55:00 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lisp</title>
+      <link>http://blog.kiyeon.net/categories/lisp/</link>
+      <pubDate>Sat, 28 Nov 2015 01:51:00 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/categories/lisp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Programming Java</title>
+      <link>http://blog.kiyeon.net/categories/programming-java/</link>
+      <pubDate>Thu, 25 Jun 2015 14:27:21 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/categories/programming-java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Utility</title>
+      <link>http://blog.kiyeon.net/categories/utility/</link>
+      <pubDate>Wed, 02 Dec 2015 10:18:00 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/categories/utility/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vim</title>
+      <link>http://blog.kiyeon.net/categories/vim/</link>
+      <pubDate>Fri, 12 Jun 2015 10:08:44 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/categories/vim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows Scripting</title>
+      <link>http://blog.kiyeon.net/categories/windows-scripting/</link>
+      <pubDate>Wed, 17 Jun 2015 09:42:37 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/categories/windows-scripting/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

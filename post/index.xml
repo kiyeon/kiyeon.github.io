@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Kiyeon&#39;s Blog</title>
+    <link>http://blog.kiyeon.net/post/</link>
+    <description>Recent content in Posts on Kiyeon&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Wed, 10 Feb 2016 14:28:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://blog.kiyeon.net/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Jekyll</title>
+      <link>http://blog.kiyeon.net/2016/02/10/jekyll/</link>
+      <pubDate>Wed, 10 Feb 2016 14:28:00 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2016/02/10/jekyll/</guid>
+      <description>Link
+ Jekyll Wiki  Themes  지킬로 만들어진 사이트 jekyllbootstrap.com jekyllthemes.org  </description>
+    </item>
+    
+    <item>
+      <title>리눅스 패키지 설치하기</title>
+      <link>http://blog.kiyeon.net/2015/12/04/installing-linux-package/</link>
+      <pubDate>Fri, 04 Dec 2015 14:55:00 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/12/04/installing-linux-package/</guid>
+      <description>Ubuntu 기본 Something along the lines of: dpkg &amp;ndash;&amp;gt; apt-get, aptitude &amp;ndash;&amp;gt; Synaptic, Software Center http://askubuntu.com/a/40781
+최신 버전 설치  최신 패키지 검색
+Ubuntu package building and hosting에서 최신 패키지를 검색한다. Binary packages built by this source에서 설치할 Binary package를 선택한다. Published versions에서 시스템에 맞는 버전을 선택한다.
+ex) sqlite3 3.9.2-1(amd64 binary) in ubuntu xenial Downloadable files에서 deb파일을 다운로드 한다.
+wget http://launchpadlibrarian.net/225502540/sqlite3_3.9.2-1_amd64.deb 다운로드한 deb을 설치한다.
+sudo dpkg -i sqlite3_3.9.2-1_amd64.deb 의존성 관련 패키지가 필요하면 Package relationships에서 deb을 받아 설치한다.</description>
+    </item>
+    
+    <item>
+      <title>OCR</title>
+      <link>http://blog.kiyeon.net/2015/12/02/ocr/</link>
+      <pubDate>Wed, 02 Dec 2015 10:18:00 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/12/02/ocr/</guid>
+      <description> 광학 문자 인식(Optical character recognition; OCR)
+Software  ABBYY FineReader - 문자 인식(OCR) 책 스캔 프로그램 추천 : 한글 영문 인식률 결과  Online OCR services  WeOCR CustomOCR Free OCR i2OCR  Open source  Tesseract - Tesseract Open Source OCR Engine (main repository)  3rdParty   </description>
+    </item>
+    
+    <item>
+      <title>AWS EBS 확장및 추가하기</title>
+      <link>http://blog.kiyeon.net/2015/11/28/adding-and-expending-aws-ebs/</link>
+      <pubDate>Sat, 28 Nov 2015 18:40:00 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/11/28/adding-and-expending-aws-ebs/</guid>
+      <description>AWS EC2의 디스크가 Full이 되어 확장이 필요했다.
+볼륨 확장 Linux에서 EBS 볼륨의 스토리지 공간 확장
+ 인스턴스를 Stop 시킨다. EBS Volume을 찾아 Snapshopt을 만든다. (복사용) Snapshot에서 2에서 만든 스냅샷을 선택하여 새로운 볼륨을 만든다. 여기서 확장할 사이즈를 정한다. ex) 8GB -&amp;gt; 15GB, 볼륨이 커지면 비용이 발생하므로 SIMPLE MONTHLY CALCULATOR로 요금을 계산하자. 이전 볼륨을 분리(Detach Volume)하고 새로 만든 볼륨을 연결(Attach Volume)한다. 인스턴스를 다시 시작한다. 파일 시스템을 확장한다. 여기서부터는 Linux 파일 시스템 확장참조  볼륨 추가 인스턴스에 볼륨 추가</description>
+    </item>
+    
+    <item>
+      <title>LISP</title>
+      <link>http://blog.kiyeon.net/2015/11/28/lisp/</link>
+      <pubDate>Sat, 28 Nov 2015 01:51:00 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/11/28/lisp/</guid>
+      <description>LISP  표현 기능이 대단히 뛰어난 언어, 가장 복잡한 프로그래밍 아이디어를 명확하고 적절하게 표현할 수 있도록 설계. 많은 대기업이 핵심적인 업무에 리스프를 사용. 리스프는 작은 노력으로도 배울 수 있지만 컴퓨터 프로그래밍에 대해 깊은 통찰력을 갖게 한다. 확장성 있는 라이브러리를 비롯한 수많은 언어 기능을 지원하며 컴파일러/인터프리터를 무척 쉽게 수정할 수 있다. 리스프의 주된 원리를 따르는 모든 언어는 리스프의 변종이라 하고 그래서 리스프는 변종이 많다. 가장 많이 사용하는 리스프는 안시 커먼 리스프와 스킴 안시 커먼 리스프  1981년 많은 리스프 변종에 대응하고자 리스프 단체에서 커먼 리스프라는 리스프 명세서를 발표.</description>
+    </item>
+    
+    <item>
+      <title>Making &amp; Testing Multiboot USB</title>
+      <link>http://blog.kiyeon.net/2015/11/10/testing-and-making-multi-booting-usb/</link>
+      <pubDate>Tue, 10 Nov 2015 23:56:57 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/11/10/testing-and-making-multi-booting-usb/</guid>
+      <description>개요 요즘은 그렇지 않지만 예전에는 뭔가 OS를 설치할일이 많았다. 특히 Windows는 정기적으로 설치해야하는 일이 빈번했다.
+Windows외에 테스트용 리눅스 서버나 복원용 툴, 고스트, 네트워크 모니터링을 위한 백트랙등 가끔씩 설치할일이 있는데 아무래도 USB로 설치하는게 간편하다. 원래는 부트영역에 한번에 하나만 설치가 가능하고 그래서 OS별로 USB를 준비하던가 그때마다 USB를 포맷하고 새로 설치하는 번거로움이 있다. 이번에 MLC 대용량 USB를 구입하면서 남는 용량이 아깝기도 하고 간혹가다 설치를 해줘야할 때도 있고해서 멀티부트 USB를 만들기로 했다.
+준비물  USB YUMI OS Image File 가상머신 Tools(VMware, Parallels, Virtual Box &amp;hellip;) Plop Boot Manager  멀티부트 USB 만들기 멀티부트 디스크를 만드는 방법은 두가지가 있는데 첫번째는 직접 부트영역을 뜯어고치는 방법과(MBR, GRUB), 멀티부트를 만들어주는 유틸리티를 사용하는 것이다.</description>
+    </item>
+    
+    <item>
+      <title>Command line에서 java 작성하고 실행하기</title>
+      <link>http://blog.kiyeon.net/2015/06/25/command-lineeseo-java-jagseonghago-silhaenghagi/</link>
+      <pubDate>Thu, 25 Jun 2015 14:27:21 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/06/25/command-lineeseo-java-jagseonghago-silhaenghagi/</guid>
+      <description>&lt;p&gt;이상하게도 java는 이클립스가 없이는 사용하기가 힘들다. 이클립스에 너무 익숙해져서 그럴지도 모르겠다. 간단하게 command line상에서 java를 작성하고 컴파일하고 실행해보자.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Change locale in linux</title>
+      <link>http://blog.kiyeon.net/2015/06/24/change-locale-in-linux/</link>
+      <pubDate>Wed, 24 Jun 2015 09:28:08 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/06/24/change-locale-in-linux/</guid>
+      <description>&lt;p&gt;Locale은 &lt;strong&gt;&amp;lsquo;지역, 언어&amp;rsquo;&lt;/strong&gt;정보로 프로그램은 입/출력시 사용자가 설정한 locale에 따라 인코딩을 적용하여 메세지를 출력한다.&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;현재값&#34;&gt;현재값&lt;/h2&gt;
+
+&lt;p&gt;현재 설정값을 보려면 &lt;strong&gt;&lt;a href=&#34;http://man.he.net/?topic=locale&amp;amp;section=all&#34;&gt;locale&lt;/a&gt;&lt;/strong&gt;을 사용한다.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;% locale
+LANG=en_US.utf8                # LC_* 값들을 설정하지 않았을때 적용되는 기본 값
+LANGUAGE=
+LC_CTYPE=&amp;quot;en_US.utf8&amp;quot;          # Character classification and case conversion.
+LC_NUMERIC=&amp;quot;en_US.utf8&amp;quot;        # Non-monetary numeric formats.
+LC_TIME=&amp;quot;en_US.utf8&amp;quot;           # Date and time formats.
+LC_COLLATE=&amp;quot;en_US.utf8&amp;quot;        # Collation order(알파벳 정렬과 관련된 규칙).
+LC_MONETARY=&amp;quot;en_US.utf8&amp;quot;       # Monetary formats.
+LC_MESSAGES=&amp;quot;en_US.utf8&amp;quot;       # Formats of informative and diagnostic messages and interactive responses.
+LC_PAPER=&amp;quot;en_US.utf8&amp;quot;          # Paper size.
+LC_NAME=&amp;quot;en_US.utf8&amp;quot;           # Name formats(이름 표기 형식. first name, last name).
+LC_ADDRESS=&amp;quot;en_US.utf8&amp;quot;        # Address formats and location information.
+LC_TELEPHONE=&amp;quot;en_US.utf8&amp;quot;      # Telephone number formats.
+LC_MEASUREMENT=&amp;quot;en_US.utf8&amp;quot;    # Measurement units (Metric or Other).
+LC_IDENTIFICATION=&amp;quot;en_US.utf8&amp;quot; # Metadata about the locale information.
+LC_ALL=                        # LC_*의 값들이 override 된다.
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>Curses Library</title>
+      <link>http://blog.kiyeon.net/2015/06/19/curses-library/</link>
+      <pubDate>Fri, 19 Jun 2015 11:10:32 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/06/19/curses-library/</guid>
+      <description>&lt;p&gt;콘솔을 좋아하는 이유? 심플하기때문에&amp;hellip; 가볍고 빠르고 어디서든 사용할 수 있다는점.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://ko.wikipedia.org/wiki/Curses&#34;&gt;curses&lt;/a&gt;는 유닉스 계열 운영체제를 위한 터미널 제어 라이브러리의 하나로, 텍스트 사용자 인터페이스(TUI) 응용 프로그램의 구성을 가능케 한다. 이 이름은 &amp;ldquo;커서 최적화&amp;rdquo;(cusor optimization)에서 따온 것이다. 문자 셀 터미널(VT100 따위) 상에서 응용 프로그램의 디스플레이를 관리하는 명령들이 모인 라이브러리이다. - wikipedia&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/1/11/Jack-curses-screen.gif&#34; alt=&#34;screenshot&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Windows Batch Scripting</title>
+      <link>http://blog.kiyeon.net/2015/06/17/windows-batch-scripting/</link>
+      <pubDate>Wed, 17 Jun 2015 09:42:37 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/06/17/windows-batch-scripting/</guid>
+      <description>&lt;p&gt;MS의 DOS로 시작해 Windows를 거쳐 유닉스와 리눅스를 만나고 이제는 유닉스(Mac)에 정착했다. 하지만 여전히 일선상에서는 Windows를 벗어나지 못하고 있다. 로컬OS는 Windows를 사용하지만 대부분 서비스를 이용하기위한(업무환경) 수단일뿐 실제 개발은 리눅스상에서 더 많이 한다. 좋든 실든 업무효율성을 높이기 위해 다양한 유틸리티와 Script가 필요하다.&lt;/p&gt;
+
+&lt;p&gt;여러대의 서버로 파일을 업로드하는 간단한 스크립트를 살펴보며 Window Batch Script를 알아보자.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>History Command</title>
+      <link>http://blog.kiyeon.net/2015/06/12/history-command/</link>
+      <pubDate>Fri, 12 Jun 2015 11:35:51 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/06/12/history-command/</guid>
+      <description>&lt;p&gt;Command line에서 명령을 실행하면 해당 명령이 기록에 남는다. 이 기록을 살펴보는 명령이 &lt;code&gt;history&lt;/code&gt;다.&lt;/p&gt;
+
+&lt;h2 id=&#34;설정&#34;&gt;설정&lt;/h2&gt;
+
+&lt;p&gt;이 설정은 bash기준이며 다른 쉘에서는 약간 다를 수 있다.&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;export HISTTIMEFORMAT=&#39;%F %T &#39;              # 로그에 날짜와 시간 출력
+export HISTIGNORE=&amp;quot;pwd:ls:ls -ltr:&amp;quot;         # pwd, ls, ls -ltr명령은 로그에 기록하지 않는다.
+export HISTCONTROL=ignorespace              # 명령 실행시 처음 스페이스가 포함되면 로그에 기록하지 않는다.
+export HISTCONTROL=ignoredups               # 명령이 중복되면 무시 (pwd를 연속으로 여러번 입력하면 로그에는 pwd하나만 기록된다)
+export HISTCONTROL=erasedups                # 중복로그를 삭제하고 최근로그만 남긴다.
+export HISTSIZE=450                         # 저장할 로그 개수 지정 (0을 지정하면 history 기능이 disable된다)
+export HISTFILESIZE=450                     # 저장할 로그 개수 지정
+export HISTFILE=/root/.commandline_warrior  # 히스토리 로그 파일 변경
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>VIM</title>
+      <link>http://blog.kiyeon.net/2015/06/12/vim/</link>
+      <pubDate>Fri, 12 Jun 2015 10:08:44 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/06/12/vim/</guid>
+      <description>&lt;p&gt;나는 &lt;a href=&#34;http://www.vim.org&#34;&gt;vim&lt;/a&gt;을 좋아하는데 그 이유는&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;마우스 사용을 최소화하여 키보드로만 작업이 가능하고,&lt;/li&gt;
+&lt;li&gt;프로그램이 작고 가볍고,&lt;/li&gt;
+&lt;li&gt;그렇기에 웬만한 머신에는 &lt;a href=&#34;http://www.vim.org&#34;&gt;vim&lt;/a&gt; 또는 vi가 설치되어있어 쉽게 에디팅이 가능하기 때문이다.&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>SSH Escape</title>
+      <link>http://blog.kiyeon.net/2015/06/11/ssh-escape/</link>
+      <pubDate>Thu, 11 Jun 2015 17:31:02 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/06/11/ssh-escape/</guid>
+      <description>&lt;p&gt;ssh접속중 탈출하고 싶다면 탈출키 &lt;code&gt;~&lt;/code&gt;를 사용한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>rotate nohup out file</title>
+      <link>http://blog.kiyeon.net/2015/06/11/rotate-nohup-out-file/</link>
+      <pubDate>Thu, 11 Jun 2015 09:07:45 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/06/11/rotate-nohup-out-file/</guid>
+      <description>&lt;p&gt;nohup은 터미널이 종료되어도 프로세스를 종료시키지 않고 동작시킬때 사용한다.&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;% nohup COMMAND        # nohup.out에 로그가 기록된다.
+% nohup COMMAND &amp;gt; FILE # FILE에 로그가 기록된다.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;표준출력과 표준에러는 출력파일을 지정하지 않으면 디폴트로 nohup.out에 기록된다.&lt;/p&gt;
+
+&lt;p&gt;로그파일을 지우면 프로세스는 출력파일을 잃게되고 프로세스를 재기동하지 않는 이상 로그를 볼 방법이 없다. 디버깅이 어려워지는 상황이 되는것이다. 물론 로그를 표준출력에 의지하지 않고 내부 로깅처리를 한다면야 상관없겠지만 간단한 스크립트에 그런 코드까지 추가한다는게 번거롭고 쉽지 않기도 하다.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>프로그래머를 위한 ack(like-grep)</title>
+      <link>http://blog.kiyeon.net/2015/06/09/peurogeuraemeoreul-wihan-ack-like-grep/</link>
+      <pubDate>Tue, 09 Jun 2015 10:27:57 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/06/09/peurogeuraemeoreul-wihan-ack-like-grep/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://unixhelp.ed.ac.uk/CGI/man-cgi?grep&#34;&gt;grep&lt;/a&gt;은 텍스트에서 키워드를 찾아내는 툴이다. 다음과 같이 사용한다.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;% lsb_release --all | grep -i desc
+Description:    Ubuntu 14.04.2 LTS
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;데이터가 많으면 해당 키워드를 찾기가 힘든데 이때 컬러옵션&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:grep-color&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:grep-color&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;을 사용할 수 있다.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;% cat /etc/services | grep --color=auto -i http
+# Updated from http://www.iana.org/assignments/port-numbers and other
+# sources like http://www.freebsd.org/cgi/cvsweb.cgi/src/etc/services .
+http            80/tcp          www             # WorldWideWeb HTTP
+http            80/udp                          # HyperText Transfer Protocol
+https           443/tcp                         # http protocol over TLS/SSL
+https           443/udp
+http-alt        8080/tcp        webcache        # WWW caching service
+http-alt        8080/udp
+hkp             11371/tcp                       # OpenPGP HTTP Keyserver
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>리눅스 패키지 관리(Linux Package Management)</title>
+      <link>http://blog.kiyeon.net/2015/06/04/linux-package-management/</link>
+      <pubDate>Thu, 04 Jun 2015 10:01:51 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/06/04/linux-package-management/</guid>
+      <description>&lt;p&gt;리눅스에서 프로그램을 설치하는 방법은 2가지가 있다.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;소스코드를 직접 컴파일하여 설치하는 방법&lt;/li&gt;
+&lt;li&gt;각 배포판에서 제공하는 패키지 매니저를 통해 설치하는 방법&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Octopress Start</title>
+      <link>http://blog.kiyeon.net/2015/05/26/octopress-and-start/</link>
+      <pubDate>Tue, 26 May 2015 20:39:26 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/05/26/octopress-and-start/</guid>
+      <description>&lt;h1 id=&#34;intro&#34;&gt;Intro&lt;/h1&gt;
+
+&lt;p&gt;세상에는 매우 다양한 CMS&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:cms&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:cms&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;가 있다.&lt;br /&gt;
+인터넷이 국내에 막 대중에게 보급되기 시작한 1999년부터 지금(2015년)까지 블로깅을 하기위해 다양한 시도를 해봤다. 정적페이지에 직접 C로 작성한 CGI를 이용해 방명록과 게시판을 달아보기도 했고&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:cgi&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:cgi&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; PHP로 사용자인증을 적용한 게시판을 만들어 사용해보기도 했다.  당시엔 직접만들어 쓰거나 아니면 누군가 만들어 놓은 CMS를 이용하기도 했는데 그땐 그런 툴이 몇 안되었기 때문에 선택이 쉬웠다. 사용하는 언어도 C, PHP, JAVA, JSP정도였고 DB도 Oracle아니면 MySQL정도였다.  운동도 보는것보다는 직접하는걸 더 좋아하는데 이런 성향은 개발에서도 나타난다. 누군가 만든걸 가져다 쓰는것보다는 직접 만들어 쓰는걸 더 선호한다.&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:preference&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:preference&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;
+
+어쨋거나&amp;hellip; 컨텐츠보다는 프레임에 더 집착하다보니 유행과 관심사에 따라 뒤엎기를 반복하여 제대로 운영되는 블로그 하나 제대로 없다.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
