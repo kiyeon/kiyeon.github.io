@@ -12,6 +12,10 @@
     
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/dos.min.js"></script>
     
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/lisp.min.js"></script>
+    
     <script>hljs.initHighlightingOnLoad();</script>
     
 </head>
@@ -22,8 +26,6 @@
 <div class="content">
     <h1 class="title" title="November 28, 2015 01:51:00">LISP</h1>
     <nav id="TableOfContents">
-<ul>
-<li>
 <ul>
 <li><a href="#lisp-https-ko-wikipedia-org-wiki-eb-a6-ac-ec-8a-a4-ed-94-84"><a href="https://ko.wikipedia.org/wiki/%EB%A6%AC%EC%8A%A4%ED%94%84">LISP</a></a>
 <ul>
@@ -37,12 +39,11 @@
 <li><a href="#etc">etc</a></li>
 </ul></li>
 <li><a href="#referenes">Referenes</a></li>
-</ul></li>
 </ul>
 </nav>
     
 
-<h2 id="lisp-https-ko-wikipedia-org-wiki-eb-a6-ac-ec-8a-a4-ed-94-84"><a href="https://ko.wikipedia.org/wiki/%EB%A6%AC%EC%8A%A4%ED%94%84">LISP</a></h2>
+<h1 id="lisp-https-ko-wikipedia-org-wiki-eb-a6-ac-ec-8a-a4-ed-94-84"><a href="https://ko.wikipedia.org/wiki/%EB%A6%AC%EC%8A%A4%ED%94%84">LISP</a></h1>
 
 <ul>
 <li>표현 기능이 대단히 뛰어난 언어, 가장 복잡한 프로그래밍 아이디어를 명확하고 적절하게 표현할 수 있도록 설계.</li>
@@ -60,7 +61,7 @@
 </ul></li>
 </ul>
 
-<h3 id="앞날이-기대되는-리스프">앞날이 기대되는 리스프</h3>
+<h2 id="앞날이-기대되는-리스프">앞날이 기대되는 리스프</h2>
 
 <ul>
 <li>하스켈
@@ -85,15 +86,15 @@
 </ul></li>
 </ul>
 
-<h2 id="lisp-맛보기">LISP 맛보기</h2>
+<h1 id="lisp-맛보기">LISP 맛보기</h1>
 
 <p>내 숫자를 맞춰봐 게임.<br />
 마음속으로 1~100사이의 숫자를 정하고 컴퓨터에게 맞추게 하는 게임이다.</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp">(defparameter *small* <span style="color:#ae81ff">1</span>)
-(defparameter *big* <span style="color:#ae81ff">100</span>)
+<pre><code class="language-lisp">(defparameter *small* 1)
+(defparameter *big* 100)
 (defun guess-my-number()
-    (ash (+ *small* *big*) <span style="color:#ae81ff">-1</span>))
+    (ash (+ *small* *big*) -1))
 (defun smaller ()
     (setf *big* (1- (guess-my-number)))
     (guess-my-number))
@@ -101,11 +102,12 @@
     (setf *small* (1+ (guess-my-number)))
     (guess-my-number))
 (defun start-over ()
-    (defparameter *small* <span style="color:#ae81ff">1</span>)
-    (defparameter *big* <span style="color:#ae81ff">100</span>)
-    (guess-my-number))</code></pre></div>
+    (defparameter *small* 1)
+    (defparameter *big* 100)
+    (guess-my-number))
+</code></pre>
 
-<h3 id="기본-수칙">기본 수칙</h3>
+<h2 id="기본-수칙">기본 수칙</h2>
 
 <ul>
 <li>리스프는 괄호로 명령어를 둘러싸야 한다. <strong>이 괄호 없이는 명령어가 실행되지 않는다.</strong></li>
@@ -113,7 +115,7 @@
 <li>그러므로 유연한 형태로 코드를 작성할 수 있다.</li>
 </ul>
 
-<h3 id="전역변수">전역변수</h3>
+<h2 id="전역변수">전역변수</h2>
 
 <ul>
 <li>리스프에서 전역으로 선언된 변수를 <strong>최상위 정의(top-level definition)</strong>라 부른다. <code>defparameter</code>함수를 이용해 새로운 최상위 정의를 할 수 있다. (전역변수)</li>
@@ -121,21 +123,21 @@
 <li><code>defparameter</code>는 전역변수에 값을 쓰면 이전에 저장된 모든 값을 덮어쓴다. 전역변수를 정의하는 다른 함수 <code>defvar</code>는 이전 값을 덮어쓰지 않는다.</li>
 </ul>
 
-<h3 id="전역-함수">전역 함수</h3>
+<h2 id="전역-함수">전역 함수</h2>
 
 <ul>
 <li>커먼 리스프에서 함수는 <code>defun</code> 명령으로 정의한다.</li>
 <li>리스프에서는 return이 필요 없으며, 함수 몸체에서 계산된 마지막 값이 자동으로 반환된다.</li>
 </ul>
 
-<h3 id="etc">etc</h3>
+<h2 id="etc">etc</h2>
 
 <ul>
 <li>지역변수와 지역함수를 선언하려면 각각 <code>let</code>과 <code>flet</code>명령을 사용한다.</li>
 <li><code>labels</code>함수는 <code>flet</code>과 비슷하나 함수 자신을 호출할 수 있게 한다.</li>
 </ul>
 
-<h2 id="referenes">Referenes</h2>
+<h1 id="referenes">Referenes</h1>
 
 <ul>
 <li><a href="http://www.yes24.com/24/goods/5968810?scode=032&amp;OzSrank=8">만들면서 배우는 리스프 프로그래밍 : Land of LISP</a></li>

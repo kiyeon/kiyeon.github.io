@@ -6,44 +6,10 @@
     <description>Recent content in Drafts on Kiyeon&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Mon, 20 Nov 2017 14:15:59 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 10 Feb 2016 14:28:00 +0900</lastBuildDate>
     
 	<atom:link href="http://blog.kiyeon.net/draft/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>키보드로 아이폰 제어</title>
-      <link>http://blog.kiyeon.net/2017/11/20/controling-iphone-by-keyboard/</link>
-      <pubDate>Mon, 20 Nov 2017 14:15:59 +0900</pubDate>
-      
-      <guid>http://blog.kiyeon.net/2017/11/20/controling-iphone-by-keyboard/</guid>
-      <description>현재 iPhone6를 사용중이다. 원래 6s를 사용했는데 잃어버리고 중고로 얻은 폰인데 베터리가 심하게 빨리 없어진다. 완충후 출근하면 60%가 남아있다. 하루종일 충전을 하고 있어야 한다. 게다가 화면 오른쪽에 세로방향으로 4갈래 라인이 생겼는데 그 부분은 터치가 되지 않는다. 가로, 세로모드 그리고 키보드를 좌측, 우측으로 옮겨가며 정말 힘겹게 사용하고 있다.
-메시지를 주고받을때 타이핑하기가 굉장히 불편한데 그래서 대안으로 블루투스 키보드를 사용한다. 그런데 사용하다보니 불편한점이 있었다. 앱의 다른버튼을 선택하거나 화면을 전환하거나 할때 키보드만으로는 제어가 안되서 손가락을 이용해 터치가 필요했던 것이다.</description>
-    </item>
-    
-    <item>
-      <title>New</title>
-      <link>http://blog.kiyeon.net/draft/new/</link>
-      <pubDate>Sun, 19 Nov 2017 01:34:26 +0900</pubDate>
-      
-      <guid>http://blog.kiyeon.net/draft/new/</guid>
-      <description>Kiss Kiss is a stupidly simple blog theme for Hugo. It&amp;rsquo;s a fork of Hemingway theme - read why.
-Getting Started Clone this repository to your hugo theme directory.
-mkdir themes cd themes git clone https://github.com/ribice/kiss.git  Site Configuration Take a look in the exampleSite folder.
-This directory contains an example config file and the content for the demo. It serves as an example setup for your documentation.
-Copy the config.</description>
-    </item>
-    
-    <item>
-      <title>HUGO?</title>
-      <link>http://blog.kiyeon.net/draft/%ED%95%9C%EA%B8%80%EC%9D%80-%EC%95%88%EB%90%98%EB%82%98/</link>
-      <pubDate>Mon, 13 Feb 2017 10:37:15 +0900</pubDate>
-      
-      <guid>http://blog.kiyeon.net/draft/%ED%95%9C%EA%B8%80%EC%9D%80-%EC%95%88%EB%90%98%EB%82%98/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://gohugo.io/&#34;&gt;HUGO&lt;/a&gt;&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:2&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:2&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;는 &lt;a href=&#34;https://golang.org/&#34;&gt;Go언어&lt;/a&gt;로 만들어진 Octopress나 jekyll과 비슷한 &lt;a href=&#34;http://nilclass.com/courses/what-is-a-static-website/#1&#34;&gt;Static website&lt;/a&gt;(&lt;a href=&#34;https://en.wikipedia.org/wiki/Static_web_page&#34;&gt;wiki&lt;/a&gt;) generator 로 현재 Jekyll과 더불러 급속도로 인기를 얻고 있다. &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
     
     <item>
       <title>Jekyll</title>
@@ -55,9 +21,24 @@ Copy the config.</description>
     </item>
     
     <item>
+      <title>리눅스 패키지 설치하기</title>
+      <link>http://blog.kiyeon.net/2015/12/04/installing-linux-package/</link>
+      <pubDate>Fri, 04 Dec 2015 14:55:00 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/12/04/installing-linux-package/</guid>
+      <description>Ubuntu 기본 Something along the lines of:
+dpkg &amp;ndash;&amp;gt; apt-get, aptitude &amp;ndash;&amp;gt; Synaptic, Software Center
+최신 버전 설치  최신 패키지 검색
+Ubuntu package building and hosting에서 최신 패키지를 검색한다. Binary packages built by this source에서 설치할 Binary package를 선택한다. Published versions에서 시스템에 맞는 버전을 선택한다.
+ex) sqlite3 3.9.2-1(amd64 binary) in ubuntu xenial Downloadable files에서 deb파일을 다운로드 한다.
+wget http://launchpadlibrarian.net/225502540/sqlite3_3.9.2-1_amd64.deb 다운로드한 deb을 설치한다.
+sudo dpkg -i sqlite3_3.9.2-1_amd64.deb 의존성 관련 패키지가 필요하면 Package relationships에서 deb을 받아 설치한다.</description>
+    </item>
+    
+    <item>
       <title>Changing the shell prompt</title>
       <link>http://blog.kiyeon.net/2015/06/25/changing-the-shell-prompt/</link>
-      <pubDate>Thu, 25 Jun 2015 10:33:58 +0000</pubDate>
+      <pubDate>Thu, 25 Jun 2015 10:33:58 +0900</pubDate>
       
       <guid>http://blog.kiyeon.net/2015/06/25/changing-the-shell-prompt/</guid>
       <description>쉘 프롬프트를 변경해보자. 여기서는 Bash를 기준으로 한다.
@@ -66,17 +47,17 @@ Copy the config.</description>
     
     <item>
       <title>Tmux</title>
-      <link>http://blog.kiyeon.net/draft/2015-06-23-tmux/</link>
-      <pubDate>Tue, 23 Jun 2015 17:22:51 +0000</pubDate>
+      <link>http://blog.kiyeon.net/2015/06/23/tmux/</link>
+      <pubDate>Tue, 23 Jun 2015 17:22:51 +0900</pubDate>
       
-      <guid>http://blog.kiyeon.net/draft/2015-06-23-tmux/</guid>
+      <guid>http://blog.kiyeon.net/2015/06/23/tmux/</guid>
       <description>  A tmux Crash Course  tmux manager  tmuxp Using Tmux and Tmuxinator http://zanshin.net/2014/07/02/using-teamocil-to-manage-tmux-sessions/ Using Tmux and Tmuxinator  </description>
     </item>
     
     <item>
       <title>ZSH</title>
       <link>http://blog.kiyeon.net/2015/06/23/zsh/</link>
-      <pubDate>Tue, 23 Jun 2015 17:19:42 +0000</pubDate>
+      <pubDate>Tue, 23 Jun 2015 17:19:42 +0900</pubDate>
       
       <guid>http://blog.kiyeon.net/2015/06/23/zsh/</guid>
       <description> Why Zsh is cooler than your shell My Extravagant Zsh Prompt A Beautifully Productive Terminal Experience Hey Prezto - Zsh for Command Line Heaven  </description>
@@ -85,7 +66,7 @@ Copy the config.</description>
     <item>
       <title>Regular Expression</title>
       <link>http://blog.kiyeon.net/2015/06/23/regular-expression/</link>
-      <pubDate>Tue, 23 Jun 2015 09:06:39 +0000</pubDate>
+      <pubDate>Tue, 23 Jun 2015 09:06:39 +0900</pubDate>
       
       <guid>http://blog.kiyeon.net/2015/06/23/regular-expression/</guid>
       <description>&lt;blockquote&gt;
@@ -111,10 +92,10 @@ Copy the config.</description>
     
     <item>
       <title>*nix Timezone 변경하기(Changing the timezone in *nix)</title>
-      <link>http://blog.kiyeon.net/2015/06/04/star-nix-timezone-byeongyeonghagi-changing-the-timezone-in-star-nix/</link>
+      <link>http://blog.kiyeon.net/2015/06/04/changing-the-timezone-in-star-nix/</link>
       <pubDate>Thu, 04 Jun 2015 09:25:19 +0900</pubDate>
       
-      <guid>http://blog.kiyeon.net/2015/06/04/star-nix-timezone-byeongyeonghagi-changing-the-timezone-in-star-nix/</guid>
+      <guid>http://blog.kiyeon.net/2015/06/04/changing-the-timezone-in-star-nix/</guid>
       <description> *nix시스템의 시간대를 변경해보자.
 References  Changing the timezone, date, and time 협정 세계시 그리니치 평균시 한국 표준시 - UTC보다 9시간 빠른 동경 135도를 기준 Standard time zones of the world Greenwich Mean Time 우분투 NTP 시간동기화  </description>
     </item>
@@ -122,10 +103,11 @@ References  Changing the timezone, date, and time 협정 세계시 그리니치 
     <item>
       <title>GIT</title>
       <link>http://blog.kiyeon.net/2015/06/03/git/</link>
-      <pubDate>Wed, 03 Jun 2015 12:50:26 +0000</pubDate>
+      <pubDate>Wed, 03 Jun 2015 12:50:26 +0900</pubDate>
       
       <guid>http://blog.kiyeon.net/2015/06/03/git/</guid>
-      <description> Git .gitignore로 관리되던 파일 제거하려면 http://stackoverflow.com/a/11451731 git rm -r --cached .
+      <description> Git .gitignore로 관리되던 파일 제거하려면
+git rm -r --cached .
 References  Getting Git Right  </description>
     </item>
     

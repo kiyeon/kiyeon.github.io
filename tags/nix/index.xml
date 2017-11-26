@@ -6,10 +6,35 @@
     <description>Recent content in Nix on Kiyeon&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Wed, 24 Jun 2015 09:28:08 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 04 Dec 2015 14:55:00 +0900</lastBuildDate>
     
 	<atom:link href="http://blog.kiyeon.net/tags/nix/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>리눅스 패키지 설치하기</title>
+      <link>http://blog.kiyeon.net/2015/12/04/installing-linux-package/</link>
+      <pubDate>Fri, 04 Dec 2015 14:55:00 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/12/04/installing-linux-package/</guid>
+      <description>Ubuntu 기본 Something along the lines of:
+dpkg &amp;ndash;&amp;gt; apt-get, aptitude &amp;ndash;&amp;gt; Synaptic, Software Center
+최신 버전 설치  최신 패키지 검색
+Ubuntu package building and hosting에서 최신 패키지를 검색한다. Binary packages built by this source에서 설치할 Binary package를 선택한다. Published versions에서 시스템에 맞는 버전을 선택한다.
+ex) sqlite3 3.9.2-1(amd64 binary) in ubuntu xenial Downloadable files에서 deb파일을 다운로드 한다.
+wget http://launchpadlibrarian.net/225502540/sqlite3_3.9.2-1_amd64.deb 다운로드한 deb을 설치한다.
+sudo dpkg -i sqlite3_3.9.2-1_amd64.deb 의존성 관련 패키지가 필요하면 Package relationships에서 deb을 받아 설치한다.</description>
+    </item>
+    
+    <item>
+      <title>Changing the shell prompt</title>
+      <link>http://blog.kiyeon.net/2015/06/25/changing-the-shell-prompt/</link>
+      <pubDate>Thu, 25 Jun 2015 10:33:58 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/06/25/changing-the-shell-prompt/</guid>
+      <description>쉘 프롬프트를 변경해보자. 여기서는 Bash를 기준으로 한다.
+ Bash Prompt HOWTO 8 Useful and Interesting Bash Prompts What is your favorite Bash prompt? Status line in linux shell Crazy POWERFUL Bash Prompt  </description>
+    </item>
     
     <item>
       <title>Change locale in linux</title>
@@ -43,6 +68,24 @@ LC_ALL=                        # LC_*의 값들이 override 된다.
     </item>
     
     <item>
+      <title>Tmux</title>
+      <link>http://blog.kiyeon.net/2015/06/23/tmux/</link>
+      <pubDate>Tue, 23 Jun 2015 17:22:51 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/06/23/tmux/</guid>
+      <description>  A tmux Crash Course  tmux manager  tmuxp Using Tmux and Tmuxinator http://zanshin.net/2014/07/02/using-teamocil-to-manage-tmux-sessions/ Using Tmux and Tmuxinator  </description>
+    </item>
+    
+    <item>
+      <title>ZSH</title>
+      <link>http://blog.kiyeon.net/2015/06/23/zsh/</link>
+      <pubDate>Tue, 23 Jun 2015 17:19:42 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/06/23/zsh/</guid>
+      <description> Why Zsh is cooler than your shell My Extravagant Zsh Prompt A Beautifully Productive Terminal Experience Hey Prezto - Zsh for Command Line Heaven  </description>
+    </item>
+    
+    <item>
       <title>리눅스 패키지 관리(Linux Package Management)</title>
       <link>http://blog.kiyeon.net/2015/06/04/linux-package-management/</link>
       <pubDate>Thu, 04 Jun 2015 10:01:51 +0900</pubDate>
@@ -60,10 +103,10 @@ LC_ALL=                        # LC_*의 값들이 override 된다.
     
     <item>
       <title>*nix Timezone 변경하기(Changing the timezone in *nix)</title>
-      <link>http://blog.kiyeon.net/2015/06/04/star-nix-timezone-byeongyeonghagi-changing-the-timezone-in-star-nix/</link>
+      <link>http://blog.kiyeon.net/2015/06/04/changing-the-timezone-in-star-nix/</link>
       <pubDate>Thu, 04 Jun 2015 09:25:19 +0900</pubDate>
       
-      <guid>http://blog.kiyeon.net/2015/06/04/star-nix-timezone-byeongyeonghagi-changing-the-timezone-in-star-nix/</guid>
+      <guid>http://blog.kiyeon.net/2015/06/04/changing-the-timezone-in-star-nix/</guid>
       <description> *nix시스템의 시간대를 변경해보자.
 References  Changing the timezone, date, and time 협정 세계시 그리니치 평균시 한국 표준시 - UTC보다 9시간 빠른 동경 135도를 기준 Standard time zones of the world Greenwich Mean Time 우분투 NTP 시간동기화  </description>
     </item>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on Kiyeon&#39;s Blog</title>
+    <link>http://blog.kiyeon.net/tags/git/</link>
+    <description>Recent content in Git on Kiyeon&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Wed, 03 Jun 2015 12:50:26 +0900</lastBuildDate>
+    
+	<atom:link href="http://blog.kiyeon.net/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>GIT</title>
+      <link>http://blog.kiyeon.net/2015/06/03/git/</link>
+      <pubDate>Wed, 03 Jun 2015 12:50:26 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/06/03/git/</guid>
+      <description> Git .gitignore로 관리되던 파일 제거하려면
+git rm -r --cached .
+References  Getting Git Right  </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Etc on Kiyeon&#39;s Blog</title>
+    <link>http://blog.kiyeon.net/tags/etc/</link>
+    <description>Recent content in Etc on Kiyeon&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Tue, 07 Mar 2017 19:00:13 +0900</lastBuildDate>
+    
+	<atom:link href="http://blog.kiyeon.net/tags/etc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>macOS에 스타크래프트 설치하고 실행하기</title>
+      <link>http://blog.kiyeon.net/2017/03/07/running-starcraft-on-macos/</link>
+      <pubDate>Tue, 07 Mar 2017 19:00:13 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2017/03/07/running-starcraft-on-macos/</guid>
+      <description>&lt;p&gt;블리자드의 스타크래프트를 macOS(Sierra Version 10.12.3)에 설치하고 실행하는 방법이다.&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;과거 맥에 PowerPC를 사용할때는 &lt;a href=&#34;https://kr.battle.net/shop/ko/product/game/legacy-games&#34;&gt;블리자드에서 스타크래프트 맥버전을 지원&lt;/a&gt;했으나 &lt;a href=&#34;https://kr.battle.net/support/ko/article/starcraft-system-requirements&#34;&gt;PowerPC지원이 끊기면서 Windows 버전만 지원&lt;/a&gt;하게되어 많은 맥 유저들이 스타크래프트를 맥에서 실행하는 방법에 대한 글들이 많았지만 방법도 다양하고 보안상 위험해 보여 내가 직접 성공한 내용에 대해 기록해봤다.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Making &amp; Testing Multiboot USB</title>
+      <link>http://blog.kiyeon.net/2015/11/10/testing-and-making-multi-booting-usb/</link>
+      <pubDate>Tue, 10 Nov 2015 23:56:57 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/11/10/testing-and-making-multi-booting-usb/</guid>
+      <description>개요 요즘은 그렇지 않지만 예전에는 뭔가 OS를 설치할일이 많았다. 특히 Windows는 정기적으로 설치해야하는 일이 빈번했다.
+Windows외에 테스트용 리눅스 서버나 복원용 툴, 고스트, 네트워크 모니터링을 위한 백트랙등 가끔씩 설치할일이 있는데 아무래도 USB로 설치하는게 간편하다. 원래는 부트영역에 한번에 하나만 설치가 가능하고 그래서 OS별로 USB를 준비하던가 그때마다 USB를 포맷하고 새로 설치하는 번거로움이 있다. 이번에 MLC 대용량 USB를 구입하면서 남는 용량이 아깝기도 하고 간혹가다 설치를 해줘야할 때도 있고해서 멀티부트 USB를 만들기로 했다.
+준비물  USB YUMI OS Image File 가상머신 Tools(VMware, Parallels, Virtual Box &amp;hellip;) Plop Boot Manager  멀티부트 USB 만들기 멀티부트 디스크를 만드는 방법은 두가지가 있는데 첫번째는 직접 부트영역을 뜯어고치는 방법과(MBR, GRUB), 멀티부트를 만들어주는 유틸리티를 사용하는 것이다.</description>
+    </item>
+    
+  </channel>
+</rss>

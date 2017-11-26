@@ -6,10 +6,73 @@
     <description>Recent content in Cli on Kiyeon&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Thu, 11 Jun 2015 09:07:45 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jun 2015 10:33:58 +0900</lastBuildDate>
     
 	<atom:link href="http://blog.kiyeon.net/tags/cli/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Changing the shell prompt</title>
+      <link>http://blog.kiyeon.net/2015/06/25/changing-the-shell-prompt/</link>
+      <pubDate>Thu, 25 Jun 2015 10:33:58 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/06/25/changing-the-shell-prompt/</guid>
+      <description>쉘 프롬프트를 변경해보자. 여기서는 Bash를 기준으로 한다.
+ Bash Prompt HOWTO 8 Useful and Interesting Bash Prompts What is your favorite Bash prompt? Status line in linux shell Crazy POWERFUL Bash Prompt  </description>
+    </item>
+    
+    <item>
+      <title>Curses Library</title>
+      <link>http://blog.kiyeon.net/2015/06/19/curses-library/</link>
+      <pubDate>Fri, 19 Jun 2015 11:10:32 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/06/19/curses-library/</guid>
+      <description>&lt;p&gt;콘솔을 좋아하는 이유? 심플하기때문에&amp;hellip; 가볍고 빠르고 어디서든 사용할 수 있다는점.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://ko.wikipedia.org/wiki/Curses&#34;&gt;curses&lt;/a&gt;는 유닉스 계열 운영체제를 위한 터미널 제어 라이브러리의 하나로, 텍스트 사용자 인터페이스(TUI) 응용 프로그램의 구성을 가능케 한다. 이 이름은 &amp;ldquo;커서 최적화&amp;rdquo;(cusor optimization)에서 따온 것이다. 문자 셀 터미널(VT100 따위) 상에서 응용 프로그램의 디스플레이를 관리하는 명령들이 모인 라이브러리이다. - wikipedia&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/1/11/Jack-curses-screen.gif&#34; alt=&#34;screenshot&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>History Command</title>
+      <link>http://blog.kiyeon.net/2015/06/12/history-command/</link>
+      <pubDate>Fri, 12 Jun 2015 11:35:51 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/06/12/history-command/</guid>
+      <description>&lt;p&gt;Command line에서 명령을 실행하면 해당 명령이 기록에 남는다. 이 기록을 살펴보는 명령이 &lt;code&gt;history&lt;/code&gt;다.&lt;/p&gt;
+
+&lt;h2 id=&#34;설정&#34;&gt;설정&lt;/h2&gt;
+
+&lt;p&gt;이 설정은 bash기준이며 다른 쉘에서는 약간 다를 수 있다.&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;export HISTTIMEFORMAT=&#39;%F %T &#39;              # 로그에 날짜와 시간 출력
+export HISTIGNORE=&amp;quot;pwd:ls:ls -ltr:&amp;quot;         # pwd, ls, ls -ltr명령은 로그에 기록하지 않는다.
+export HISTCONTROL=ignorespace              # 명령 실행시 처음 스페이스가 포함되면 로그에 기록하지 않는다.
+export HISTCONTROL=ignoredups               # 명령이 중복되면 무시 (pwd를 연속으로 여러번 입력하면 로그에는 pwd하나만 기록된다)
+export HISTCONTROL=erasedups                # 중복로그를 삭제하고 최근로그만 남긴다.
+export HISTSIZE=450                         # 저장할 로그 개수 지정 (0을 지정하면 history 기능이 disable된다)
+export HISTFILESIZE=450                     # 저장할 로그 개수 지정
+export HISTFILE=/root/.commandline_warrior  # 히스토리 로그 파일 변경
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>SSH Escape</title>
+      <link>http://blog.kiyeon.net/2015/06/11/ssh-escape/</link>
+      <pubDate>Thu, 11 Jun 2015 17:31:02 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/06/11/ssh-escape/</guid>
+      <description>&lt;p&gt;ssh접속중 탈출하고 싶다면 탈출키 &lt;code&gt;~&lt;/code&gt;를 사용한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>rotate nohup out file</title>
@@ -19,7 +82,7 @@
       <guid>http://blog.kiyeon.net/2015/06/11/rotate-nohup-out-file/</guid>
       <description>&lt;p&gt;nohup은 터미널이 종료되어도 프로세스를 종료시키지 않고 동작시킬때 사용한다.&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;% nohup COMMAND        # nohup.out에 로그가 기록된다.
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;% nohup COMMAND        # nohup.out에 로그가 기록된다.
 % nohup COMMAND &amp;gt; FILE # FILE에 로그가 기록된다.
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -38,13 +101,13 @@
       <guid>http://blog.kiyeon.net/2015/06/09/ack-like-grep-for-programmer/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://unixhelp.ed.ac.uk/CGI/man-cgi?grep&#34;&gt;grep&lt;/a&gt;은 텍스트에서 키워드를 찾아내는 툴이다. 다음과 같이 사용한다.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;% lsb_release --all | grep -i desc
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;% lsb_release --all | grep -i desc
 Description:    Ubuntu 14.04.2 LTS
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;데이터가 많으면 해당 키워드를 찾기가 힘든데 이때 컬러옵션&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:grep-color&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:grep-color&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;을 사용할 수 있다.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;% cat /etc/services | grep --color=auto -i http
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;% cat /etc/services | grep --color=auto -i http
 # Updated from http://www.iana.org/assignments/port-numbers and other
 # sources like http://www.freebsd.org/cgi/cvsweb.cgi/src/etc/services .
 http            80/tcp          www             # WorldWideWeb HTTP

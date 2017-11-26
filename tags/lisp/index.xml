@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lisp on Kiyeon&#39;s Blog</title>
+    <link>http://blog.kiyeon.net/tags/lisp/</link>
+    <description>Recent content in Lisp on Kiyeon&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Sat, 28 Nov 2015 01:51:00 +0900</lastBuildDate>
+    
+	<atom:link href="http://blog.kiyeon.net/tags/lisp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>LISP</title>
+      <link>http://blog.kiyeon.net/2015/11/28/lisp/</link>
+      <pubDate>Sat, 28 Nov 2015 01:51:00 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/11/28/lisp/</guid>
+      <description>LISP  표현 기능이 대단히 뛰어난 언어, 가장 복잡한 프로그래밍 아이디어를 명확하고 적절하게 표현할 수 있도록 설계. 많은 대기업이 핵심적인 업무에 리스프를 사용. 리스프는 작은 노력으로도 배울 수 있지만 컴퓨터 프로그래밍에 대해 깊은 통찰력을 갖게 한다. 확장성 있는 라이브러리를 비롯한 수많은 언어 기능을 지원하며 컴파일러/인터프리터를 무척 쉽게 수정할 수 있다. 리스프의 주된 원리를 따르는 모든 언어는 리스프의 변종이라 하고 그래서 리스프는 변종이 많다. 가장 많이 사용하는 리스프는 안시 커먼 리스프와 스킴 안시 커먼 리스프  1981년 많은 리스프 변종에 대응하고자 리스프 단체에서 커먼 리스프라는 리스프 명세서를 발표.</description>
+    </item>
+    
+  </channel>
+</rss>

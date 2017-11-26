@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aws on Kiyeon&#39;s Blog</title>
+    <link>http://blog.kiyeon.net/tags/aws/</link>
+    <description>Recent content in Aws on Kiyeon&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Sat, 28 Nov 2015 18:40:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://blog.kiyeon.net/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AWS EBS 확장및 추가하기</title>
+      <link>http://blog.kiyeon.net/2015/11/28/adding-and-expending-aws-ebs/</link>
+      <pubDate>Sat, 28 Nov 2015 18:40:00 +0000</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/11/28/adding-and-expending-aws-ebs/</guid>
+      <description>AWS EC2의 디스크가 Full이 되어 확장이 필요했다.
+볼륨 확장 Linux에서 EBS 볼륨의 스토리지 공간 확장
+ 인스턴스를 Stop 시킨다. EBS Volume을 찾아 Snapshopt을 만든다. (복사용) Snapshot에서 2에서 만든 스냅샷을 선택하여 새로운 볼륨을 만든다. 여기서 확장할 사이즈를 정한다. ex) 8GB -&amp;gt; 15GB, 볼륨이 커지면 비용이 발생하므로 SIMPLE MONTHLY CALCULATOR로 요금을 계산하자. 이전 볼륨을 분리(Detach Volume)하고 새로 만든 볼륨을 연결(Attach Volume)한다. 인스턴스를 다시 시작한다. 파일 시스템을 확장한다. 여기서부터는 Linux 파일 시스템 확장참조  볼륨 추가 인스턴스에 볼륨 추가</description>
+    </item>
+    
+  </channel>
+</rss>

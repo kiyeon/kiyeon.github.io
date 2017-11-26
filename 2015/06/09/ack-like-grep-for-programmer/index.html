@@ -12,6 +12,10 @@
     
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/dos.min.js"></script>
     
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/lisp.min.js"></script>
+    
     <script>hljs.initHighlightingOnLoad();</script>
     
 </head>
@@ -28,13 +32,13 @@
 </nav>
     <p><a href="http://unixhelp.ed.ac.uk/CGI/man-cgi?grep">grep</a>은 텍스트에서 키워드를 찾아내는 툴이다. 다음과 같이 사용한다.</p>
 
-<pre><code class="language-bash">% lsb_release --all | grep -i desc
+<pre><code class="language-shell">% lsb_release --all | grep -i desc
 Description:    Ubuntu 14.04.2 LTS
 </code></pre>
 
 <p>데이터가 많으면 해당 키워드를 찾기가 힘든데 이때 컬러옵션<sup class="footnote-ref" id="fnref:grep-color"><a rel="footnote" href="#fn:grep-color">1</a></sup>을 사용할 수 있다.</p>
 
-<pre><code class="language-bash">% cat /etc/services | grep --color=auto -i http
+<pre><code class="language-shell">% cat /etc/services | grep --color=auto -i http
 # Updated from http://www.iana.org/assignments/port-numbers and other
 # sources like http://www.freebsd.org/cgi/cvsweb.cgi/src/etc/services .
 http            80/tcp          www             # WorldWideWeb HTTP

@@ -12,6 +12,10 @@
     
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/dos.min.js"></script>
     
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/lisp.min.js"></script>
+    
     <script>hljs.initHighlightingOnLoad();</script>
     
 </head>
@@ -37,7 +41,7 @@
 
 <p>이 설정은 bash기준이며 다른 쉘에서는 약간 다를 수 있다.<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup></p>
 
-<pre><code>export HISTTIMEFORMAT='%F %T '              # 로그에 날짜와 시간 출력
+<pre><code class="language-shell">export HISTTIMEFORMAT='%F %T '              # 로그에 날짜와 시간 출력
 export HISTIGNORE=&quot;pwd:ls:ls -ltr:&quot;         # pwd, ls, ls -ltr명령은 로그에 기록하지 않는다.
 export HISTCONTROL=ignorespace              # 명령 실행시 처음 스페이스가 포함되면 로그에 기록하지 않는다.
 export HISTCONTROL=ignoredups               # 명령이 중복되면 무시 (pwd를 연속으로 여러번 입력하면 로그에는 pwd하나만 기록된다)

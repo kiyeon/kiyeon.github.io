@@ -12,6 +12,10 @@
     
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/dos.min.js"></script>
     
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/lisp.min.js"></script>
+    
     <script>hljs.initHighlightingOnLoad();</script>
     
 </head>
@@ -23,8 +27,6 @@
     <h1 class="title" title="November 28, 2015 18:40:00">AWS EBS 확장및 추가하기</h1>
     <nav id="TableOfContents">
 <ul>
-<li>
-<ul>
 <li><a href="#볼륨-확장">볼륨 확장</a></li>
 <li><a href="#볼륨-추가">볼륨 추가</a>
 <ul>
@@ -32,14 +34,13 @@
 </ul></li>
 <li><a href="#etc">Etc</a></li>
 <li><a href="#references">References</a></li>
-</ul></li>
 </ul>
 </nav>
     
 
 <p>AWS EC2의 디스크가 Full이 되어 확장이 필요했다.</p>
 
-<h2 id="볼륨-확장">볼륨 확장</h2>
+<h1 id="볼륨-확장">볼륨 확장</h1>
 
 <p><a href="http://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/ebs-expand-volume.html">Linux에서 EBS 볼륨의 스토리지 공간 확장</a></p>
 
@@ -52,7 +53,7 @@
 <li>파일 시스템을 확장한다. 여기서부터는 <a href="http://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/ebs-expand-volume.html#recognize-expanded-volume-linux">Linux 파일 시스템 확장</a>참조</li>
 </ol>
 
-<h2 id="볼륨-추가">볼륨 추가</h2>
+<h1 id="볼륨-추가">볼륨 추가</h1>
 
 <p><a href="http://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/ec2-add-volume-to-instance.html">인스턴스에 볼륨 추가</a></p>
 
@@ -69,15 +70,17 @@
 </ul></li>
 </ol>
 
-<h3 id="볼륨-추가-후-fstab-설정">볼륨 추가 후 fstab 설정</h3>
+<h2 id="볼륨-추가-후-fstab-설정">볼륨 추가 후 fstab 설정</h2>
 
 <p>부팅 될때마다 mount를 유지하려면 <code>/etc/fstab</code>에 마운트 정보를 기록해야 한다.</p>
 
 <p><code>fstab</code>은 리눅스가 부팅될 때마다 자동으로 읽는 중요한 파일이므로 수정 시에 주의가 필요하다. 글자가 틀릴 경우 부팅 자체가 아예 안될 수 있다.</p>
 
-<p>fstab에는 6개의 필드가 있다.
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 장치이름     마운트될 디렉토리  파일 시스템 속성       dump 사용 여부  파일 시스템 체크 여부
-</span><span style="color:#75715e"></span>/dev/sdb1    /home/mydata   ext3     defaults   <span style="color:#ae81ff">0</span>             <span style="color:#ae81ff">1</span></code></pre></div></p>
+<p>fstab에는 6개의 필드가 있다.</p>
+
+<pre><code class="language-bash"># 장치이름     마운트될 디렉토리  파일 시스템 속성       dump 사용 여부  파일 시스템 체크 여부
+/dev/sdb1    /home/mydata   ext3     defaults   0             1
+</code></pre>
 
 <ol>
 <li>device : 장치명이 들어간다. UUID나 Lable등이 사용가능하다. <code>blkid</code>로 확인.</li>
@@ -88,7 +91,7 @@
 <li>fsck : 부팅시 이 파티션을 체크하는데 1인 파일 시스템을 먼저 체크하고 2는 1을 체크한 후에 체크한다. 0은 체크를 생략하며 그로인해 부팅속도가 향상된다.</li>
 </ol>
 
-<h2 id="etc">Etc</h2>
+<h1 id="etc">Etc</h1>
 
 <ul>
 <li>현재 디스크의 파일 시스템을 확인하고 싶다면 <code>df -T</code> 또는 <code>blkid</code>를 입력한다.<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup></li>
@@ -104,7 +107,7 @@
 </ul></li>
 </ul>
 
-<h2 id="references">References</h2>
+<h1 id="references">References</h1>
 
 <ul>
 <li><a href="https://aws.amazon.com/ko/">Amazon Web Services</a></li>

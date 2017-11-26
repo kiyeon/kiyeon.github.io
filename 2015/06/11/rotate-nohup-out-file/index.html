@@ -12,6 +12,10 @@
     
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/dos.min.js"></script>
     
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/lisp.min.js"></script>
+    
     <script>hljs.initHighlightingOnLoad();</script>
     
 </head>
@@ -29,7 +33,7 @@
 </nav>
     <p>nohup은 터미널이 종료되어도 프로세스를 종료시키지 않고 동작시킬때 사용한다.<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup></p>
 
-<pre><code class="language-bash">% nohup COMMAND        # nohup.out에 로그가 기록된다.
+<pre><code class="language-shell">% nohup COMMAND        # nohup.out에 로그가 기록된다.
 % nohup COMMAND &gt; FILE # FILE에 로그가 기록된다.
 </code></pre>
 
@@ -41,14 +45,14 @@
 
 <p>mknod로 fifo파일을 만들고 nohup의 출력을 fifo파일로 한다. cat에서 fifo를 입력으로 받아 출력방향을 정한다. 표준출력은 <code>&gt;</code>, 표준에러는 <code>2&gt;</code> 표준출력과 같은 파일에 표준에러를 쓰려면 <code>&amp;1</code>을 준다.<sup class="footnote-ref" id="fnref:3"><a rel="footnote" href="#fn:3">2</a></sup> 주의할점은 프로세스실행후 처음 fifo에 대한 출력을 한번 뚫어(?) 줘야 한다는거다. 그렇지 않으면 프로세스가 stop상태로 동작을 하지 않는다. 아마 출력장치가 접속되길 기다리는거 같다. 한번 출력지정후엔 출력파일이 끊겨도 계속 동작한다.<sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">3</a></sup></p>
 
-<pre><code class="language-bash">mknod /tmp/mypipe p
+<pre><code class="language-shell">mknod /tmp/mypipe p
 cat &lt; /tmp/mypipe &gt; /tmp/myreallog
 nohup myapplication &gt;/tmp/mypipe
 </code></pre>
 
 <p>To rotate the log</p>
 
-<pre><code class="language-bash">mv /tmp/myreallog /tmp/rotatedlog
+<pre><code class="language-shell">mv /tmp/myreallog /tmp/rotatedlog
 kill [pid of the cat process]
 cat &lt; /tmp/mypipe &gt;/tmp/myreallog
 </code></pre>
