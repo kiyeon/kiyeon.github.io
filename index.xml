@@ -357,6 +357,7 @@ References  Changing the timezone, date, and time 협정 세계시 그리니치 
       <guid>http://blog.kiyeon.net/2015/06/03/git/</guid>
       <description> Git .gitignore로 관리되던 파일 제거하려면
 git rm -r --cached .
+서브모듈 삭제하기
 References  Getting Git Right  </description>
     </item>
     
