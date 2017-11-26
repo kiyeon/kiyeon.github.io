@@ -36,37 +36,6 @@ sudo dpkg -i sqlite3_3.9.2-1_amd64.deb 의존성 관련 패키지가 필요하�
     </item>
     
     <item>
-      <title>Change locale in linux</title>
-      <link>http://blog.kiyeon.net/2015/06/24/change-locale-in-linux/</link>
-      <pubDate>Wed, 24 Jun 2015 09:28:08 +0000</pubDate>
-      
-      <guid>http://blog.kiyeon.net/2015/06/24/change-locale-in-linux/</guid>
-      <description>&lt;p&gt;Locale은 &lt;strong&gt;&amp;lsquo;지역, 언어&amp;rsquo;&lt;/strong&gt;정보로 프로그램은 입/출력시 사용자가 설정한 locale에 따라 인코딩을 적용하여 메세지를 출력한다.&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;현재값&#34;&gt;현재값&lt;/h2&gt;
-
-&lt;p&gt;현재 설정값을 보려면 &lt;strong&gt;&lt;a href=&#34;http://man.he.net/?topic=locale&amp;amp;section=all&#34;&gt;locale&lt;/a&gt;&lt;/strong&gt;을 사용한다.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;% locale
-LANG=en_US.utf8                # LC_* 값들을 설정하지 않았을때 적용되는 기본 값
-LANGUAGE=
-LC_CTYPE=&amp;quot;en_US.utf8&amp;quot;          # Character classification and case conversion.
-LC_NUMERIC=&amp;quot;en_US.utf8&amp;quot;        # Non-monetary numeric formats.
-LC_TIME=&amp;quot;en_US.utf8&amp;quot;           # Date and time formats.
-LC_COLLATE=&amp;quot;en_US.utf8&amp;quot;        # Collation order(알파벳 정렬과 관련된 규칙).
-LC_MONETARY=&amp;quot;en_US.utf8&amp;quot;       # Monetary formats.
-LC_MESSAGES=&amp;quot;en_US.utf8&amp;quot;       # Formats of informative and diagnostic messages and interactive responses.
-LC_PAPER=&amp;quot;en_US.utf8&amp;quot;          # Paper size.
-LC_NAME=&amp;quot;en_US.utf8&amp;quot;           # Name formats(이름 표기 형식. first name, last name).
-LC_ADDRESS=&amp;quot;en_US.utf8&amp;quot;        # Address formats and location information.
-LC_TELEPHONE=&amp;quot;en_US.utf8&amp;quot;      # Telephone number formats.
-LC_MEASUREMENT=&amp;quot;en_US.utf8&amp;quot;    # Measurement units (Metric or Other).
-LC_IDENTIFICATION=&amp;quot;en_US.utf8&amp;quot; # Metadata about the locale information.
-LC_ALL=                        # LC_*의 값들이 override 된다.
-&lt;/code&gt;&lt;/pre&gt;</description>
-    </item>
-    
-    <item>
       <title>Tmux</title>
       <link>http://blog.kiyeon.net/draft/2015-06-23-tmux/</link>
       <pubDate>Tue, 23 Jun 2015 17:22:51 +0000</pubDate>
@@ -82,51 +51,6 @@ LC_ALL=                        # LC_*의 값들이 override 된다.
       
       <guid>http://blog.kiyeon.net/2015/06/23/zsh/</guid>
       <description> Why Zsh is cooler than your shell My Extravagant Zsh Prompt A Beautifully Productive Terminal Experience Hey Prezto - Zsh for Command Line Heaven  </description>
-    </item>
-    
-    <item>
-      <title>프로그래머를 위한 ack(like-grep)</title>
-      <link>http://blog.kiyeon.net/2015/06/09/peurogeuraemeoreul-wihan-ack-like-grep/</link>
-      <pubDate>Tue, 09 Jun 2015 10:27:57 +0000</pubDate>
-      
-      <guid>http://blog.kiyeon.net/2015/06/09/peurogeuraemeoreul-wihan-ack-like-grep/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://unixhelp.ed.ac.uk/CGI/man-cgi?grep&#34;&gt;grep&lt;/a&gt;은 텍스트에서 키워드를 찾아내는 툴이다. 다음과 같이 사용한다.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;% lsb_release --all | grep -i desc
-Description:    Ubuntu 14.04.2 LTS
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;데이터가 많으면 해당 키워드를 찾기가 힘든데 이때 컬러옵션&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:grep-color&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:grep-color&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;을 사용할 수 있다.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;% cat /etc/services | grep --color=auto -i http
-# Updated from http://www.iana.org/assignments/port-numbers and other
-# sources like http://www.freebsd.org/cgi/cvsweb.cgi/src/etc/services .
-http            80/tcp          www             # WorldWideWeb HTTP
-http            80/udp                          # HyperText Transfer Protocol
-https           443/tcp                         # http protocol over TLS/SSL
-https           443/udp
-http-alt        8080/tcp        webcache        # WWW caching service
-http-alt        8080/udp
-hkp             11371/tcp                       # OpenPGP HTTP Keyserver
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>리눅스 패키지 관리(Linux Package Management)</title>
-      <link>http://blog.kiyeon.net/2015/06/04/linux-package-management/</link>
-      <pubDate>Thu, 04 Jun 2015 10:01:51 +0000</pubDate>
-      
-      <guid>http://blog.kiyeon.net/2015/06/04/linux-package-management/</guid>
-      <description>&lt;p&gt;e눅스에서 프로그램을 설치하는 방법은 2가지가 있다.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;소스코드를 직접 컴파일하여 설치하는 방법&lt;/li&gt;
-&lt;li&gt;각 배포판에서 제공하는 패키지 매니저를 통해 설치하는 방법&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -6,17 +6,36 @@
     <description>Recent content in Cli on Kiyeon&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Tue, 09 Jun 2015 10:27:57 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jun 2015 09:07:45 +0900</lastBuildDate>
     
 	<atom:link href="http://blog.kiyeon.net/tags/cli/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>프로그래머를 위한 ack(like-grep)</title>
-      <link>http://blog.kiyeon.net/2015/06/09/peurogeuraemeoreul-wihan-ack-like-grep/</link>
-      <pubDate>Tue, 09 Jun 2015 10:27:57 +0000</pubDate>
+      <title>rotate nohup out file</title>
+      <link>http://blog.kiyeon.net/2015/06/11/rotate-nohup-out-file/</link>
+      <pubDate>Thu, 11 Jun 2015 09:07:45 +0900</pubDate>
       
-      <guid>http://blog.kiyeon.net/2015/06/09/peurogeuraemeoreul-wihan-ack-like-grep/</guid>
+      <guid>http://blog.kiyeon.net/2015/06/11/rotate-nohup-out-file/</guid>
+      <description>&lt;p&gt;nohup은 터미널이 종료되어도 프로세스를 종료시키지 않고 동작시킬때 사용한다.&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;% nohup COMMAND        # nohup.out에 로그가 기록된다.
+% nohup COMMAND &amp;gt; FILE # FILE에 로그가 기록된다.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;표준출력과 표준에러는 출력파일을 지정하지 않으면 디폴트로 nohup.out에 기록된다.&lt;/p&gt;
+
+&lt;p&gt;로그파일을 지우면 프로세스는 출력파일을 잃게되고 프로세스를 재기동하지 않는 이상 로그를 볼 방법이 없다. 디버깅이 어려워지는 상황이 되는것이다. 물론 로그를 표준출력에 의지하지 않고 내부 로깅처리를 한다면야 상관없겠지만 간단한 스크립트에 그런 코드까지 추가한다는게 번거롭고 쉽지 않기도 하다.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>프로그래머를 위한 ack(like-grep)</title>
+      <link>http://blog.kiyeon.net/2015/06/09/ack-like-grep-for-programmer/</link>
+      <pubDate>Tue, 09 Jun 2015 10:27:57 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/06/09/ack-like-grep-for-programmer/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://unixhelp.ed.ac.uk/CGI/man-cgi?grep&#34;&gt;grep&lt;/a&gt;은 텍스트에서 키워드를 찾아내는 툴이다. 다음과 같이 사용한다.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;% lsb_release --all | grep -i desc

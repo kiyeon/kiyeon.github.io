@@ -5,13 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Kiyeon&#39;s Blog</title>
     <link rel="stylesheet" type="text/css" href="/css/ybasic.css" />
+
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-heath-dark.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/dos.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
 </head>
 <body>
 
 
 
 <div class="content">
-    <h1 class="title" title="June 25, 2015">Command line에서 java 작성하고 실행하기</h1>
+    <h1 class="title" title="June 25, 2015 14:27:21">Command line에서 java 작성하고 실행하기</h1>
     <nav id="TableOfContents">
 <ul>
 <li><a href="#writing-code">Writing code</a></li>
@@ -29,23 +38,26 @@
 
 <h1 id="writing-code">Writing code</h1>
 
-<p>Main class인 HelloWorld.java와 Library class인 Common.java를 만들어 compile과 package, import의 연관관계도 살펴보자.
-``` java HelloWorld.java
-package net.kiyeon;</p>
+<p>Main class인 HelloWorld.java와 Library class인 Common.java를 만들어 compile과 package, import의 연관관계도 살펴보자.</p>
 
-<p>import net.kiyeon.lib.Common;</p>
+<p>HelloWorld.java</p>
 
-<p>public class HelloWorld
+<pre><code class="language-java">package net.kiyeon;
+
+import net.kiyeon.lib.Common;
+
+public class HelloWorld
 {
   public static void main(String args[])
   {
-    Common.println(&ldquo;Hello World!&rdquo;);
+    Common.println(&quot;Hello World!&quot;);
   }
-}</p>
+}
+</code></pre>
 
-<pre><code>
-``` java Common.java
-package net.kiyeon.lib;
+<p>Common.java</p>
+
+<pre><code class="language-java">package net.kiyeon.lib;
 
 public class Common
 {
@@ -60,7 +72,7 @@ public class Common
 
 <p>Compile은 <code>javac</code>를 사용하며 라이브러리를 먼저 컴파일한다. 이때 <code>-d .</code>옵션을 줘야 package대로 폴더가 생성된다.</p>
 
-<pre><code class="language-bash">% javac -d . Common.java
+<pre><code class="language-shell">% javac -d . Common.java
 % tree
 .
 ├── Common.java
@@ -73,7 +85,7 @@ public class Common
 
 <p>다음으로 main class를 compile한다.</p>
 
-<pre><code class="language-bash">% javac -d . HelloWorld.java
+<pre><code class="language-shell">% javac -d . HelloWorld.java
 % tree
 .
 ├── Common.java
@@ -89,7 +101,7 @@ public class Common
 
 <p>실행해보자.</p>
 
-<pre><code class="language-bash">% java net.kiyeon.HelloWorld
+<pre><code class="language-shell">% java net.kiyeon.HelloWorld
 Hello World!
 </code></pre>
 
@@ -101,7 +113,7 @@ Hello World!
 
 <p><a href="https://docs.oracle.com/javase/tutorial/deployment/jar/build.html">jar</a>를 만들기 위해서는 <code>manifest.mf</code>가 필요한데 특별히 지정할 값이 없다면 jar가 디폴트로 생성한다.</p>
 
-<pre><code class="language-bash">% jar cvf myprogram.jar net
+<pre><code class="language-shell">% jar cvf myprogram.jar net
 added manifest
 adding: net/(in = 0) (out= 0)(stored 0%)
 adding: net/kiyeon/(in = 0) (out= 0)(stored 0%)
@@ -115,13 +127,13 @@ Common.java  HelloWorld.java  myprogram.jar  net
 
 <p>myprogram.jar가 만들어졌다. 실행할때 <code>-cp</code> 옵션을 사용해야한다.</p>
 
-<pre><code class="language-bash">% java -cp myprogram.jar net.kiyeon.HelloWorld
+<pre><code class="language-shell">% java -cp myprogram.jar net.kiyeon.HelloWorld
 Hello World!
 </code></pre>
 
 <p>간편하게 실행시키려면 manifest.mf에 main-class를 지정하고 jar로 묶은뒤 java로 실행할때 <code>-jar</code>옵션을 주면 된다.</p>
 
-<pre><code class="language-bash">% echo main-class: net.kiyeon.HelloWorld &gt; manifest.mf
+<pre><code class="language-shell">% echo main-class: net.kiyeon.HelloWorld &gt; manifest.mf
 
 % jar cvmf manifest.mf myprogram.jar net
 added manifest
@@ -144,17 +156,19 @@ Hello World!
 <p>Note: The Class-Path header points to classes or JAR files on the local network, not JAR files within the JAR file or classes accessible over Internet protocols. To load classes in JAR files within a JAR file into the class path, you must write custom code to load those classes. For example, if MyJar.jar contains another JAR file called MyUtils.jar, you cannot use the Class-Path header in MyJar.jar&rsquo;s manifest to load classes in MyUtils.jar into the class path. - <a href="https://docs.oracle.com/javase/tutorial/deployment/jar/downman.html">java documentation</a></p>
 </blockquote>
 
-<p>외부 Jar를 함께 묶고 싶다면 압축을 푼후 Jar하나로 묶어 참조하거나 MANIFEST.MF에 <code>Class-Path</code>를 지정하거나 (MANIFEST.MF에서 Class-Path는 Main-Class가 있는 폴더의 상대경로로 지정한다.)
-``` java MANIFEST.MF
-Manifest-Version: 1.0
+<p>외부 Jar를 함께 묶고 싶다면 압축을 푼후 Jar하나로 묶어 참조하거나 MANIFEST.MF에 <code>Class-Path</code>를 지정하거나 (MANIFEST.MF에서 Class-Path는 Main-Class가 있는 폴더의 상대경로로 지정한다.)</p>
+
+<p>MANIFEST.MF</p>
+
+<pre><code class="language-java">Manifest-Version: 1.0
 Created-By: 1.7.0_06 (Oracle Corporation)
 Main-Class: net.kiyeon.HelloWorld
-Class-Path: lib/ojdbc6.jar</p>
+Class-Path: lib/ojdbc6.jar
+</code></pre>
 
-<pre><code>
-java실행시 `-cp`옵션으로 classpath를 함께 지정하는 것이다. classpath지정시 윈도우는 `;`를 구분자로 사용하고 리눅스계열은 `:`를 구분자로 사용한다.
-``` bash
-% java -cp ./lib/ojdbc6.jar:myprogram.jar net.kiyeon.HelloWorld
+<p>java실행시 <code>-cp</code>옵션으로 classpath를 함께 지정하는 것이다. classpath지정시 윈도우는 <code>;</code>를 구분자로 사용하고 리눅스계열은 <code>:</code>를 구분자로 사용한다.</p>
+
+<pre><code class="language-shell">% java -cp ./lib/ojdbc6.jar:myprogram.jar net.kiyeon.HelloWorld
 </code></pre>
 
 <h1 id="references">References</h1>
@@ -181,6 +195,25 @@ java실행시 `-cp`옵션으로 classpath를 함께 지정하는 것이다. clas
  <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
 </ol>
 </div>
+
+    
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        (function() {
+            
+            
+            if (window.location.hostname == "localhost")
+                return;
+
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            var disqus_shortname = 'kiyeon';
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
 </div>
 
 

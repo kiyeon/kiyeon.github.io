@@ -5,16 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Kiyeon&#39;s Blog</title>
     <link rel="stylesheet" type="text/css" href="/css/ybasic.css" />
+
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-heath-dark.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/dos.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
 </head>
 <body>
 
 
 
 <div class="content">
-    <h1 class="title" title="June 24, 2015">Change locale in linux</h1>
+    <h1 class="title" title="June 24, 2015 09:28:08">Change locale in linux</h1>
     <nav id="TableOfContents">
-<ul>
-<li>
 <ul>
 <li><a href="#현재값">현재값</a></li>
 <li><a href="#변경-가능한-목록">변경 가능한 목록</a></li>
@@ -25,16 +32,15 @@
 <li><a href="#시스템-기본값-설정">시스템 기본값 설정</a></li>
 <li><a href="#정리">정리</a></li>
 <li><a href="#references">References</a></li>
-</ul></li>
 </ul>
 </nav>
     <p>Locale은 <strong>&lsquo;지역, 언어&rsquo;</strong>정보로 프로그램은 입/출력시 사용자가 설정한 locale에 따라 인코딩을 적용하여 메세지를 출력한다.<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup></p>
 
-<h2 id="현재값">현재값</h2>
+<h1 id="현재값">현재값</h1>
 
 <p>현재 설정값을 보려면 <strong><a href="http://man.he.net/?topic=locale&amp;section=all">locale</a></strong>을 사용한다.</p>
 
-<pre><code class="language-bash">% locale
+<pre><code class="language-shell">% locale
 LANG=en_US.utf8                # LC_* 값들을 설정하지 않았을때 적용되는 기본 값
 LANGUAGE=
 LC_CTYPE=&quot;en_US.utf8&quot;          # Character classification and case conversion.
@@ -53,14 +59,16 @@ LC_ALL=                        # LC_*의 값들이 override 된다.
 </code></pre>
 
 <p>
-Locale은 다음과 같은 포맷으로 정의된다.
-<code>&lt;lang&gt;_&lt;territory&gt;.&lt;codeset&gt;[@&lt;modifiers&gt;]</code> = <code>en_US.utf8</code></p>
+Locale은 다음과 같은 포맷으로 정의된다.</p>
 
-<h2 id="변경-가능한-목록">변경 가능한 목록</h2>
+<pre><code>&lt;lang&gt;_&lt;territory&gt;.&lt;codeset&gt;[@&lt;modifiers&gt;] = en_US.utf8
+</code></pre>
+
+<h1 id="변경-가능한-목록">변경 가능한 목록</h1>
 
 <p>변경 가능한 값을 보려면 <strong><a href="http://man.he.net/?topic=locale&amp;section=all">locale</a> -a</strong> or <strong><a href="http://man.he.net/?topic=localedef&amp;section=all">localedef</a> &ndash;list-archive</strong>를 사용한다.</p>
 
-<pre><code class="language-bash">% locale -a
+<pre><code class="language-shell">% locale -a
 C
 C.UTF-8
 en_US.utf8
@@ -72,15 +80,15 @@ en_US.utf8
 
 <p>locale데이터는 <code>/usr/lib/locale/locale-archive</code> 파일에 기록되는데 위 커맨드는 이 아카이브파일에 저장된 목록을 보여준다.</p>
 
-<pre><code class="language-bash">% ls -lh /usr/lib/locale/locale-archive
+<pre><code class="language-shell">% ls -lh /usr/lib/locale/locale-archive
 -rw-r--r-- 1 root root 1.3M Jun 24 10:22 /usr/lib/locale/locale-archive
 </code></pre>
 
-<h2 id="지원하는-목록">지원하는 목록</h2>
+<h1 id="지원하는-목록">지원하는 목록</h1>
 
 <p>시스템에서 지원하는 목록은 <code>/usr/share/i18n/SUPPORTED</code>에 기록되어있다.</p>
 
-<pre><code class="language-bash">% cat /usr/share/i18n/SUPPORTED | wc -l
+<pre><code class="language-shell">% cat /usr/share/i18n/SUPPORTED | wc -l
 457
 
 
@@ -98,11 +106,11 @@ am_ET UTF-8
 ...
 </code></pre>
 
-<h2 id="locale-추가">Locale 추가</h2>
+<h1 id="locale-추가">Locale 추가</h1>
 
 <p>지원하는 Locale을 추가할 수 있으며 추가하게 되면 <code>/usr/lib/locale/locale-archive</code>에 기록이 된다. 추가할때는 <strong><a href="http://man.he.net/?topic=locale-gen&amp;section=all">locale-gen</a></strong>을 사용한다. 지원하는 Locale 목록을 보고 루트권한으로 추가한다. 여기서는 한국어와 프랑스어를 추가한다.</p>
 
-<pre><code class="language-bash">% cat /usr/share/i18n/SUPPORTED | grep -Ei '(ko_kr|fr_fr)'
+<pre><code class="language-shell">% cat /usr/share/i18n/SUPPORTED | grep -Ei '(ko_kr|fr_fr)'
 fr_FR.UTF-8 UTF-8
 fr_FR ISO-8859-1
 fr_FR@euro ISO-8859-15
@@ -127,11 +135,11 @@ fr_FR.utf8
 ko_KR.utf8
 </code></pre>
 
-<h2 id="사용">사용</h2>
+<h1 id="사용">사용</h1>
 
 <p>추가된 Locale을 사용하려면 환경변수 <code>LANG</code>에 해당 Locale을 지정하면 된다.</p>
 
-<pre><code class="language-bash">% export LANG=fr_FR.utf8
+<pre><code class="language-shell">% export LANG=fr_FR.utf8
 
 
 % locale
@@ -161,11 +169,11 @@ mercredi 24 juin 2015, 21:35:59 (UTC+0900)
 2015. 06. 24. (수) 21:40:54 KST
 </code></pre>
 
-<h2 id="삭제">삭제</h2>
+<h1 id="삭제">삭제</h1>
 
 <p>추가된 Locale을 삭제할때는 <code>locale-gen --purge</code>를 사용하며 이때 인자로 주어진 Locale을 제외한 모든 Locale이 삭제된다.</p>
 
-<pre><code class="language-bash">% sudo locale-gen --purge en_US.utf8 ko_KR.utf8
+<pre><code class="language-shell">% sudo locale-gen --purge en_US.utf8 ko_KR.utf8
 Generating locales...
   en_US.UTF-8... done
   ko_KR.UTF-8... done
@@ -176,16 +184,16 @@ en_US.utf8
 ko_KR.utf8
 </code></pre>
 
-<h2 id="시스템-기본값-설정">시스템 기본값 설정</h2>
+<h1 id="시스템-기본값-설정">시스템 기본값 설정</h1>
 
 <p>locale을 시스템 기본값으로 변경하려면 <code>/etc/default/locale</code>에서 <code>LANG</code>의 값을 변경한후 리부팅을 하면 된다.</p>
 
-<pre><code class="language-bash">% cat /etc/default/locale
+<pre><code class="language-shell">% cat /etc/default/locale
 # Created by cloud-init v. 0.7.5 on Wed, 10 Dec 2014 23:55:44 +0000
 LANG=&quot;en_US.UTF-8&quot;
 </code></pre>
 
-<h2 id="정리">정리</h2>
+<h1 id="정리">정리</h1>
 
 <ul>
 <li><a href="http://man.he.net/?topic=locale&amp;section=all">locale</a>, <a href="http://man.he.net/?topic=localedef&amp;section=all">localedef</a> - locale 조회</li>
@@ -196,7 +204,7 @@ LANG=&quot;en_US.UTF-8&quot;
 <li><code>export LANG=ko_KR.UTF-8</code> - locale 적용</li>
 </ul>
 
-<h2 id="references">References</h2>
+<h1 id="references">References</h1>
 
 <ul>
 <li><a href="http://www.shellhacks.com/en/HowTo-Change-Locale-Language-and-Character-Set-in-Linux">HowTo : Change Locale (Language and Character Set) in Linux</a></li>
@@ -211,6 +219,25 @@ LANG=&quot;en_US.UTF-8&quot;
  <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
 </ol>
 </div>
+
+    
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        (function() {
+            
+            
+            if (window.location.hostname == "localhost")
+                return;
+
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            var disqus_shortname = 'kiyeon';
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
 </div>
 
 

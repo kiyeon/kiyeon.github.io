@@ -6,10 +6,23 @@
     <description>Recent content in Posts on Kiyeon&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Fri, 04 Dec 2015 14:55:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 Mar 2017 19:00:13 +0900</lastBuildDate>
     
 	<atom:link href="http://blog.kiyeon.net/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>macOS에 스타크래프트 설치하고 실행하기</title>
+      <link>http://blog.kiyeon.net/post/installing-starcraft-on-macos/</link>
+      <pubDate>Tue, 07 Mar 2017 19:00:13 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/post/installing-starcraft-on-macos/</guid>
+      <description>&lt;p&gt;블리자드의 스타크래프트를 macOS(Sierra Version 10.12.3)에 설치하고 실행하는 방법이다.&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;과거 맥에 PowerPC를 사용할때는 &lt;a href=&#34;https://kr.battle.net/shop/ko/product/game/legacy-games&#34;&gt;블리자드에서 스타크래프트 맥버전을 지원&lt;/a&gt;했으나 &lt;a href=&#34;https://kr.battle.net/support/ko/article/starcraft-system-requirements&#34;&gt;PowerPC지원이 끊기면서 Windows 버전만 지원&lt;/a&gt;하게되어 많은 맥 유저들이 스타크래프트를 맥에서 실행하는 방법에 대한 글들이 많았지만 방법도 다양하고 보안상 위험해 보여 내가 직접 성공한 내용에 대해 기록해봤다.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>리눅스 패키지 설치하기</title>
@@ -69,7 +82,7 @@ Windows외에 테스트용 리눅스 서버나 복원용 툴, 고스트, 네트�
     <item>
       <title>Command line에서 java 작성하고 실행하기</title>
       <link>http://blog.kiyeon.net/2015/06/25/command-lineeseo-java-jagseonghago-silhaenghagi/</link>
-      <pubDate>Thu, 25 Jun 2015 14:27:21 +0000</pubDate>
+      <pubDate>Thu, 25 Jun 2015 14:27:21 +0900</pubDate>
       
       <guid>http://blog.kiyeon.net/2015/06/25/command-lineeseo-java-jagseonghago-silhaenghagi/</guid>
       <description>&lt;p&gt;이상하게도 java는 이클립스가 없이는 사용하기가 힘들다. 이클립스에 너무 익숙해져서 그럴지도 모르겠다. 간단하게 command line상에서 java를 작성하고 컴파일하고 실행해보자.&lt;/p&gt;
@@ -80,16 +93,16 @@ Windows외에 테스트용 리눅스 서버나 복원용 툴, 고스트, 네트�
     <item>
       <title>Change locale in linux</title>
       <link>http://blog.kiyeon.net/2015/06/24/change-locale-in-linux/</link>
-      <pubDate>Wed, 24 Jun 2015 09:28:08 +0000</pubDate>
+      <pubDate>Wed, 24 Jun 2015 09:28:08 +0900</pubDate>
       
       <guid>http://blog.kiyeon.net/2015/06/24/change-locale-in-linux/</guid>
       <description>&lt;p&gt;Locale은 &lt;strong&gt;&amp;lsquo;지역, 언어&amp;rsquo;&lt;/strong&gt;정보로 프로그램은 입/출력시 사용자가 설정한 locale에 따라 인코딩을 적용하여 메세지를 출력한다.&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;현재값&#34;&gt;현재값&lt;/h2&gt;
+&lt;h1 id=&#34;현재값&#34;&gt;현재값&lt;/h1&gt;
 
 &lt;p&gt;현재 설정값을 보려면 &lt;strong&gt;&lt;a href=&#34;http://man.he.net/?topic=locale&amp;amp;section=all&#34;&gt;locale&lt;/a&gt;&lt;/strong&gt;을 사용한다.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;% locale
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;% locale
 LANG=en_US.utf8                # LC_* 값들을 설정하지 않았을때 적용되는 기본 값
 LANGUAGE=
 LC_CTYPE=&amp;quot;en_US.utf8&amp;quot;          # Character classification and case conversion.
@@ -128,7 +141,7 @@ LC_ALL=                        # LC_*의 값들이 override 된다.
     <item>
       <title>Windows Batch Scripting</title>
       <link>http://blog.kiyeon.net/2015/06/17/windows-batch-scripting/</link>
-      <pubDate>Wed, 17 Jun 2015 09:42:37 +0000</pubDate>
+      <pubDate>Wed, 17 Jun 2015 09:42:37 +0900</pubDate>
       
       <guid>http://blog.kiyeon.net/2015/06/17/windows-batch-scripting/</guid>
       <description>&lt;p&gt;MS의 DOS로 시작해 Windows를 거쳐 유닉스와 리눅스를 만나고 이제는 유닉스(Mac)에 정착했다. 하지만 여전히 일선상에서는 Windows를 벗어나지 못하고 있다. 로컬OS는 Windows를 사용하지만 대부분 서비스를 이용하기위한(업무환경) 수단일뿐 실제 개발은 리눅스상에서 더 많이 한다. 좋든 실든 업무효율성을 높이기 위해 다양한 유틸리티와 Script가 필요하다.&lt;/p&gt;
@@ -150,7 +163,7 @@ LC_ALL=                        # LC_*의 값들이 override 된다.
 
 &lt;p&gt;이 설정은 bash기준이며 다른 쉘에서는 약간 다를 수 있다.&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;export HISTTIMEFORMAT=&#39;%F %T &#39;              # 로그에 날짜와 시간 출력
+&lt;pre&gt;&lt;code&gt;export HISTTIMEFORMAT=&#39;%F %T &#39;              # 로그에 날짜와 시간 출력
 export HISTIGNORE=&amp;quot;pwd:ls:ls -ltr:&amp;quot;         # pwd, ls, ls -ltr명령은 로그에 기록하지 않는다.
 export HISTCONTROL=ignorespace              # 명령 실행시 처음 스페이스가 포함되면 로그에 기록하지 않는다.
 export HISTCONTROL=ignoredups               # 명령이 중복되면 무시 (pwd를 연속으로 여러번 입력하면 로그에는 pwd하나만 기록된다)
@@ -194,7 +207,7 @@ export HISTFILE=/root/.commandline_warrior  # 히스토리 로그 파일 변경
     <item>
       <title>rotate nohup out file</title>
       <link>http://blog.kiyeon.net/2015/06/11/rotate-nohup-out-file/</link>
-      <pubDate>Thu, 11 Jun 2015 09:07:45 +0000</pubDate>
+      <pubDate>Thu, 11 Jun 2015 09:07:45 +0900</pubDate>
       
       <guid>http://blog.kiyeon.net/2015/06/11/rotate-nohup-out-file/</guid>
       <description>&lt;p&gt;nohup은 터미널이 종료되어도 프로세스를 종료시키지 않고 동작시킬때 사용한다.&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
@@ -212,10 +225,10 @@ export HISTFILE=/root/.commandline_warrior  # 히스토리 로그 파일 변경
     
     <item>
       <title>프로그래머를 위한 ack(like-grep)</title>
-      <link>http://blog.kiyeon.net/2015/06/09/peurogeuraemeoreul-wihan-ack-like-grep/</link>
-      <pubDate>Tue, 09 Jun 2015 10:27:57 +0000</pubDate>
+      <link>http://blog.kiyeon.net/2015/06/09/ack-like-grep-for-programmer/</link>
+      <pubDate>Tue, 09 Jun 2015 10:27:57 +0900</pubDate>
       
-      <guid>http://blog.kiyeon.net/2015/06/09/peurogeuraemeoreul-wihan-ack-like-grep/</guid>
+      <guid>http://blog.kiyeon.net/2015/06/09/ack-like-grep-for-programmer/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://unixhelp.ed.ac.uk/CGI/man-cgi?grep&#34;&gt;grep&lt;/a&gt;은 텍스트에서 키워드를 찾아내는 툴이다. 다음과 같이 사용한다.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;% lsb_release --all | grep -i desc
@@ -240,35 +253,9 @@ hkp             11371/tcp                       # OpenPGP HTTP Keyserver
     </item>
     
     <item>
-      <title>리눅스 패키지 관리(Linux Package Management)</title>
-      <link>http://blog.kiyeon.net/2015/06/04/linux-package-management/</link>
-      <pubDate>Thu, 04 Jun 2015 10:01:51 +0000</pubDate>
-      
-      <guid>http://blog.kiyeon.net/2015/06/04/linux-package-management/</guid>
-      <description>&lt;p&gt;e눅스에서 프로그램을 설치하는 방법은 2가지가 있다.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;소스코드를 직접 컴파일하여 설치하는 방법&lt;/li&gt;
-&lt;li&gt;각 배포판에서 제공하는 패키지 매니저를 통해 설치하는 방법&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>*nix Timezone 변경하기(Changing the timezone in *nix)</title>
-      <link>http://blog.kiyeon.net/2015/06/04/star-nix-timezone-byeongyeonghagi-changing-the-timezone-in-star-nix/</link>
-      <pubDate>Thu, 04 Jun 2015 09:25:19 +0000</pubDate>
-      
-      <guid>http://blog.kiyeon.net/2015/06/04/star-nix-timezone-byeongyeonghagi-changing-the-timezone-in-star-nix/</guid>
-      <description> *nix시스템의 시간대를 변경해보자.
-References  Changing the timezone, date, and time 협정 세계시 그리니치 평균시 한국 표준시 - UTC보다 9시간 빠른 동경 135도를 기준 Standard time zones of the world Greenwich Mean Time 우분투 NTP 시간동기화  </description>
-    </item>
-    
-    <item>
       <title>Octopress Start</title>
       <link>http://blog.kiyeon.net/2015/05/26/octopress-and-start/</link>
-      <pubDate>Tue, 26 May 2015 20:39:26 +0000</pubDate>
+      <pubDate>Tue, 26 May 2015 20:39:26 +0900</pubDate>
       
       <guid>http://blog.kiyeon.net/2015/05/26/octopress-and-start/</guid>
       <description>&lt;h1 id=&#34;intro&#34;&gt;Intro&lt;/h1&gt;

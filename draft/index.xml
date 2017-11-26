@@ -35,19 +35,6 @@ Copy the config.</description>
     </item>
     
     <item>
-      <title>macOS에 스타크래프트 설치하고 실행하기</title>
-      <link>http://blog.kiyeon.net/draft/installing-starcraft-on-macos/</link>
-      <pubDate>Tue, 07 Mar 2017 19:00:13 +0900</pubDate>
-      
-      <guid>http://blog.kiyeon.net/draft/installing-starcraft-on-macos/</guid>
-      <description>&lt;p&gt;블리자드 스타크래프트를 macOS(Sierra Version 10.12.3)에 설치하고 실행하는 방법이다.&lt;/p&gt;
-
-&lt;p&gt;과거 맥에 PowerPC를 사용할때는 &lt;a href=&#34;https://kr.battle.net/shop/ko/product/game/legacy-games&#34;&gt;블리자드에서 스타크래프트 맥버전을 지원&lt;/a&gt;했으나 &lt;a href=&#34;https://kr.battle.net/support/ko/article/starcraft-system-requirements&#34;&gt;PowerPC지원이 끊기면서 Windows 버전만 지원&lt;/a&gt;하게되어 많은 맥 유저들이 스타크래프트를 맥에서 실행하는 방법에 대한 글들이 많았으나 나에게 적용되는 글을 찾기도 힘들고 보안상 위험해 보여 내가 직접 성공한 내용에 대해 기록해봤다.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>HUGO?</title>
       <link>http://blog.kiyeon.net/draft/%ED%95%9C%EA%B8%80%EC%9D%80-%EC%95%88%EB%90%98%EB%82%98/</link>
       <pubDate>Mon, 13 Feb 2017 10:37:15 +0900</pubDate>
@@ -104,6 +91,32 @@ Copy the config.</description>
       <description>&lt;blockquote&gt;
 &lt;p&gt;정규 표현식(正規表現式, 영어: regular expression, 간단히 regexp 또는 regex)은 특정한 규칙을 가진 문자열의 집합을 표현하는 데 사용하는 형식 언어이다. 정규 표현식은 많은 텍스트 편집기와 프로그래밍 언어에서 문자열의 검색과 치환을 위해 지원하고 있으며, 특히 펄과 Tcl은 언어 자체에 강력한 정규 표현식을 구현하고 있다.
 &lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>리눅스 패키지 관리(Linux Package Management)</title>
+      <link>http://blog.kiyeon.net/2015/06/04/linux-package-management/</link>
+      <pubDate>Thu, 04 Jun 2015 10:01:51 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/06/04/linux-package-management/</guid>
+      <description>&lt;p&gt;e눅스에서 프로그램을 설치하는 방법은 2가지가 있다.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;소스코드를 직접 컴파일하여 설치하는 방법&lt;/li&gt;
+&lt;li&gt;각 배포판에서 제공하는 패키지 매니저를 통해 설치하는 방법&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>*nix Timezone 변경하기(Changing the timezone in *nix)</title>
+      <link>http://blog.kiyeon.net/2015/06/04/star-nix-timezone-byeongyeonghagi-changing-the-timezone-in-star-nix/</link>
+      <pubDate>Thu, 04 Jun 2015 09:25:19 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2015/06/04/star-nix-timezone-byeongyeonghagi-changing-the-timezone-in-star-nix/</guid>
+      <description> *nix시스템의 시간대를 변경해보자.
+References  Changing the timezone, date, and time 협정 세계시 그리니치 평균시 한국 표준시 - UTC보다 9시간 빠른 동경 135도를 기준 Standard time zones of the world Greenwich Mean Time 우분투 NTP 시간동기화  </description>
     </item>
     
     <item>

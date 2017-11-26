@@ -5,13 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Kiyeon&#39;s Blog</title>
     <link rel="stylesheet" type="text/css" href="/css/ybasic.css" />
+
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-heath-dark.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/dos.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
 </head>
 <body>
 
 
 
 <div class="content">
-    <h1 class="title" title="June 12, 2015">History Command</h1>
+    <h1 class="title" title="June 12, 2015 11:35:51">History Command</h1>
     <nav id="TableOfContents">
 <ul>
 <li>
@@ -28,7 +37,7 @@
 
 <p>이 설정은 bash기준이며 다른 쉘에서는 약간 다를 수 있다.<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup></p>
 
-<pre><code class="language-bash">export HISTTIMEFORMAT='%F %T '              # 로그에 날짜와 시간 출력
+<pre><code>export HISTTIMEFORMAT='%F %T '              # 로그에 날짜와 시간 출력
 export HISTIGNORE=&quot;pwd:ls:ls -ltr:&quot;         # pwd, ls, ls -ltr명령은 로그에 기록하지 않는다.
 export HISTCONTROL=ignorespace              # 명령 실행시 처음 스페이스가 포함되면 로그에 기록하지 않는다.
 export HISTCONTROL=ignoredups               # 명령이 중복되면 무시 (pwd를 연속으로 여러번 입력하면 로그에는 pwd하나만 기록된다)
@@ -76,6 +85,25 @@ export HISTFILE=/root/.commandline_warrior  # 히스토리 로그 파일 변경
  <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
 </ol>
 </div>
+
+    
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        (function() {
+            
+            
+            if (window.location.hostname == "localhost")
+                return;
+
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            var disqus_shortname = 'kiyeon';
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
 </div>
 
 
