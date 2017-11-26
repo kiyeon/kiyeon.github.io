@@ -6,20 +6,10 @@
     <description>Recent content in Posts on Kiyeon&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Wed, 10 Feb 2016 14:28:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 04 Dec 2015 14:55:00 +0000</lastBuildDate>
     
 	<atom:link href="http://blog.kiyeon.net/post/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Jekyll</title>
-      <link>http://blog.kiyeon.net/2016/02/10/jekyll/</link>
-      <pubDate>Wed, 10 Feb 2016 14:28:00 +0000</pubDate>
-      
-      <guid>http://blog.kiyeon.net/2016/02/10/jekyll/</guid>
-      <description>Link
- Jekyll Wiki  Themes  지킬로 만들어진 사이트 jekyllbootstrap.com jekyllthemes.org  </description>
-    </item>
     
     <item>
       <title>리눅스 패키지 설치하기</title>

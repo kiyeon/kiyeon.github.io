@@ -13,10 +13,10 @@
     
     <item>
       <title>키보드로 아이폰 제어</title>
-      <link>http://blog.kiyeon.net/draft/iphone-voiceover/</link>
+      <link>http://blog.kiyeon.net/2017/11/20/controling-iphone-by-keyboard/</link>
       <pubDate>Mon, 20 Nov 2017 14:15:59 +0900</pubDate>
       
-      <guid>http://blog.kiyeon.net/draft/iphone-voiceover/</guid>
+      <guid>http://blog.kiyeon.net/2017/11/20/controling-iphone-by-keyboard/</guid>
       <description>현재 iPhone6를 사용중이다. 원래 6s를 사용했는데 잃어버리고 중고로 얻은 폰인데 베터리가 심하게 빨리 없어진다. 완충후 출근하면 60%가 남아있다. 하루종일 충전을 하고 있어야 한다. 게다가 화면 오른쪽에 세로방향으로 4갈래 라인이 생겼는데 그 부분은 터치가 되지 않는다. 가로, 세로모드 그리고 키보드를 좌측, 우측으로 옮겨가며 정말 힘겹게 사용하고 있다.
 메시지를 주고받을때 타이핑하기가 굉장히 불편한데 그래서 대안으로 블루투스 키보드를 사용한다. 그런데 사용하다보니 불편한점이 있었다. 앱의 다른버튼을 선택하거나 화면을 전환하거나 할때 키보드만으로는 제어가 안되서 손가락을 이용해 터치가 필요했던 것이다.</description>
     </item>
@@ -61,11 +61,10 @@ Copy the config.</description>
     <item>
       <title>Jekyll</title>
       <link>http://blog.kiyeon.net/2016/02/10/jekyll/</link>
-      <pubDate>Wed, 10 Feb 2016 14:28:00 +0000</pubDate>
+      <pubDate>Wed, 10 Feb 2016 14:28:00 +0900</pubDate>
       
       <guid>http://blog.kiyeon.net/2016/02/10/jekyll/</guid>
-      <description>Link
- Jekyll Wiki  Themes  지킬로 만들어진 사이트 jekyllbootstrap.com jekyllthemes.org  </description>
+      <description> Link  Jekyll Wiki  Themes  지킬로 만들어진 사이트 jekyllbootstrap.com jekyllthemes.org  </description>
     </item>
     
     <item>

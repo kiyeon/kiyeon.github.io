@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://blog.kiyeon.net/draft/iphone-voiceover/</loc>
+    <loc>http://blog.kiyeon.net/2017/11/20/controling-iphone-by-keyboard/</loc>
     <lastmod>2017-11-20T14:15:59+09:00</lastmod>
   </url>
   
@@ -24,7 +24,7 @@
   
   <url>
     <loc>http://blog.kiyeon.net/2016/02/10/jekyll/</loc>
-    <lastmod>2016-02-10T14:28:00+00:00</lastmod>
+    <lastmod>2016-02-10T14:28:00+09:00</lastmod>
   </url>
   
   <url>
@@ -210,8 +210,8 @@
   </url>
   
   <url>
-    <loc>http://blog.kiyeon.net/categories/jekyll/</loc>
-    <lastmod>2016-02-10T14:28:00+00:00</lastmod>
+    <loc>http://blog.kiyeon.net/tags/jekyll/</loc>
+    <lastmod>2016-02-10T14:28:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -259,7 +259,7 @@
   
   <url>
     <loc>http://blog.kiyeon.net/post/</loc>
-    <lastmod>2016-02-10T14:28:00+00:00</lastmod>
+    <lastmod>2015-12-04T14:55:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
