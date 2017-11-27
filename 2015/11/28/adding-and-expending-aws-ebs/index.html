@@ -1,134 +1,6 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kiyeon&#39;s Blog</title>
-    <link rel="stylesheet" type="text/css" href="/css/ybasic.css" />
-
-    
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-heath-dark.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/dos.min.js"></script>
-    
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
-    
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/lisp.min.js"></script>
-    
-    <script>hljs.initHighlightingOnLoad();</script>
-    
-</head>
-<body>
-
-
-
-<div class="content">
-    <h1 class="title" title="November 28, 2015 18:40:00">AWS EBS 확장및 추가하기</h1>
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#볼륨-확장">볼륨 확장</a></li>
-<li><a href="#볼륨-추가">볼륨 추가</a>
-<ul>
-<li><a href="#볼륨-추가-후-fstab-설정">볼륨 추가 후 fstab 설정</a></li>
-</ul></li>
-<li><a href="#etc">Etc</a></li>
-<li><a href="#references">References</a></li>
-</ul>
-</nav>
-    
-
-<p>AWS EC2의 디스크가 Full이 되어 확장이 필요했다.</p>
-
-<h1 id="볼륨-확장">볼륨 확장</h1>
-
-<p><a href="http://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/ebs-expand-volume.html">Linux에서 EBS 볼륨의 스토리지 공간 확장</a></p>
-
-<ol>
-<li>인스턴스를 Stop 시킨다.</li>
-<li>EBS Volume을 찾아 Snapshopt을 만든다. (복사용)</li>
-<li>Snapshot에서 2에서 만든 스냅샷을 선택하여 새로운 볼륨을 만든다. 여기서 확장할 사이즈를 정한다. <code>ex) 8GB -&gt; 15GB</code>, 볼륨이 커지면 비용이 발생하므로 <a href="https://calculator.s3.amazonaws.com/index.html">SIMPLE MONTHLY CALCULATOR</a>로 요금을 계산하자.</li>
-<li>이전 볼륨을 분리(Detach Volume)하고 새로 만든 볼륨을 연결(Attach Volume)한다.</li>
-<li>인스턴스를 다시 시작한다.</li>
-<li>파일 시스템을 확장한다. 여기서부터는 <a href="http://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/ebs-expand-volume.html#recognize-expanded-volume-linux">Linux 파일 시스템 확장</a>참조</li>
-</ol>
-
-<h1 id="볼륨-추가">볼륨 추가</h1>
-
-<p><a href="http://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/ec2-add-volume-to-instance.html">인스턴스에 볼륨 추가</a></p>
-
-<ol>
-<li>추가하려는 인스턴스의 가용 영역(Availability Zone)을 확인한다. 추가 볼륨의 가용 영역이 인스턴스와 같아야 연결할 수 있다.</li>
-<li>EBS메뉴에서 Volumes를 선택하여 새로운 볼륨을 생성한다.(볼륨 유형, 크기, 가용 영역 입력)</li>
-<li>새로 생성된 볼륨을 연결(Attach Volume)한다. 생성한 볼륨의 상태가 <code>available</code>이 되면 인스턴스에 연결 할 수 있다.</li>
-<li>인스턴스에 접속하여 볼륨을 연결한다.
-
-<ul>
-<li><code>lsblk</code> or <code>sudo fdisk -l | grep Disk</code>로 연결된 볼륨을 확인 할 수 있다. (<code>blkid</code>로 UUID와 File system을 확인 할 수 있다.)</li>
-<li>새 볼륨을 사용하려면 포맷을 해야한다. <code>sudo mkfs -t ext4 /dev/xvdf</code>로 포맷.</li>
-<li>포맷된 디바이스를 mount로 연결한다. <code>sudo mkdir /mnt/my-data</code>, <code>sudo mount /dev/xvdf /mnt/my-data</code></li>
-</ul></li>
-</ol>
-
-<h2 id="볼륨-추가-후-fstab-설정">볼륨 추가 후 fstab 설정</h2>
-
-<p>부팅 될때마다 mount를 유지하려면 <code>/etc/fstab</code>에 마운트 정보를 기록해야 한다.</p>
-
-<p><code>fstab</code>은 리눅스가 부팅될 때마다 자동으로 읽는 중요한 파일이므로 수정 시에 주의가 필요하다. 글자가 틀릴 경우 부팅 자체가 아예 안될 수 있다.</p>
-
-<p>fstab에는 6개의 필드가 있다.</p>
-
-<pre><code class="language-bash"># 장치이름     마운트될 디렉토리  파일 시스템 속성       dump 사용 여부  파일 시스템 체크 여부
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1"><title>Kiyeon&#39;s Blog</title><link rel=stylesheet type=text/css href=/css/ybasic.css><link rel=stylesheet href=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-heath-dark.min.css><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js></script><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/dos.min.js></script><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js></script><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/lisp.min.js></script><script>hljs.initHighlightingOnLoad();</script></head><body><div class=content><h1 class=title title="November 28, 2015 18:40:00">AWS EBS 확장및 추가하기</h1><nav id=TableOfContents><ul><li><a href=#볼륨-확장>볼륨 확장</a></li><li><a href=#볼륨-추가>볼륨 추가</a><ul><li><a href=#볼륨-추가-후-fstab-설정>볼륨 추가 후 fstab 설정</a></li></ul></li><li><a href=#etc>Etc</a></li><li><a href=#references>References</a></li></ul></nav><p>AWS EC2의 디스크가 Full이 되어 확장이 필요했다.</p><h1 id=볼륨-확장>볼륨 확장</h1><p><a href=http://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/ebs-expand-volume.html>Linux에서 EBS 볼륨의 스토리지 공간 확장</a></p><ol><li>인스턴스를 Stop 시킨다.</li><li>EBS Volume을 찾아 Snapshopt을 만든다. (복사용)</li><li>Snapshot에서 2에서 만든 스냅샷을 선택하여 새로운 볼륨을 만든다. 여기서 확장할 사이즈를 정한다. <code>ex) 8GB -&gt; 15GB</code>, 볼륨이 커지면 비용이 발생하므로 <a href=https://calculator.s3.amazonaws.com/index.html>SIMPLE MONTHLY CALCULATOR</a>로 요금을 계산하자.</li><li>이전 볼륨을 분리(Detach Volume)하고 새로 만든 볼륨을 연결(Attach Volume)한다.</li><li>인스턴스를 다시 시작한다.</li><li>파일 시스템을 확장한다. 여기서부터는 <a href=http://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/ebs-expand-volume.html#recognize-expanded-volume-linux>Linux 파일 시스템 확장</a>참조</li></ol><h1 id=볼륨-추가>볼륨 추가</h1><p><a href=http://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/ec2-add-volume-to-instance.html>인스턴스에 볼륨 추가</a></p><ol><li>추가하려는 인스턴스의 가용 영역(Availability Zone)을 확인한다. 추가 볼륨의 가용 영역이 인스턴스와 같아야 연결할 수 있다.</li><li>EBS메뉴에서 Volumes를 선택하여 새로운 볼륨을 생성한다.(볼륨 유형, 크기, 가용 영역 입력)</li><li>새로 생성된 볼륨을 연결(Attach Volume)한다. 생성한 볼륨의 상태가 <code>available</code>이 되면 인스턴스에 연결 할 수 있다.</li><li>인스턴스에 접속하여 볼륨을 연결한다.<ul><li><code>lsblk</code> or <code>sudo fdisk -l | grep Disk</code>로 연결된 볼륨을 확인 할 수 있다. (<code>blkid</code>로 UUID와 File system을 확인 할 수 있다.)</li><li>새 볼륨을 사용하려면 포맷을 해야한다. <code>sudo mkfs -t ext4 /dev/xvdf</code>로 포맷.</li><li>포맷된 디바이스를 mount로 연결한다. <code>sudo mkdir /mnt/my-data</code>, <code>sudo mount /dev/xvdf /mnt/my-data</code></li></ul></li></ol><h2 id=볼륨-추가-후-fstab-설정>볼륨 추가 후 fstab 설정</h2><p>부팅 될때마다 mount를 유지하려면 <code>/etc/fstab</code>에 마운트 정보를 기록해야 한다.</p><p><code>fstab</code>은 리눅스가 부팅될 때마다 자동으로 읽는 중요한 파일이므로 수정 시에 주의가 필요하다. 글자가 틀릴 경우 부팅 자체가 아예 안될 수 있다.</p><p>fstab에는 6개의 필드가 있다.</p><pre><code class=language-bash># 장치이름     마운트될 디렉토리  파일 시스템 속성       dump 사용 여부  파일 시스템 체크 여부
 /dev/sdb1    /home/mydata   ext3     defaults   0             1
-</code></pre>
-
-<ol>
-<li>device : 장치명이 들어간다. UUID나 Lable등이 사용가능하다. <code>blkid</code>로 확인.</li>
-<li>mount point</li>
-<li>fstype</li>
-<li>options : defaults로 설정하면 읽기/쓰기/실행 등의 작업이 대부분 가능하다.</li>
-<li>dump : 1로 설정하면 리눅스 dump명령으로 백업이 가능하다.</li>
-<li>fsck : 부팅시 이 파티션을 체크하는데 1인 파일 시스템을 먼저 체크하고 2는 1을 체크한 후에 체크한다. 0은 체크를 생략하며 그로인해 부팅속도가 향상된다.</li>
-</ol>
-
-<h1 id="etc">Etc</h1>
-
-<ul>
-<li>현재 디스크의 파일 시스템을 확인하고 싶다면 <code>df -T</code> 또는 <code>blkid</code>를 입력한다.<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup></li>
-<li>Ubuntu에 접속할때 <code>*** /dev/xvda1 should be checked for errors ***</code>가 나온다면&hellip; 디스크체크<sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">2</a></sup>
-
-<ul>
-<li><code>sudo vi /etc/default/rcS</code></li>
-<li><code>#FSCKFIX=no</code>를 주석처리하고 <code>FSCKFIX=yes</code>를 추가 (automatically repair filesystems with inconsistencies during boot)</li>
-<li><code>sudo touch /forcefsck</code></li>
-<li>reboot</li>
-<li>리부팅후 <code>/forcefsck</code>는 없어진다.</li>
-<li><code>FSCKFIX=yes</code>를 제거한다.</li>
-</ul></li>
-</ul>
-
-<h1 id="references">References</h1>
-
-<ul>
-<li><a href="https://aws.amazon.com/ko/">Amazon Web Services</a></li>
-<li><a href="Amazon Elastic Compute Cloud 설명서">Amazon Elastic Compute Cloud 설명서</a></li>
-</ul>
-<div class="footnotes">
-
-<hr />
-
-<ol>
-<li id="fn:1"><a href="https://kldp.org/node/93119">https://kldp.org/node/93119</a>
- <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
-<li id="fn:2"><a href="http://serverfault.com/a/679051">http://serverfault.com/a/679051</a>
- <a class="footnote-return" href="#fnref:2"><sup>[return]</sup></a></li>
-</ol>
-</div>
-
-
-    
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
+</code></pre><ol><li>device : 장치명이 들어간다. UUID나 Lable등이 사용가능하다. <code>blkid</code>로 확인.</li><li>mount point</li><li>fstype</li><li>options : defaults로 설정하면 읽기/쓰기/실행 등의 작업이 대부분 가능하다.</li><li>dump : 1로 설정하면 리눅스 dump명령으로 백업이 가능하다.</li><li>fsck : 부팅시 이 파티션을 체크하는데 1인 파일 시스템을 먼저 체크하고 2는 1을 체크한 후에 체크한다. 0은 체크를 생략하며 그로인해 부팅속도가 향상된다.</li></ol><h1 id=etc>Etc</h1><ul><li>현재 디스크의 파일 시스템을 확인하고 싶다면 <code>df -T</code> 또는 <code>blkid</code>를 입력한다.<sup class=footnote-ref id=fnref:1><a rel=footnote href=#fn:1>1</a></sup></li><li>Ubuntu에 접속할때 <code>*** /dev/xvda1 should be checked for errors ***</code>가 나온다면&hellip; 디스크체크<sup class=footnote-ref id=fnref:2><a rel=footnote href=#fn:2>2</a></sup><ul><li><code>sudo vi /etc/default/rcS</code></li><li><code>#FSCKFIX=no</code>를 주석처리하고 <code>FSCKFIX=yes</code>를 추가 (automatically repair filesystems with inconsistencies during boot)</li><li><code>sudo touch /forcefsck</code></li><li>reboot</li><li>리부팅후 <code>/forcefsck</code>는 없어진다.</li><li><code>FSCKFIX=yes</code>를 제거한다.</li></ul></li></ul><h1 id=references>References</h1><ul><li><a href="https://aws.amazon.com/ko/">Amazon Web Services</a></li><li><a href="Amazon Elastic Compute Cloud 설명서">Amazon Elastic Compute Cloud 설명서</a></li></ul><div class=footnotes><hr><ol><li id=fn:1><a href=https://kldp.org/node/93119>https://kldp.org/node/93119</a> <a class=footnote-return href=#fnref:1><sup>[return]</sup></a></li><li id=fn:2><a href=http://serverfault.com/a/679051>http://serverfault.com/a/679051</a> <a class=footnote-return href=#fnref:2><sup>[return]</sup></a></li></ol></div><div id=disqus_thread></div><script type=text/javascript>
         (function() {
             
             
@@ -140,17 +12,7 @@
             dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    
-</div>
-
-
-<footer>Kiyeon&#39;s Blog</footer>
-
-
-<script>
+    </script><noscript>Please enable JavaScript to view the <a href=http://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href="http://disqus.com/" class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div><footer>Kiyeon&#39;s Blog</footer><script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -159,9 +21,4 @@
     ga('create', 'UA-79101-12', 'auto');
     ga('send', 'pageview');
 
-</script>
-
-
-</body>
-</html>
-
+</script></body></html>

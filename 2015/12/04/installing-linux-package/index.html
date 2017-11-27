@@ -1,74 +1,9 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kiyeon&#39;s Blog</title>
-    <link rel="stylesheet" type="text/css" href="/css/ybasic.css" />
-
-    
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-heath-dark.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/dos.min.js"></script>
-    
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
-    
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/lisp.min.js"></script>
-    
-    <script>hljs.initHighlightingOnLoad();</script>
-    
-</head>
-<body>
-
-
-
-<div class="content">
-    <h1 class="title" title="December 4, 2015 14:55:00">리눅스 패키지 설치하기</h1>
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#ubuntu">Ubuntu</a>
-<ul>
-<li><a href="#기본">기본</a></li>
-<li><a href="#최신-버전-설치">최신 버전 설치</a></li>
-</ul></li>
-</ul>
-</nav>
-    
-
-<h1 id="ubuntu">Ubuntu</h1>
-
-<h2 id="기본">기본</h2>
-
-<p><a href="http://askubuntu.com/a/40781">Something along the lines of</a>:<br />
-dpkg &ndash;&gt; apt-get, aptitude &ndash;&gt; Synaptic, Software Center</p>
-
-<h2 id="최신-버전-설치">최신 버전 설치</h2>
-
-<ol>
-<li>최신 패키지 검색<br />
-<a href="https://launchpad.net/ubuntu">Ubuntu package building and hosting</a>에서 최신 패키지를 검색한다.</li>
-<li><strong>Binary packages built by this source</strong>에서 설치할 Binary package를 선택한다.</li>
-<li><strong>Published versions</strong>에서 시스템에 맞는 버전을 선택한다.<br />
-ex) <a href="https://launchpad.net/ubuntu/xenial/amd64/sqlite3/3.9.2-1">sqlite3 3.9.2-1(amd64 binary) in ubuntu xenial</a></li>
-<li><strong>Downloadable files</strong>에서 deb파일을 다운로드 한다.<br />
-<code>wget http://launchpadlibrarian.net/225502540/sqlite3_3.9.2-1_amd64.deb</code></li>
-<li>다운로드한 deb을 설치한다.<br />
-<code>sudo dpkg -i sqlite3_3.9.2-1_amd64.deb</code></li>
-<li>의존성 관련 패키지가 필요하면 <strong>Package relationships</strong>에서 deb을 받아 설치한다.</li>
-<li>설치 완료한 패키지를 실행해본다.<br />
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">% sqlite3
-SQLite version <span style="color:#ae81ff">3</span>.9.2 <span style="color:#ae81ff">2015</span>-11-02 <span style="color:#ae81ff">18</span>:31:45
-Enter <span style="color:#e6db74">&#34;.help&#34;</span> <span style="color:#66d9ef">for</span> usage hints.
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1"><title>Kiyeon&#39;s Blog</title><link rel=stylesheet type=text/css href=/css/ybasic.css><link rel=stylesheet href=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-heath-dark.min.css><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js></script><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/dos.min.js></script><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js></script><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/lisp.min.js></script><script>hljs.initHighlightingOnLoad();</script></head><body><div class=content><h1 class=title title="December 4, 2015 14:55:00">리눅스 패키지 설치하기</h1><nav id=TableOfContents><ul><li><a href=#ubuntu>Ubuntu</a><ul><li><a href=#기본>기본</a></li><li><a href=#최신-버전-설치>최신 버전 설치</a></li></ul></li></ul></nav><h1 id=ubuntu>Ubuntu</h1><h2 id=기본>기본</h2><p><a href=http://askubuntu.com/a/40781>Something along the lines of</a>:<br>dpkg &ndash;&gt; apt-get, aptitude &ndash;&gt; Synaptic, Software Center</p><h2 id=최신-버전-설치>최신 버전 설치</h2><ol><li>최신 패키지 검색<br><a href=https://launchpad.net/ubuntu>Ubuntu package building and hosting</a>에서 최신 패키지를 검색한다.</li><li><strong>Binary packages built by this source</strong>에서 설치할 Binary package를 선택한다.</li><li><strong>Published versions</strong>에서 시스템에 맞는 버전을 선택한다.<br>ex) <a href=https://launchpad.net/ubuntu/xenial/amd64/sqlite3/3.9.2-1>sqlite3 3.9.2-1(amd64 binary) in ubuntu xenial</a></li><li><strong>Downloadable files</strong>에서 deb파일을 다운로드 한다.<br><code>wget http://launchpadlibrarian.net/225502540/sqlite3_3.9.2-1_amd64.deb</code></li><li>다운로드한 deb을 설치한다.<br><code>sudo dpkg -i sqlite3_3.9.2-1_amd64.deb</code></li><li>의존성 관련 패키지가 필요하면 <strong>Package relationships</strong>에서 deb을 받아 설치한다.</li><li>설치 완료한 패키지를 실행해본다.<br><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>% sqlite3
+SQLite version <span style=color:#ae81ff>3</span>.9.2 <span style=color:#ae81ff>2015</span>-11-02 <span style=color:#ae81ff>18</span>:31:45
+Enter <span style=color:#e6db74>&#34;.help&#34;</span> <span style=color:#66d9ef>for</span> usage hints.
 Connected to a transient in-memory database.
-Use <span style="color:#e6db74">&#34;.open FILENAME&#34;</span> to reopen on a persistent database.
-sqlite&gt;</code></pre></div></li>
-</ol>
-
-
-    
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
+Use <span style=color:#e6db74>&#34;.open FILENAME&#34;</span> to reopen on a persistent database.
+sqlite&gt;</code></pre></div></li></ol><div id=disqus_thread></div><script type=text/javascript>
         (function() {
             
             
@@ -80,17 +15,7 @@ sqlite&gt;</code></pre></div></li>
             dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    
-</div>
-
-
-<footer>Kiyeon&#39;s Blog</footer>
-
-
-<script>
+    </script><noscript>Please enable JavaScript to view the <a href=http://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href="http://disqus.com/" class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div><footer>Kiyeon&#39;s Blog</footer><script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -99,9 +24,4 @@ sqlite&gt;</code></pre></div></li>
     ga('create', 'UA-79101-12', 'auto');
     ga('send', 'pageview');
 
-</script>
-
-
-</body>
-</html>
-
+</script></body></html>
