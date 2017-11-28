@@ -6,10 +6,21 @@
     <description>Recent content in Posts on Kiyeon&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Mon, 20 Nov 2017 14:15:59 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 28 Nov 2017 11:25:55 +0900</lastBuildDate>
     
 	<atom:link href="http://blog.kiyeon.net/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AWS EC2 SSH 접속</title>
+      <link>http://blog.kiyeon.net/2017/11/28/connecting-aws-ec2-by-ssh/</link>
+      <pubDate>Tue, 28 Nov 2017 11:25:55 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2017/11/28/connecting-aws-ec2-by-ssh/</guid>
+      <description>AWS EC2에 새로운 인스턴스를 생성한후 SSH 접속하는 방법이다.
+Key Pair 사용 접속 인스턴스 생성 마지막단계에서 Key Pair를 생성할것인지 묻는다.
+ 키 페어는 AWS에 저장하는 퍼블릭 키와 사용자가 저장하는 프라이빗 키 파일로 구성됩니다. 이 둘을 모두 사용하여 SSH를 통해 인스턴스에 안전하게 접속할 수 있습니다. Windows AMI의 경우 인스턴스에 로그인하는 데 사용되는 암호를 얻으려면 프라이빗 키 파일이 필요합니다. Linux AMI의 경우, 프라이빗 키 파일을 사용하면 인스턴스에 안전하게 SSH로 연결할 수 있습니다.</description>
+    </item>
     
     <item>
       <title>키보드로 아이폰 제어</title>
