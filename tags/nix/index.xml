@@ -6,10 +6,34 @@
     <description>Recent content in Nix on Kiyeon&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Fri, 04 Dec 2015 14:55:00 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 29 Nov 2017 15:43:25 +0900</lastBuildDate>
     
 	<atom:link href="http://blog.kiyeon.net/tags/nix/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Windows용 Console</title>
+      <link>http://blog.kiyeon.net/2017/11/29/console-for-windows/</link>
+      <pubDate>Wed, 29 Nov 2017 15:43:25 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2017/11/29/console-for-windows/</guid>
+      <description> Gow - Unix command line utilities installer for Windows
+References  Make the Windows Command Prompt, Linux-like  </description>
+    </item>
+    
+    <item>
+      <title>플랫폼별 패키지 메니저(Platform Package Manager)</title>
+      <link>http://blog.kiyeon.net/2017/11/28/platform-package-manager/</link>
+      <pubDate>Tue, 28 Nov 2017 17:23:22 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2017/11/28/platform-package-manager/</guid>
+      <description> macOS Homebrew
+Linux Linuxbrew
+Windows Scoop 설치  Powershell3가 설치되어있어야 한다. CLI에서 다음을 입력. iex (new-object net.webclient).downloadstring(&#39;https://get.scoop.sh&#39;)  Scoop
+Chocolatey
+https://laracasts.com/discuss/channels/laravel/homebrew-install-on-windows-os The Windows alternatives are: Chocolatey Npackd Scoop OneGet for Windows 10
+References  Do you miss Homebrew on Windows? Don&amp;rsquo;t. Use Scoop  </description>
+    </item>
     
     <item>
       <title>리눅스 패키지 설치하기</title>
