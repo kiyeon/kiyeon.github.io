@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://blog.kiyeon.net/2017/11/28/platform-package-manager/</loc>
+    <lastmod>2017-11-28T17:23:22+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://blog.kiyeon.net/2017/11/28/connecting-aws-ec2-by-ssh/</loc>
     <lastmod>2017-11-28T11:25:55+09:00</lastmod>
   </url>
@@ -173,7 +178,7 @@
   
   <url>
     <loc>http://blog.kiyeon.net/draft/</loc>
-    <lastmod>2017-11-26T20:21:06+09:00</lastmod>
+    <lastmod>2017-11-28T17:23:22+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -215,7 +220,7 @@
   
   <url>
     <loc>http://blog.kiyeon.net/</loc>
-    <lastmod>2017-11-28T11:25:55+09:00</lastmod>
+    <lastmod>2017-11-28T17:23:22+09:00</lastmod>
     <priority>0</priority>
   </url>
   
