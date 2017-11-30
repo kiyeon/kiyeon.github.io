@@ -17,8 +17,12 @@
       <pubDate>Wed, 29 Nov 2017 15:43:25 +0900</pubDate>
       
       <guid>http://blog.kiyeon.net/2017/11/29/console-for-windows/</guid>
-      <description> Gow - Unix command line utilities installer for Windows
-References  Make the Windows Command Prompt, Linux-like  </description>
+      <description>Windows에 기본으로 제공하는 콘솔앱인 &amp;lsquo;cmd&amp;rsquo;는 사용이 불편하다. cmd를 대체할만한 툴 알아봤다.
+ConsoleZ ConsoleZ는 Console에서 fork되어 개선된 콘솔앱이다. 멀티탭과 화면분할, 각 화면별 백그라운드 스타일 지정등 다양한 기능을 제공하는데 macOS의 iTerm2와 비슷한 느낌을 준다.
+ConsoleZ 설치하기 Scoop을 사용하여 설치한다.
+scoop search consolez
+C:\Users\Administrator&amp;gt;scoop search consolez Results from other known buckets... (add them using &#39;scoop bucket add &amp;lt;name&amp;gt;&#39;) &#39;extras&#39; bucket: consolez  scoop bucket add extras
+C:\Users\Administrator&amp;gt;scoop bucket add extras Git is required for buckets.</description>
     </item>
     
     <item>
@@ -27,12 +31,13 @@ References  Make the Windows Command Prompt, Linux-like  </description>
       <pubDate>Tue, 28 Nov 2017 17:23:22 +0900</pubDate>
       
       <guid>http://blog.kiyeon.net/2017/11/28/platform-package-manager/</guid>
-      <description> macOS Homebrew
+      <description>macOS Homebrew
 Linux Linuxbrew
-Windows Scoop 설치  Powershell3가 설치되어있어야 한다. CLI에서 다음을 입력. iex (new-object net.webclient).downloadstring(&#39;https://get.scoop.sh&#39;)  Scoop
-Chocolatey
-https://laracasts.com/discuss/channels/laravel/homebrew-install-on-windows-os The Windows alternatives are: Chocolatey Npackd Scoop OneGet for Windows 10
-References  Do you miss Homebrew on Windows? Don&amp;rsquo;t. Use Scoop  </description>
+Windows Scoop 설치 Scoop을 설치하려면 Powershell3가 설치되어있어야 한다.
+powershell에서 다음을 입력한다.
+iex (new-object net.webclient).downloadstring(&#39;https://get.scoop.sh&#39;)  다음과 같이 실행 규칙을 변경해야 한단다
+PowerShell requires an execution policy of &#39;RemoteSigned&#39; to run Scoop. To make this change please run: &#39;Set-ExecutionPolicy RemoteSigned -scope CurrentUser&#39;  실행 규칙을 변경하고 다시 scoop을 설치한다.
+실행 규칙 변경 실행 정책은 신뢰하지 않는 스크립트로부터 사용자를 보호합니다. 실행 정책을 변경하면 about_Execution_Policies 도움말 항목(http://technet.microsoft.com/ko-kr/library/dd347641.aspx)에 설명된 보안 위험에 노출될 수 있습니다.</description>
     </item>
     
     <item>

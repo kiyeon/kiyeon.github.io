@@ -1,4 +1,50 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1"><title>Kiyeon&#39;s Blog</title><link rel=stylesheet type=text/css href=/css/ybasic.css><link rel=stylesheet href=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-heath-dark.min.css><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js></script><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/dos.min.js></script><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js></script><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/lisp.min.js></script><script>hljs.initHighlightingOnLoad();</script></head><body><div class=content><h1 class=title title="November 28, 2017 17:23:22">플랫폼별 패키지 메니저(Platform Package Manager)</h1><nav id=TableOfContents><ul><li><a href=#macos>macOS</a></li><li><a href=#linux>Linux</a></li><li><a href=#windows>Windows</a><ul><li><a href=#scoop>Scoop</a><ul><li><a href=#설치>설치</a></li></ul></li></ul></li><li><a href=#references>References</a></li></ul></nav><h1 id=macos>macOS</h1><p><a href="https://brew.sh/">Homebrew</a></p><h1 id=linux>Linux</h1><p><a href="http://linuxbrew.sh/">Linuxbrew</a></p><h1 id=windows>Windows</h1><h2 id=scoop>Scoop</h2><h3 id=설치>설치</h3><ol><li><a href="http://www.microsoft.com/en-us/download/details.aspx?id=34595">Powershell3</a>가 설치되어있어야 한다.</li><li>CLI에서 다음을 입력. <code>iex (new-object net.webclient).downloadstring('https://get.scoop.sh')</code></li></ol><p><a href="http://scoop.sh/">Scoop</a></p><p><a href="https://chocolatey.org/">Chocolatey</a></p><p><a href=https://laracasts.com/discuss/channels/laravel/homebrew-install-on-windows-os>https://laracasts.com/discuss/channels/laravel/homebrew-install-on-windows-os</a> The Windows alternatives are: Chocolatey Npackd Scoop OneGet for Windows 10</p><h1 id=references>References</h1><ul><li><a href="https://www.outcoldman.com/en/archive/2014/07/20/scoop/">Do you miss Homebrew on Windows? Don&rsquo;t. Use Scoop</a></li></ul><div id=disqus_thread></div><script type=text/javascript>
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1"><title>Kiyeon&#39;s Blog</title><link rel=stylesheet type=text/css href=/css/ybasic.css><link rel=stylesheet href=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-heath-dark.min.css><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js></script><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/dos.min.js></script><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js></script><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/lisp.min.js></script><script>hljs.initHighlightingOnLoad();</script></head><body><div class=content><h1 class=title title="November 28, 2017 17:23:22">플랫폼별 패키지 메니저(Platform Package Manager)</h1><nav id=TableOfContents><ul><li><a href=#macos>macOS</a></li><li><a href=#linux>Linux</a></li><li><a href=#windows>Windows</a><ul><li><a href=#scoop>Scoop</a><ul><li><a href=#설치>설치</a></li></ul></li></ul></li><li><a href=#references>References</a></li></ul></nav><h1 id=macos>macOS</h1><p><a href="https://brew.sh/">Homebrew</a></p><h1 id=linux>Linux</h1><p><a href="http://linuxbrew.sh/">Linuxbrew</a></p><h1 id=windows>Windows</h1><h2 id=scoop>Scoop</h2><h3 id=설치>설치</h3><p><a href="http://scoop.sh/">Scoop</a>을 설치하려면 <a href="http://www.microsoft.com/en-us/download/details.aspx?id=34595">Powershell3</a>가 설치되어있어야 한다.</p><p>powershell에서 다음을 입력한다.</p><pre><code class=language-dos>iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+</code></pre><p>다음과 같이 실행 규칙을 변경해야 한단다</p><pre><code class=language-dos>PowerShell requires an execution policy of 'RemoteSigned' to run Scoop.
+To make this change please run:
+'Set-ExecutionPolicy RemoteSigned -scope CurrentUser'
+</code></pre><p>실행 규칙을 변경하고 다시 scoop을 설치한다.</p><pre><code class=language-dos>실행 규칙 변경
+실행 정책은 신뢰하지 않는 스크립트로부터 사용자를 보호합니다. 실행 정책을
+변경하면 about_Execution_Policies 도움말
+항목(http://technet.microsoft.com/ko-kr/library/dd347641.aspx)에 설명된 보안
+위험에 노출될 수 있습니다. 실행 정책을 변경하시겠습니까?
+[Y] 예(Y)  [N] 아니요(N)  [S] 일시 중단(S)  [?] 도움말 (기본값은 &quot;Y&quot;):
+
+PS C:\Users\Administrator&gt; iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+Initializing...
+Downloading...
+Extracting...
+Creating shim...
+Adding ~\scoop\shims to your path.
+Scoop was installed successfully!
+Type 'scoop help' for instructions.
+</code></pre><p><a href="http://scoop.sh/">Scoop</a>이 설치됐다.</p><pre><code class=language-dos>PS C:\Users\Administrator&gt; scoop
+Usage: scoop &lt;command&gt; [&lt;args&gt;]
+
+Some useful commands are:
+
+alias      Manage scoop aliases
+bucket     Manage Scoop buckets
+cache      Show or clear the download cache
+checkup    Check for potential problems
+cleanup    Cleanup apps by removing old versions
+config     Get or set configuration values
+create     Create a custom app manifest
+depends    List dependencies for an app
+export     Exports (an importable) list of installed apps
+help       Show help for a command
+home       Opens the app homepage
+install    Install apps
+list       List installed apps
+reset      Reset an app to resolve conflicts
+search     Search available apps
+status     Show status and check for new app versions
+uninstall  Uninstall an app
+update     Update apps, or Scoop itself
+which      Locate a shim/executable (similar to 'which' on Linux)
+
+
+Type 'scoop help &lt;command&gt;' to get help for a specific command.
+</code></pre><p><a href="http://scoop.sh/">Scoop</a>을 통해 설치된 앱들은 <code>~\scoop\apps</code>에 위치한다.</p><p><a href="https://chocolatey.org/">Chocolatey</a></p><p><a href="https://code.google.com/archive/p/windows-package-manager/">Npackd</a> <a href=https://github.com/OneGet/oneget>OneGet for Windows 10</a></p><h1 id=references>References</h1><ul><li><a href="https://www.outcoldman.com/en/archive/2014/07/20/scoop/">Do you miss Homebrew on Windows? Don&rsquo;t. Use Scoop</a></li></ul><div id=disqus_thread></div><script type=text/javascript>
         (function() {
             
             
