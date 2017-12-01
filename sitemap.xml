@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://blog.kiyeon.net/2017/12/01/linux-timezone/</loc>
+    <lastmod>2017-12-01T14:23:26+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://blog.kiyeon.net/2017/11/29/console-for-windows/</loc>
     <lastmod>2017-11-29T15:43:25+09:00</lastmod>
   </url>
@@ -225,7 +230,7 @@
   
   <url>
     <loc>http://blog.kiyeon.net/</loc>
-    <lastmod>2017-11-29T15:43:25+09:00</lastmod>
+    <lastmod>2017-12-01T14:23:26+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -249,7 +254,7 @@
   
   <url>
     <loc>http://blog.kiyeon.net/tags/nix/</loc>
-    <lastmod>2017-11-29T15:43:25+09:00</lastmod>
+    <lastmod>2017-12-01T14:23:26+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -261,7 +266,7 @@
   
   <url>
     <loc>http://blog.kiyeon.net/post/</loc>
-    <lastmod>2017-11-28T11:25:55+09:00</lastmod>
+    <lastmod>2017-12-01T14:23:26+09:00</lastmod>
     <priority>0</priority>
   </url>
   

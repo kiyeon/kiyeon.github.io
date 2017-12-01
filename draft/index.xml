@@ -147,7 +147,12 @@ References  Changing the timezone, date, and time 협정 세계시 그리니치 
       <description> Git .gitignore로 관리되던 파일 제거하려면
 git rm -r --cached .
 서브모듈 삭제하기 Git - 수정한 것 되돌리기
-References  Getting Git Right  </description>
+상황별 Tip Pull하기전 변경사항을 보고 싶을때 SVN에서는 Incoming을 통해 누가 어떤 코드를 수정했는지 쉽게 파악이 가능했다. 그렇다면 Git에서는 어떻게 확인할까?
+pull을 하면 변경된 모든사항에 바로 로컬 저장소에 반영이 된다.
+$ git pull  fetch를 하면
+https://stackoverflow.com/a/1331753
+fetch한 내용 확인하기
+$ git log origin/master  References  Pro Git - git-scm.com에서 제공하는 Git Book Getting Git Right - Git Tutorials git ready - 상황별 Tip Why Git is Better than X - Git이 다른 VCS보다 좋은 이유  </description>
     </item>
     
   </channel>

@@ -6,10 +6,22 @@
     <description>Recent content on Kiyeon&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Wed, 29 Nov 2017 15:43:25 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 01 Dec 2017 14:23:26 +0900</lastBuildDate>
     
 	<atom:link href="http://blog.kiyeon.net/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Linux Timezone 변경 &amp; 시간 설정</title>
+      <link>http://blog.kiyeon.net/2017/12/01/linux-timezone/</link>
+      <pubDate>Fri, 01 Dec 2017 14:23:26 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2017/12/01/linux-timezone/</guid>
+      <description>우분투 기준 타임존 변경하는 방법과 시간 설정 방법이다.
+Timezone 변경하기 date를 해보면 UTC1로 시간이 표시된다.
+$ date Fri Dec 1 05:25:04 UTC 2017  tzselect tzselect를 사용해 TZ format을 알아볼 수 있고 이 값으로 Local Timezone을 변경할 수 있다. 이 방법은 로컬에만 적용된다.
+$ tzselect Please identify a location so that time zone rules can be set correctly. Please select a continent, ocean, &amp;quot;coord&amp;quot;, or &amp;quot;TZ&amp;quot;. 1) Africa 2) Americas 3) Antarctica 4) Asia 5) Atlantic Ocean 6) Australia 7) Europe 8) Indian Ocean 9) Pacific Ocean 10) coord - I want to use geographical coordinates.</description>
+    </item>
     
     <item>
       <title>Windows용 Console</title>
@@ -407,7 +419,12 @@ References  Changing the timezone, date, and time 협정 세계시 그리니치 
       <description> Git .gitignore로 관리되던 파일 제거하려면
 git rm -r --cached .
 서브모듈 삭제하기 Git - 수정한 것 되돌리기
-References  Getting Git Right  </description>
+상황별 Tip Pull하기전 변경사항을 보고 싶을때 SVN에서는 Incoming을 통해 누가 어떤 코드를 수정했는지 쉽게 파악이 가능했다. 그렇다면 Git에서는 어떻게 확인할까?
+pull을 하면 변경된 모든사항에 바로 로컬 저장소에 반영이 된다.
+$ git pull  fetch를 하면
+https://stackoverflow.com/a/1331753
+fetch한 내용 확인하기
+$ git log origin/master  References  Pro Git - git-scm.com에서 제공하는 Git Book Getting Git Right - Git Tutorials git ready - 상황별 Tip Why Git is Better than X - Git이 다른 VCS보다 좋은 이유  </description>
     </item>
     
     <item>
