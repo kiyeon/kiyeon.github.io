@@ -24,6 +24,20 @@ $ tzselect Please identify a location so that time zone rules can be set correct
     </item>
     
     <item>
+      <title>Windows용 Console</title>
+      <link>http://blog.kiyeon.net/2017/11/29/console-for-windows/</link>
+      <pubDate>Wed, 29 Nov 2017 15:43:25 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2017/11/29/console-for-windows/</guid>
+      <description>Windows에 기본으로 제공하는 콘솔앱인 &amp;lsquo;cmd&amp;rsquo;는 사용이 불편하다. cmd를 대체할만한 툴 알아봤다.
+ConsoleZ ConsoleZ는 Console에서 fork되어 개선된 콘솔앱이다. 멀티탭과 화면분할, 각 화면별 백그라운드 스타일 지정등 다양한 기능을 제공하는데 macOS의 iTerm2와 비슷한 느낌을 준다.
+ConsoleZ 설치하기 Scoop을 사용하여 설치한다.
+scoop search consolez
+C:\Users\Administrator&amp;gt;scoop search consolez Results from other known buckets... (add them using &#39;scoop bucket add &amp;lt;name&amp;gt;&#39;) &#39;extras&#39; bucket: consolez  scoop bucket add extras
+C:\Users\Administrator&amp;gt;scoop bucket add extras Git is required for buckets.</description>
+    </item>
+    
+    <item>
       <title>AWS EC2 SSH 접속</title>
       <link>http://blog.kiyeon.net/2017/11/28/connecting-aws-ec2-by-ssh/</link>
       <pubDate>Tue, 28 Nov 2017 11:25:55 +0900</pubDate>

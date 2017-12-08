@@ -1,12 +1,12 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1"><title>Kiyeon&#39;s Blog</title><link rel=stylesheet type=text/css href=/css/ybasic.css><link rel=stylesheet href=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-heath-dark.min.css><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js></script><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/dos.min.js></script><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js></script><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/lisp.min.js></script><script>hljs.initHighlightingOnLoad();</script></head><body><div class=content><h1 class=title title="November 29, 2017 15:43:25">Windows용 Console</h1><nav id=TableOfContents><ul><li><a href=#consolez>ConsoleZ</a><ul><li><a href=#consolez-설치하기>ConsoleZ 설치하기</a></li><li><a href=#유용한-패키지>유용한 패키지</a></li></ul></li><li><a href=#babun>Babun</a></li><li><a href=#references>References</a></li></ul></nav><p>Windows에 기본으로 제공하는 콘솔앱인 &lsquo;cmd&rsquo;는 사용이 불편하다. cmd를 대체할만한 툴 알아봤다.</p><h1 id=consolez>ConsoleZ</h1><p><a href=https://github.com/cbucher/console>ConsoleZ</a>는 <a href="https://sourceforge.net/projects/console/">Console</a>에서 fork되어 개선된 콘솔앱이다. 멀티탭과 화면분할, 각 화면별 백그라운드 스타일 지정등 다양한 기능을 제공하는데 macOS의 iTerm2와 비슷한 느낌을 준다.</p><h2 id=consolez-설치하기>ConsoleZ 설치하기</h2><p><a href=/2017/11/28/platform-package-manager/#scoop>Scoop</a>을 사용하여 설치한다.</p><p>scoop search consolez</p><pre><code class=language-dos>C:\Users\Administrator&gt;scoop search consolez
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1"><title>Kiyeon&#39;s Blog</title><link rel=stylesheet type=text/css href=/css/ybasic.css><link rel=stylesheet href=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-heath-dark.min.css><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js></script><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/dos.min.js></script><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js></script><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/lisp.min.js></script><script>hljs.initHighlightingOnLoad();</script></head><body><div class=content><h1 class=title title="November 29, 2017 15:43:25">Windows용 Console</h1><nav id=TableOfContents><ul><li><a href=#consolez>ConsoleZ</a><ul><li><a href=#consolez-설치하기>ConsoleZ 설치하기</a></li><li><a href=#유용한-패키지>유용한 패키지</a></li></ul></li><li><a href=#conemu>ConEmu</a><ul><li><a href=#정리>정리</a></li></ul></li><li><a href=#references>References</a></li></ul></nav><p>Windows에 기본으로 제공하는 콘솔앱인 &lsquo;cmd&rsquo;는 사용이 불편하다. cmd를 대체할만한 툴 알아봤다.</p><h1 id=consolez>ConsoleZ</h1><p><a href=https://github.com/cbucher/console>ConsoleZ</a>는 <a href="https://sourceforge.net/projects/console/">Console</a>에서 fork되어 개선된 콘솔앱이다. 멀티탭과 화면분할, 각 화면별 백그라운드 스타일 지정등 다양한 기능을 제공하는데 macOS의 iTerm2와 비슷한 느낌을 준다.</p><h2 id=consolez-설치하기>ConsoleZ 설치하기</h2><p><a href=/2017/11/28/platform-package-manager/#scoop>Scoop</a>을 사용하여 설치한다.</p><p><strong>scoop search consolez</strong></p><pre><code class=language-dos>C:\Users\Administrator&gt;scoop search consolez
 Results from other known buckets...
 (add them using 'scoop bucket add &lt;name&gt;')
 
 'extras' bucket:
     consolez
-</code></pre><p>scoop bucket add extras</p><pre><code class=language-dos>C:\Users\Administrator&gt;scoop bucket add extras
+</code></pre><p><strong>scoop bucket add extras</strong></p><pre><code class=language-dos>C:\Users\Administrator&gt;scoop bucket add extras
 Git is required for buckets. Run 'scoop install git'.
-</code></pre><p>scoop install git</p><pre><code class=language-dos>C:\Users\Administrator&gt;scoop install git
+</code></pre><p><strong>scoop install git</strong></p><pre><code class=language-dos>C:\Users\Administrator&gt;scoop install git
 Installing 'git' (2.15.1.windows.1).
 PortableGit-2.15.1-64-bit.7z.exe (36.1 MB) [==========================] 100%
 Checking hash of PortableGit-2.15.1-64-bit.7z.exe... ok.
@@ -28,7 +28,7 @@ scoop install openssh
 ssh)), 'USER')
 
 and then restart powershell.
-</code></pre><p>scoop bucket add extras</p><pre><code class=language-dos>C:\Users\Administrator&gt;scoop bucket add extras
+</code></pre><p><strong>scoop bucket add extras</strong></p><pre><code class=language-dos>C:\Users\Administrator&gt;scoop bucket add extras
 Checking repo... ok
 Cloning into 'C:\Users\Administrator\scoop\buckets\extras'...
 remote: Counting objects: 6495, done.
@@ -37,7 +37,7 @@ remote: Total 6495 (delta 37), reused 64 (delta 28), pack-reused 6418
 Receiving objects: 100% (6495/6495), 1.42 MiB | 168.00 KiB/s, done.
 Resolving deltas: 100% (3834/3834), done.
 The extras bucket was added successfully.
-</code></pre><p>scoop install consolez</p><pre><code class=language-dos>C:\Users\Administrator&gt; scoop install consolez
+</code></pre><p><strong>scoop install consolez</strong></p><pre><code class=language-dos>C:\Users\Administrator&gt; scoop install consolez
 Installing 'consolez' (1.18.2.17272).
 Loading ConsoleZ.x64.1.18.2.17272.zip from cache
 Checking hash of ConsoleZ.x64.1.18.2.17272.zip... ok.
@@ -46,7 +46,7 @@ Linking ~\scoop\apps\consolez\current =&gt; ~\scoop\apps\consolez\1.18.2.17272
 Creating shim for 'console'.
 Creating shortcut for ConsoleZ (console.exe)
 'consolez' (1.18.2.17272) was installed successfully!
-</code></pre><p>설치후 한글로 인해 <a href=http://bwhite.tistory.com/883>화면이 깨질때</a> 다음 절차를 따라해본다.</p><blockquote><ol><li>레지스트리 편집기(regedit.exe) 를 실행후, HKEY_CURRENT_USER\Console 키를 찾아서, subkey 이름이 &ldquo;Console2 command window&rdquo; 가 있다면, 이것을 삭제한다.</li><li>제어판을 열고, &lsquo;국가 및 언어&rsquo; 를 실행한다. 관리자 옵션(또는 고급) 탭을 선택후, &lsquo;유니코드를 지원하지 않는 프로그램용 언어&rsquo; 에 한국어(대한민국) 으로 되어 있으면 그대로, 그렇지 않으면, &lsquo;시스템 로캘 변경&rsquo; 을 눌러 한국어를 선택한다. 변경사항이 있으면 윈도우 재부팅을 해야 한다.</li><li>consoleZ 를 실행(console.exe)후, 메뉴에 &lsquo;View - Console&rsquo; 를 선택한다. 새로운 콘솔창 제목바에서 마우스 우측버튼을 눌러 속성을 선택한다. 글꼴 탭을 선택후, 글꼴을 굴림체로, 크기는 보통 11 이나 12 정도 로 설정하고 확인 버튼을 누른다. 창을 닫고, console.exe 를 재시작하면 이제 제대로 화면 출력이 됨을 확인한다.</li></ol></blockquote><h2 id=유용한-패키지>유용한 패키지</h2><ul><li><a href=https://github.com/bmatzelle/gow>Gow</a> - Unix command line utilities installer for Windows</li></ul><h1 id=babun>Babun</h1><h1 id=references>References</h1><ul><li><a href="https://devtidbits.com/2014/05/21/create-a-better-windows-command-line-prompt/">Make the Windows Command Prompt, Linux-like</a></li><li><a href=http://bwhite.tistory.com/883>ConsoleZ 설정 및 사용하기</a></li></ul><div id=disqus_thread></div><script type=text/javascript>
+</code></pre><p>설치후 한글로 인해 <a href=http://bwhite.tistory.com/883>화면이 깨질때</a> 다음 절차를 따라해본다.</p><blockquote><ol><li>레지스트리 편집기(regedit.exe) 를 실행후, HKEY_CURRENT_USER\Console 키를 찾아서, subkey 이름이 &ldquo;Console2 command window&rdquo; 가 있다면, 이것을 삭제한다.</li><li>제어판을 열고, &lsquo;국가 및 언어&rsquo; 를 실행한다. 관리자 옵션(또는 고급) 탭을 선택후, &lsquo;유니코드를 지원하지 않는 프로그램용 언어&rsquo; 에 한국어(대한민국) 으로 되어 있으면 그대로, 그렇지 않으면, &lsquo;시스템 로캘 변경&rsquo; 을 눌러 한국어를 선택한다. 변경사항이 있으면 윈도우 재부팅을 해야 한다.</li><li>consoleZ 를 실행(console.exe)후, 메뉴에 &lsquo;View - Console&rsquo; 를 선택한다. 새로운 콘솔창 제목바에서 마우스 우측버튼을 눌러 속성을 선택한다. 글꼴 탭을 선택후, 글꼴을 굴림체로, 크기는 보통 11 이나 12 정도 로 설정하고 확인 버튼을 누른다. 창을 닫고, console.exe 를 재시작하면 이제 제대로 화면 출력이 됨을 확인한다.</li></ol></blockquote><h2 id=유용한-패키지>유용한 패키지</h2><ul><li><a href=https://github.com/bmatzelle/gow>Gow</a> - Unix command line utilities installer for Windows</li></ul><h1 id=conemu>ConEmu</h1><h2 id=정리>정리</h2><p><a href=https://github.com/cbucher/console>ConsoleZ</a>는 CMD대체 앱일뿐 *nix방식으로 사용할 수 있는것은 아니다. 윈도우를 *nix방식으로 사용하길 원한다면 <a href="/2017/12/06/nix-for-windows/">Babun, MinGW</a>을 살펴보기 바란다.</p><h1 id=references>References</h1><ul><li><a href="https://devtidbits.com/2014/05/21/create-a-better-windows-command-line-prompt/">Make the Windows Command Prompt, Linux-like</a></li><li><a href=http://bwhite.tistory.com/883>ConsoleZ 설정 및 사용하기</a></li></ul><div id=disqus_thread></div><script type=text/javascript>
         (function() {
             
             

@@ -6,10 +6,46 @@
     <description>Recent content in Cli on Kiyeon&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Thu, 25 Jun 2015 10:33:58 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 06 Dec 2017 09:44:54 +0900</lastBuildDate>
     
 	<atom:link href="http://blog.kiyeon.net/tags/cli/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>윈도우 CLI를 *NIX CLI처럼 만들기</title>
+      <link>http://blog.kiyeon.net/2017/12/06/nix-for-windows/</link>
+      <pubDate>Wed, 06 Dec 2017 09:44:54 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2017/12/06/nix-for-windows/</guid>
+      <description> *nix환경의 CLI에 익숙하다보니 Windows의 CLI가 굉장히 어색하고 불편하다. Windows를 *nix화 해주는 툴들을 알아본다.
+Babun MinGW </description>
+    </item>
+    
+    <item>
+      <title>터미널 컬러</title>
+      <link>http://blog.kiyeon.net/2017/12/04/color-in-terminal/</link>
+      <pubDate>Mon, 04 Dec 2017 16:24:54 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2017/12/04/color-in-terminal/</guid>
+      <description>검정바탕에 하얀 텍스트 딱딱한 터미널 화면에 컬러를 넣어보자. 시작하기 전에 헷갈리는 용어부터 정리해보자.
+용어 콘솔(Console)
+콘솔과 터미널이 굉장히 헷갈린다. 콘솔이나 터미널이나 결국 입출력을 담당하는 곳이라서 그런거 같다. 가장 큰 차이는 콘솔은 서버에 직접 연결되어있는 하드웨어이고 터미널은 콘솔을 가상화한 소프트웨어로 로컬이나(GUI환경) 원격 제어를 위해 사용된다. 그외엔 거의 같다고 보면 되겠다.
+ 가상콘솔(Virtual Console) : 리눅스에서 시스템을 관리하다 보면 콘솔에서만 수행할 수 있는 작업들이 존재하기 때문에 콘솔 화면 1개만으로는 여러 개의 작업을 하기에 불편함이 있다.</description>
+    </item>
+    
+    <item>
+      <title>Windows용 Console</title>
+      <link>http://blog.kiyeon.net/2017/11/29/console-for-windows/</link>
+      <pubDate>Wed, 29 Nov 2017 15:43:25 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2017/11/29/console-for-windows/</guid>
+      <description>Windows에 기본으로 제공하는 콘솔앱인 &amp;lsquo;cmd&amp;rsquo;는 사용이 불편하다. cmd를 대체할만한 툴 알아봤다.
+ConsoleZ ConsoleZ는 Console에서 fork되어 개선된 콘솔앱이다. 멀티탭과 화면분할, 각 화면별 백그라운드 스타일 지정등 다양한 기능을 제공하는데 macOS의 iTerm2와 비슷한 느낌을 준다.
+ConsoleZ 설치하기 Scoop을 사용하여 설치한다.
+scoop search consolez
+C:\Users\Administrator&amp;gt;scoop search consolez Results from other known buckets... (add them using &#39;scoop bucket add &amp;lt;name&amp;gt;&#39;) &#39;extras&#39; bucket: consolez  scoop bucket add extras
+C:\Users\Administrator&amp;gt;scoop bucket add extras Git is required for buckets.</description>
+    </item>
     
     <item>
       <title>Changing the shell prompt</title>

@@ -6,10 +6,20 @@
     <description>Recent content in Windows on Kiyeon&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Wed, 29 Nov 2017 15:43:25 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 06 Dec 2017 09:44:54 +0900</lastBuildDate>
     
 	<atom:link href="http://blog.kiyeon.net/tags/windows/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>윈도우 CLI를 *NIX CLI처럼 만들기</title>
+      <link>http://blog.kiyeon.net/2017/12/06/nix-for-windows/</link>
+      <pubDate>Wed, 06 Dec 2017 09:44:54 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2017/12/06/nix-for-windows/</guid>
+      <description> *nix환경의 CLI에 익숙하다보니 Windows의 CLI가 굉장히 어색하고 불편하다. Windows를 *nix화 해주는 툴들을 알아본다.
+Babun MinGW </description>
+    </item>
     
     <item>
       <title>Windows용 Console</title>
