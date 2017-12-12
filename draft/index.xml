@@ -6,10 +6,25 @@
     <description>Recent content in Drafts on Kiyeon&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Wed, 06 Dec 2017 09:44:54 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 12 Dec 2017 10:46:46 +0900</lastBuildDate>
     
 	<atom:link href="http://blog.kiyeon.net/draft/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CRLF</title>
+      <link>http://blog.kiyeon.net/2017/12/12/crlf/</link>
+      <pubDate>Tue, 12 Dec 2017 10:46:46 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2017/12/12/crlf/</guid>
+      <description>CRLF는 새줄 문자를 말한다. New Line, Line Break, Line Separators, EOL(End-Of-Line)라고도 한다.
+CR(Carrige Return)
+* 현재 라인에서 커서를 제일 앞으로 이동 * 아스키(13, 0x0D), \r
+LF(Line Feed)
+* 커서의 위치는 그대로 두고 종이를 한 라인 위로 올리는 동작 * 아스키(10, 0x0A), \n
+운영체제별 줄바꿈 문자 OS별로 줄바꿈 문자가 다르다.
+ Windows : CRLF(\r\n) *nix and macOS : LF(\n) Classic Mac : CR(\r)  이럴때 발생할 수 있는 문제 * 줄바꿈이 제대로 표현되지 않아 다닥다닥 붙는다 * EOL에 특수문자(^M)가 표시된다</description>
+    </item>
     
     <item>
       <title>윈도우 CLI를 *NIX CLI처럼 만들기</title>

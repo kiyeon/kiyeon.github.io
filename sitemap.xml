@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://blog.kiyeon.net/2017/12/12/crlf/</loc>
+    <lastmod>2017-12-12T10:46:46+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://blog.kiyeon.net/2017/12/06/nix-for-windows/</loc>
     <lastmod>2017-12-06T09:44:54+09:00</lastmod>
   </url>
@@ -198,7 +203,7 @@
   
   <url>
     <loc>http://blog.kiyeon.net/draft/</loc>
-    <lastmod>2017-12-06T09:44:54+09:00</lastmod>
+    <lastmod>2017-12-12T10:46:46+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -240,7 +245,7 @@
   
   <url>
     <loc>http://blog.kiyeon.net/</loc>
-    <lastmod>2017-12-06T09:44:54+09:00</lastmod>
+    <lastmod>2017-12-12T10:46:46+09:00</lastmod>
     <priority>0</priority>
   </url>
   
