@@ -6,10 +6,21 @@
     <description>Recent content in Posts on Kiyeon&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Fri, 01 Dec 2017 14:23:26 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 17 Feb 2018 20:41:26 +0900</lastBuildDate>
     
 	<atom:link href="http://blog.kiyeon.net/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>무료 HTTPS, Let&#39;s Encrypt</title>
+      <link>http://blog.kiyeon.net/2018/02/17/letsencrypt/</link>
+      <pubDate>Sat, 17 Feb 2018 20:41:26 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2018/02/17/letsencrypt/</guid>
+      <description>보안을 위해 웹에서도 https를 사용하는 추세다. openssl로 사설인증서를 만들어 간단하게 적용할 수도 있지만 브라우저에의해 신뢰할 수 없는 SSL 인증서를 사용함으로써 기본적으로 차단된다. 그러므로 개발용이 아닌 서비스용으로 https를 사용하기 위해서는 공인된 인증기관에서 SSL을 구매해야하는데 개인용으로 사용하기에는 비용이 만만치 않다.
+Let&amp;rsquo;s Encrypt는 SSL 구매가 HTTPS 보급에 방해된다고 생각해 SSL을 무료로 발급해준다. 발급후 유효기간이 90일로 90일마다 갱신해줘야 하지만 갱신을 자동으로 하는 방법이 있어 개인용이나 소규모 프로젝트에서 사용하기에 무리가 없을듯 하다.
+이 문서에서는 우분투(14.</description>
+    </item>
     
     <item>
       <title>Linux Timezone 변경 &amp; 시간 설정</title>
@@ -216,24 +227,6 @@ export HISTSIZE=450                         # 저장할 로그 개수 지정 (0�
 export HISTFILESIZE=450                     # 저장할 로그 개수 지정
 export HISTFILE=/root/.commandline_warrior  # 히스토리 로그 파일 변경
 &lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>VIM</title>
-      <link>http://blog.kiyeon.net/2015/06/12/vim/</link>
-      <pubDate>Fri, 12 Jun 2015 10:08:44 +0900</pubDate>
-      
-      <guid>http://blog.kiyeon.net/2015/06/12/vim/</guid>
-      <description>&lt;p&gt;나는 &lt;a href=&#34;http://www.vim.org&#34;&gt;vim&lt;/a&gt;을 좋아하는데 그 이유는
-&lt;!--hahahaha--&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;마우스 사용을 최소화하여 키보드로만 작업이 가능하고,&lt;/li&gt;
-&lt;li&gt;프로그램이 작고 가볍고,&lt;/li&gt;
-&lt;li&gt;그렇기에 웬만한 머신에는 &lt;a href=&#34;http://www.vim.org&#34;&gt;vim&lt;/a&gt; 또는 vi가 설치되어있어 쉽게 에디팅이 가능하기 때문이다.&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
-&lt;/ul&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
