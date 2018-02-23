@@ -1,13 +1,23 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1"><title>Kiyeon&#39;s Blog</title><link rel=stylesheet type=text/css href=/css/ybasic.css><link rel=stylesheet href=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-heath-dark.min.css><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js></script><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/dos.min.js></script><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js></script><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/lisp.min.js></script><script>hljs.initHighlightingOnLoad();</script></head><body><div class=content><h1 class=title title="January 31, 2018 16:08:44">Altibase</h1><p>알티베이스는 알티베이스사에서 제작한 한국산 데이터베이스 관리 시스템이다. 알티베이스 버전3까지는 순수한 인메모리 DBMS만 지원을 하였으나, 알티베이스 버전4부터는 인메모리 DBMS와 온디스크 DBMS를 동시에 지원하는 하이브리드 형태의 DBMS로 변경되었다. 알티베이스 버전 6부터는 제품명이 &ldquo;Altibase HDB&rdquo;로 변경되었는데, &ldquo;HDB&rdquo;는 하이브리드 DBMS의 약자이다. 알티베이스 버전7부터는 샤딩 기술이 적용되었다.</p><pre><code class=language-sql>    /* 문자열 암호화 */
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1"><title>Kiyeon&#39;s Blog</title><link rel=stylesheet type=text/css href=/css/ybasic.css><link rel=stylesheet href=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-heath-dark.min.css><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js></script><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/dos.min.js></script><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js></script><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/lisp.min.js></script><script>hljs.initHighlightingOnLoad();</script></head><body><div class=content><h1 class=title title="January 31, 2018 16:08:44">Altibase</h1><nav id=TableOfContents><ul><li><a href=#암호화>암호화</a></li><li><a href=#isql>iSQL</a><ul><li><a href=#한글-깨질때>한글 깨질때</a></li><li><a href=#isql-설정>iSQL 설정</a></li></ul></li></ul></nav><blockquote><p>알티베이스는 알티베이스사에서 제작한 한국산 데이터베이스 관리 시스템이다. 알티베이스 버전3까지는 순수한 인메모리 DBMS만 지원을 하였으나, 알티베이스 버전4부터는 인메모리 DBMS와 온디스크 DBMS를 동시에 지원하는 하이브리드 형태의 DBMS로 변경되었다. 알티베이스 버전 6부터는 제품명이 &ldquo;Altibase HDB&rdquo;로 변경되었는데, &ldquo;HDB&rdquo;는 하이브리드 DBMS의 약자이다. 알티베이스 버전7부터는 샤딩 기술이 적용되었다.</p></blockquote><ul><li><a href=https://goo.gl/eSrSe2>Altibase 가이드</a></li><li><a href=http://support.altibase.com/kr/manual>Altibase Manuals</a></li></ul><h1 id=암호화>암호화</h1><p><a href="http://manual.altibase.com/kr/651b/html/SQL%20Reference/wwhelp/wwhimpl/js/html/wwhelp.htm?href=SQL.1.103.html">알티베이스에서 몇가지 암호화 함수</a>를 제공한다. 다른 RDBMS의 암호화 함수는 암호화할 값을 넘기면 자동으로 암호화해주는데 반해 알티베이스 암호화함수는 사용하기가 조금 까다롭다. 메뉴얼을 보면 암호화할 값의 길이를 함수에 따라 8의 배수 또는 16의 배수로 맞춰야한다.</p><p>길이를 맞추기위해 빈값을 넣어야 하고 유니코드의 경우 길이가 다르므로 암호화 함수를 사용할때 사전 계산해야할것들이 많아 사용이 번거롭다. 이를 위해 아래와 같이 패키저로 만들었다.</p><pre><code class=language-sql>CREATE OR REPLACE PACKAGE USER_PKG
+IS
+    FUNCTION ENCODE(STR VARCHAR2(32000)) RETURN VARCHAR2(32000);
+    FUNCTION DECODE(STR VARCHAR2(32000)) RETURN VARCHAR2(32000);
+END;
+
+/
+
+CREATE OR REPLACE PACKAGE BODY USER_PKG
+IS
+    /* 문자열 암호화 */
     /* 암복호화 문자열 길이 8배수를 맞추기 위해 rpad를 사용하는데 원문을 보존하기위한 방법으로 원문 뒤에 &quot;$&quot;를 추가하고 UNICODE를 처리하기 위해 lengthb를 사용함. */
     FUNCTION ENCODE(STR VARCHAR2(32000)) RETURN VARCHAR2(32000)
     IS
         PIECES_OF_EIGHT  INTEGER;
     BEGIN
-        /* SELECT SVC_USER.MEGBO_PKG.ENCODE('pass워드1234') FROM DUAL; */
+        /* SELECT SVC_USER.USER_PKG.ENCODE('pass워드1234') FROM DUAL; */
         /* RESULT : 4MI�.�ң�� */
         PIECES_OF_EIGHT := ((FLOOR(LENGTHB(STR||'$')/8 + .9)) * 8) - LENGTHB(STR||'$');
-        RETURN TRIPLE_DESENCRYPT(STR||'$'||RPAD(' ', PIECES_OF_EIGHT), '#$DaJ+W_v;DWJ+W_');
+        RETURN TRIPLE_DESENCRYPT(STR||'$'||RPAD(' ', PIECES_OF_EIGHT), '$asd8_d,;-2+aka9');
     END;
     
     /* 문자열 복호화 */
@@ -15,16 +25,68 @@
     IS
         DECRYPTED_STRING VARCHAR2(32000);
     BEGIN
-        /* SELECT SVC_USER.MEGBO_PKG.DECODE(SVC_USER.MEGBO_PKG.ENCODE('pass워드1234')) FROM DUAL; */
+        /* SELECT SVC_USER.USER_PKG.DECODE(SVC_USER.USER_PKG.ENCODE('pass워드1234')) FROM DUAL; */
         /* RESULT : pass워드1234 */
-        DECRYPTED_STRING := TRIPLE_DESDECRYPT(STR, '#$DaJ+W_v;DWJ+W_');
+        DECRYPTED_STRING := TRIPLE_DESDECRYPT(STR, '$asd8_d,;-2+aka9');
         DECRYPTED_STRING := RTRIM(DECRYPTED_STRING);
         DECRYPTED_STRING := SUBSTR(DECRYPTED_STRING, 1, LENGTH(DECRYPTED_STRING)-1);
         RETURN DECRYPTED_STRING;
         
         EXCEPTION WHEN OTHERS THEN RETURN STR;
     END;
-</code></pre><ul><li><a href=https://goo.gl/eSrSe2>Altibase 가이드</a></li><li><a href=http://support.altibase.com/kr/manual>Altibase Manuals</a></li></ul><div id=disqus_thread></div><script type=text/javascript>
+END USER_PKG;
+</code></pre><h1 id=isql>iSQL</h1><h2 id=한글-깨질때>한글 깨질때</h2><ul><li><a href="http://aid.altibase.com/pages/viewpage.action?pageId=8454470">캐릭터셋 변경 방법 상세 절차</a></li></ul><p>NLS_USE에 터미널과 같은 캐릭터셋을 지정한다. NLS_USE는 데이터 검색시, 사용자에게 보여주는 문자 집합으로 iSQL을 실행하는 터미널의 encoding을 명시해준다.</p><ul><li>US7ASCII</li><li>KO16KSC5601</li><li>MS949</li><li>BIG5</li><li>GB2312380</li><li>UTF8</li><li>SHIFTJIS</li><li>EUCJP</li></ul><p>생략시 환경변수 ALTIBASE_NLS_USE, altibase.properties를 차례로 참조하며, 설정되지 않았을 경우에는 기본 문자 집합(US7ASCII)을 사용한다.</p><pre><code class=language-shell>$ /Altibase/bin/isql -s 127.0.0.1 -u user -port 20300 -p user -NLS_USE UTF8
+</code></pre><h2 id=isql-설정>iSQL 설정</h2><ul><li><a href="http://support.altibase.com/kr/search?kwd=isql&amp;category=manual&amp;subCategory=ALL&amp;reSrchFlag=false&amp;pageNum=1&amp;pageSize=2&amp;detailSearch=false&amp;srchFd=TOTAL&amp;sort=r&amp;date=TOTAL&amp;startDate=&amp;endDate=&amp;fileExt=TOTAL&amp;writer=&amp;year=TOTAL&amp;preKwd=isql">Altibase iSQL User&rsquo;s Manual(PDF)</a></li><li><a href=http://www.gurubee.net/lecture/2160>ALTIBASE HDB 5.3.3 기초강좌, iSQL</a></li><li><a href=http://infodbbase.tistory.com/12>Altibase iSQL 명령어</a></li></ul><p>isql에서 select시 컬럼이 가로로 출력되어 컬럼이 많을경우 줄바꿈이되면서 컬럼과 데이터를 눈으로 매핑시키기가 어렵다. 이때 <code>set vertical on;</code>을 하면 컬럼과 데이터가 세로로 출력되어 쉽게 데이터를 확인할 수 있다. 기본값은 off다.</p><p>$ALTIBASE_HOME/conf에 <strong>glogin.sql</strong> 또는 isql을 실행하는 폴더에 <strong>login.sql</strong>이 있으면 isql시작시 해당 파일을 로드한다. 쉘의 rc파일과 같은 기능을 한다. 이곳에 기본설정을 해놓으면 좀더 쉽게 isql을 사용할 수 있다.</p><pre><code class=language-sql>-- login.sql
+set vertical on;
+set timing on;
+set colsize 100;
+set explainplan on;
+set chkconstraints on;
+set foreignkeys on;
+autocommit off;
+</code></pre><p>isql에서 <code>help index</code>를 하면 설정할 수 있는 값들을 볼 수 있고 <code>help [index value]</code>를 하면 해당 설정의 도움말을 볼 수 있다.</p><pre><code class=language-shell>iSQL&gt; help index
+/                EXPLAINPLAN      QUERYLOGGING
+@                FEEDBACK         QUIT
+ALTER            FOREIGNKEYS      ROLLBACK
+AUTOCOMMIT       H[ISTORY]        SAVE
+CHKCONSTRAINTS   HEADING          SELECT
+COLSIZE          INSERT           SPOOL
+COMMIT           LINESIZE         START
+CREATE           LOAD             TERM
+DELETE           LOBOFFSET        TIMESCALE
+DESC             LOBSIZE          TIMING
+DROP             MERGE            UPDATE
+EDIT             MOVE             USER
+EXECUTE          NUM[WIDTH]       VAR[IABLE]
+EXIT             PAGESIZE         VERTICAL
+iSQL&gt; help @
+start file_name; - run script file
+@file_name;      - run script file
+iSQL&gt; help heading
+heading; - Display header with rows of selection
+           ex) set heading on;  - heading mode on
+               set heading off; - heading mode off
+</code></pre><p><code>show all</code>을 하면 현재 세션 화면 설정 값을 볼 수 있다.</p><pre><code class=language-shell>iSQL&gt; show all
+User      : USER
+ColSize   : 0
+LobOffset : 0
+LineSize  : 80
+LobSize   : 80
+NumWidth  : 11
+PageSize  : 2
+TimeScale : Second
+Heading   : On
+Timing    : On
+Vertical  : On
+ChkConstraints : Off
+ForeignKeys : Off
+PlanCommit : Off
+QueryLogging : Off
+Term : On
+Feedback : 1
+</code></pre><p><code>show user</code>를 하면 현재 사용자를 출력한다.</p><pre><code class=language-shell>iSQL&gt; show user
+User : USER
+</code></pre><div id=disqus_thread></div><script type=text/javascript>
         (function() {
             
             

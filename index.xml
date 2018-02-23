@@ -6,10 +6,22 @@
     <description>Recent content on Kiyeon&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Sat, 17 Feb 2018 20:41:26 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 22 Feb 2018 16:37:26 +0900</lastBuildDate>
     
 	<atom:link href="http://blog.kiyeon.net/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>SSH 자동 로그인</title>
+      <link>http://blog.kiyeon.net/2018/02/22/ssh-autologin/</link>
+      <pubDate>Thu, 22 Feb 2018 16:37:26 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2018/02/22/ssh-autologin/</guid>
+      <description>ssh 접속시 password 입력없이 자동으로 로그인하는 방법이다.
+SSH Key 만들기 ssh 자동 로그인은 공개키, 비공개키를 사용한다. 키를 생성하자.
+키파일명과 키파일을 어느 폴더에 만들지, 비공개키를 암호활지를 물어본다. 암호화를 하면 로그인시마다 비밀번호를 물어보기 때문에 자동로그인의 의미가 없다. 모두 Enter를 하여 넘어가면 키가 생성된다.
+$ ssh-keygen -t rsa Generating public/private rsa key pair. Enter file in which to save the key (/home/user/.ssh/id_rsa): Created directory &#39;/home/user/.ssh&#39;. Enter passphrase (empty for no passphrase): Enter same passphrase again: Your identification has been saved in /home/user/.</description>
+    </item>
     
     <item>
       <title>무료 HTTPS, Let&#39;s Encrypt</title>
@@ -29,7 +41,7 @@ Let&amp;rsquo;s Encrypt는 SSL 구매가 HTTPS 보급에 방해된다고 생각�
       
       <guid>http://blog.kiyeon.net/2018/01/31/altibase/</guid>
       <description>알티베이스는 알티베이스사에서 제작한 한국산 데이터베이스 관리 시스템이다. 알티베이스 버전3까지는 순수한 인메모리 DBMS만 지원을 하였으나, 알티베이스 버전4부터는 인메모리 DBMS와 온디스크 DBMS를 동시에 지원하는 하이브리드 형태의 DBMS로 변경되었다. 알티베이스 버전 6부터는 제품명이 &amp;ldquo;Altibase HDB&amp;rdquo;로 변경되었는데, &amp;ldquo;HDB&amp;rdquo;는 하이브리드 DBMS의 약자이다. 알티베이스 버전7부터는 샤딩 기술이 적용되었다.
-/* 문자열 암호화 */ /* 암복호화 문자열 길이 8배수를 맞추기 위해 rpad를 사용하는데 원문을 보존하기위한 방법으로 원문 뒤에 &amp;quot;$&amp;quot;를 추가하고 UNICODE를 처리하기 위해 lengthb를 사용함. */ FUNCTION ENCODE(STR VARCHAR2(32000)) RETURN VARCHAR2(32000) IS PIECES_OF_EIGHT INTEGER; BEGIN /* SELECT SVC_USER.</description>
+  Altibase 가이드 Altibase Manuals  암호화 알티베이스에서 몇가지 암호화 함수를 제공한다. 다른 RDBMS의 암호화 함수는 암호화할 값을 넘기면 자동으로 암호화해주는데 반해 알티베이스 암호화함수는 사용하기가 조금 까다롭다.</description>
     </item>
     
     <item>
