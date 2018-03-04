@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mysql on Kiyeon&#39;s Blog</title>
+    <link>http://blog.kiyeon.net/tags/mysql/</link>
+    <description>Recent content in Mysql on Kiyeon&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Tue, 28 Feb 2017 17:14:44 +0900</lastBuildDate>
+    
+	<atom:link href="http://blog.kiyeon.net/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>MySql</title>
+      <link>http://blog.kiyeon.net/2017/02/28/mysql/</link>
+      <pubDate>Tue, 28 Feb 2017 17:14:44 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2017/02/28/mysql/</guid>
+      <description>사용자 생성 쿼리 CREATE DATABASE MYAPP; CREATE USER &#39;HOMESTEAD&#39; IDENTIFIED BY &#39;SECRET&#39;; GRANT ALL PRIVILEGES ON MYAPP.* TO &#39;HOMESTEAD&#39;; FLUSH PRIVILEGES;  테이블 생성 CREATE TABLE POSTS ( ID INT(11) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY, TITLE VARCHAR(255), BODY TEXT ) ENGINE=INNODB DEFAULT CHARSET=UTF8 COLLATE=UTF8_UNICODE_CI; CREATE TABLE AUTHORS( ID INT(11) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY , EMAIL VARCHAR(255) NOT NULL, PASSWORD VARCHAR(60) NOT NULL ) ENGINE=INNODB DEFAULT CHARSET=UTF8 COLLATE=UTF8_UNICODE_CI;  순위 구하기 MySQL에는 랭킹을 구하는 함수가 없어 꼼수를 사용해야 한다.</description>
+    </item>
+    
+    <item>
+      <title>데이터가 숫자인 문자형타입 컬럼 정렬방법</title>
+      <link>http://blog.kiyeon.net/2016/11/04/order-by/</link>
+      <pubDate>Fri, 04 Nov 2016 13:00:02 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2016/11/04/order-by/</guid>
+      <description>컬럼의 타입은 문자형이다. 문자형 타입에는 어떤 데이터값이라도 들어올 수 있다. 이런 컬럼으로 정렬(order by)를 하는 경우가 있는데 어떻게 보면 테이블 설계가 잘못 됐다고 볼 수 있다. 원래 해당 컬럼의 숫자데이터로 정렬할 목적이였다면 숫자타입으로 컬럼을 만들어야 한다. 이런 상황에서 정렬을 해보면 잘되는것 처럼 보이지만 10단위에서 문제가 생긴다. 즉 오름차순일 경우 아래와 같이 정렬된다.
+1 10 2 26 276483 3 ...  숫자가 아닌 문자이기때문에 순서대로 정렬되지 않는다.
+해결방법 Oracle ORDER BY TO_NUMBER(ORD)</description>
+    </item>
+    
+  </channel>
+</rss>

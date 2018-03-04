@@ -1,4 +1,4 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1"><title>Kiyeon&#39;s Blog</title><link rel=stylesheet type=text/css href=/css/ybasic.css><link rel=stylesheet href=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-heath-dark.min.css><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js></script><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/dos.min.js></script><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js></script><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/lisp.min.js></script><script>hljs.initHighlightingOnLoad();</script></head><body><div class=content><h1 class=title title="February 13, 2017 10:37:15">HUGO</h1><nav id=TableOfContents><ul><li><a href=#사이트-생성>사이트 생성</a></li><li><a href=#글쓰기>글쓰기</a></li><li><a href=#테마-설치>테마 설치</a></li><li><a href=#서버-띄우고-브라우저로-확인>서버 띄우고 브라우저로 확인</a></li><li><a href=#배포>배포</a></li><li><a href=#유용한-cli-명령>유용한 CLI 명령</a></li><li><a href=#markdown>Markdown</a></li><li><a href=#syntax-highlighting>Syntax Highlighting</a></li><li><a href=#주석>주석</a></li><li><a href=#references>References</a></li></ul></nav><p><a href="http://gohugo.io/">HUGO</a><sup class=footnote-ref id=fnref:1><a rel=footnote href=#fn:1>1</a></sup>는 <a href="https://golang.org/">Go언어</a>로 만들어진 Octopress나 jekyll과 비슷한 <a href=http://nilclass.com/courses/what-is-a-static-website/#1>Static website</a>(<a href=https://en.wikipedia.org/wiki/Static_web_page>wiki</a>) generator 로 현재 Jekyll과 더불러 <a href="https://www.staticgen.com/">급속도로 인기를 얻고 있다</a>.</p><p></p><p><a href="https://gohugo.io/overview/installing/">멀티 플랫폼을 지원하며 설치가 간단</a>하다.</p><h1 id=사이트-생성>사이트 생성</h1><p>사이트 생성이 굉장히 간단하다. 생성된 폴더를 보면 심플한 구조로 되어있다.</p><pre><code class=language-shell>$ hugo new site myhugo &amp;&amp; tree myhugo
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1"><title>Kiyeon&#39;s Blog</title><link rel=stylesheet type=text/css href=/css/ybasic.css><link rel=stylesheet href=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-heath-dark.min.css><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js></script><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/dos.min.js></script><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js></script><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/lisp.min.js></script><script>hljs.initHighlightingOnLoad();</script></head><body><div class=content><h1 class=title title="February 13, 2017 10:37:15">HUGO</h1><nav id=TableOfContents><ul><li><a href=#사이트-생성>사이트 생성</a></li><li><a href=#글쓰기>글쓰기</a></li><li><a href=#테마-설치>테마 설치</a></li><li><a href=#서버-띄우고-브라우저로-확인>서버 띄우고 브라우저로 확인</a></li><li><a href=#배포>배포</a><ul><li><a href=#hugo-git-page로-배포하기>Hugo, Git Page로 배포하기</a></li></ul></li><li><a href=#유용한-cli-명령>유용한 CLI 명령</a></li><li><a href=#jekyll-포스트-가져오기>Jekyll 포스트 가져오기</a></li><li><a href=#markdown>Markdown</a></li><li><a href=#syntax-highlighting>Syntax Highlighting</a></li><li><a href=#주석>주석</a></li><li><a href=#references>References</a></li></ul></nav><p><a href="http://gohugo.io/">HUGO</a><sup class=footnote-ref id=fnref:1><a rel=footnote href=#fn:1>1</a></sup>는 <a href="https://golang.org/">Go언어</a>로 만들어진 Octopress나 jekyll과 비슷한 <a href=http://nilclass.com/courses/what-is-a-static-website/#1>Static website</a>(<a href=https://en.wikipedia.org/wiki/Static_web_page>wiki</a>) generator 로 현재 Jekyll과 더불러 <a href="https://www.staticgen.com/">급속도로 인기를 얻고 있다</a>.</p><p></p><p><a href="https://gohugo.io/overview/installing/">멀티 플랫폼을 지원하며 설치가 간단</a>하다.</p><h1 id=사이트-생성>사이트 생성</h1><p>사이트 생성이 굉장히 간단하다. 생성된 폴더를 보면 심플한 구조로 되어있다.</p><pre><code class=language-shell>$ hugo new site myhugo &amp;&amp; tree myhugo
 Congratulations! Your new Hugo site is created in /Users/kiyeon/myhugo.
 
 Just a few more steps and you're ready to go:
@@ -22,7 +22,7 @@ myhugo
 └── themes
 
 6 directories, 2 files
-</code></pre><h1 id=글쓰기>글쓰기</h1><pre><code class=language-shell>myhugo$ hugo new post/hello-world.md --editor=vi
+</code></pre><h1 id=글쓰기>글쓰기</h1><p>이때 파일명의 대시(&lsquo;-&rsquo;)는 제목에서 스페이스로 처리된다. &lsquo;&ndash;editor vi&rsquo;옵션을 주면 파일을 만들고 vi로 해당 파일을 열어준다. <strong>파일명을 한글로하면 로컬에서는 잘 열리지만 배포시 안열리는 문제가 있다.</strong></p><p>draft가 &lsquo;true&rsquo;이면 비공개다. &lsquo;false&rsquo;로 해야 공개가 된다.</p><pre><code class=language-shell>myhugo$ hugo new post/hello-world.md --editor vi
 ---
 title: &quot;hello world&quot;
 date: 2017-02-13T20:20:36+09:00
@@ -32,11 +32,39 @@ draft: false
 Hello World!
 </code></pre><h1 id=테마-설치>테마 설치</h1><p>서버를 띄우고 브라우저에서 확인하기 위해서는 포스트를 포장해줄 레이아웃(테마)이 필요하다. hugo는 기본테마가 없기때문에 반드시 처음 설치를 하면 테마를 설치해줘야 한다. <a href="http://themes.gohugo.io/">Theme showcase</a>에서 마음에 드는 테마를 고른후 git으로 설치한다.</p><pre><code class=language-shell>myhugo&gt; git clone https://github.com/appernetic/hugo-bootstrap-premium themes/btpr
 </code></pre><h1 id=서버-띄우고-브라우저로-확인>서버 띄우고 브라우저로 확인</h1><pre><code class=language-shell>myhugo&gt; hugo server --theme=btpr --buildDrafts
+Started building sites ...
+Built site for language en:
+1 of 1 draft rendered
+0 future content
+0 expired content
+1 regular pages created
+2 other pages created
+0 non-page files copied
+2 paginator pages created
+0 tags created
+0 categories created
+total in 11 ms
+Watching for changes in ~/hugo_test/1/{data,content,layouts,static,themes}
+Serving pages from memory
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Press Ctrl+C to stop
 </code></pre><p><code>--buildDrafts | -D</code>는 draft된 글도 함께 빌드하라는 옵션이다. 위에서는 draft를 false로 해서 안써도 되지만 이런 옵션이 있다는걸 알아두자. <code>hugo help</code>를 하면 도움말을 볼 수 있다. 참고로 IP를 지정하고 싶다면 <code>--bind=IpAddress</code>를 사용하고 도메인을 지정하려면 <code>--baseURL | -b domain</code>을 사용한다. 이제 브라우저에서 확인해볼 수 있다. HUGO가 재미있는건 별도의 설치없이도 LiveReload가 된다는건데 설정이나 글을 수정하면 브라우저가 새로고침이 되어 수정한 내용을 실시간으로 확인해 볼 수 있다.</p><h1 id=배포>배포</h1><p>배포전에 <code>config.toml</code>을 수정한다.</p><pre><code class=language-shell>myhugo$ cat config.toml
 languageCode = &quot;ko-kr&quot;
 title = &quot;My New Hugo Site&quot;
 baseurl = &quot;https://myhugo.aerobatic.io/&quot;
-</code></pre><p>languageCode는 ko-kr, baseurl은 배포할 웹서버의 도메인으로 바꿔준다.</p><p>웹에 배포를 하기위해 사이트를 빌딩 한다.</p><pre><code class=language-shell>myhugo$ hugo --theme=btpr
+</code></pre><p>languageCode는 ko-kr, baseurl은 배포할 웹서버의 도메인으로 바꿔준다.(명령행에서는 &ndash;baseURL=<a href=https://hugo.aerobatic.io>https://hugo.aerobatic.io</a>)</p><p>웹에 배포를 하기위해 사이트를 빌딩 한다.</p><p>hugo만 실행하면 public폴더에 배포용 파일들을 만들어 준다. 이때도 마찬가지로 theme를 지정해줘야 하며 웹에서 사용할 수 있도록 baseURL도 설정되어 있어야 한다.</p><pre><code class=language-shell>myhugo$ hugo --theme=btpr
+Started building sites ...
+Built site for language en:
+0 draft content
+0 future content
+0 expired content
+5 regular pages created
+2 other pages created
+0 non-page files copied
+2 paginator pages created
+0 tags created
+0 categories created
+total in 20 ms
 </code></pre><p>위 명령을 실행하면 public폴더가 생성되고 hugo가 그 폴더에 사이트를 빌드해준다.<br>간단하게 <a href="http://aerobatic.com/">Aerobatic</a>에 배포를 해보자.</p><pre><code class=language-shell>myhugo$ cd public
 myhugo/public$ aero create &amp;&amp; aero rename -n 'myhugo' &amp;&amp; aero deploy
 
@@ -58,7 +86,52 @@ Deploy new Aerobatic website version to stage production
 
 Version v1 deployment complete.
 View now at https://myhugo.aerobatic.io
-</code></pre><p><a href="https://myhugo.aerobatic.io/">https://myhugo.aerobatic.io/</a> 웹에 배포된 것을 확인할 수 있다.</p><h1 id=유용한-cli-명령>유용한 CLI 명령</h1><ul><li><code>hugo list drafts</code> : draft중인 문서 리스트 출력. front matter의 <code>draft = true</code>인 문서.</li><li><code>hugo --cleanDestinationDir</code> : 빌드를 하면 hugo는 새로운 파일에 대해서 추가만 한다. 쓰고 지우는 과정에서 구조가 바뀔 수 있는데 추가만 하므로 Destination Dir에 사용하지 않는 파일들이 쌓일 수가 있다. 항상 현재 구조와 동일하게 유지 하고 싶다면 이 옵션을 사용하자.</li></ul><h1 id=markdown>Markdown</h1><p>HUGO는 <a href=https://github.com/russross/blackfriday>BlackFriday</a> <a href=http://daringfireball.net/projects/markdown>Markdown</a> 렌더링 엔진을 사용한다.<br><a href=https://gohugo.io/overview/configuration/#configure-blackfriday-rendering>Blackfriday의 옵션을 사용해 Markdown 렌더링 기능을 조금 수정</a>할 수 있으며 config.toml(or yaml)에 다음과 같은 형식으로 설정해야 한다.</p><p>config.toml</p><pre><code class=language-toml>[blackfriday]
+</code></pre><p><a href="https://myhugo.aerobatic.io/">https://myhugo.aerobatic.io/</a> 웹에 배포된 것을 확인할 수 있다.</p><h2 id=hugo-git-page로-배포하기>Hugo, Git Page로 배포하기</h2><p><a href="https://gohugo.io/tutorials/github-pages-blog/">https://gohugo.io/tutorials/github-pages-blog/</a> 참조</p><p>2개의 저장소를 만든다. 하나는 hugo 컨텐츠 관리용 저장소. <a href=https://github.com/kiyeon/my-hugo>https://github.com/kiyeon/my-hugo</a> 다른 하나는 github page 배포용 저장소. <a href=https://github.com/kiyeon/kiyeon.github.io>https://github.com/kiyeon/kiyeon.github.io</a></p><pre><code class=language-shell># 지킬 컨텐츠를 hugo로 import 한다.
+hugo import jekyll myjekyll_dir my-hugo &amp;&amp; cd my-hugo
+
+# 컨텐츠 관리용 저장소 셋팅
+git init
+git remote add origin https://github.com/kiyeon/my-hugo.git
+
+# 테마를 받고 git 서브모듈로 추가한다.
+mkdir themes
+git submodule add https://github.com/yoshiharuyamashita/blackburn.git
+cd ..
+
+# config.toml을 설정한다. 
+baseurl = &quot;http://blog.kiyeon.net/&quot;
+#languageCode = &quot;en-us&quot;
+languageCode = &quot;ko-kr&quot;
+title = &quot;Kiyeon's Blog&quot;
+theme = &quot;blackburn&quot;
+author = &quot;Yoshiharu Yamashita&quot;
+copyright = &quot;&amp;copy; 2016. All rights reserved.&quot;
+canonifyurls = true
+paginate = 5
+disablePathToLower = true
+
+# 배포용 저장소를 서브모듈로 추가한다.
+mkdir public
+cd public
+git submodule add https://github.com/kiyeon/kiyeon/github.io.git
+cd ..
+
+# 사이트를 빌딩한다.
+hugo
+
+# 빌딩한 사이틀 배포한다.
+cd public
+git add .
+git commit -m&quot;rebuilding site `date`&quot;
+git push -u origin master
+
+# 컨텐츠 저장소의 변경사항을 저장하고 푸쉬한다.
+cd ..
+git add .
+git commit -m'initialize hugo'
+git push -u origin master
+</code></pre><p>새로운 폴더에서 작업할땐 clone후 git submodule init &amp;&amp; git shubmodule update를 해준다.</p><h1 id=유용한-cli-명령>유용한 CLI 명령</h1><ul><li><code>hugo list drafts</code> : draft중인 문서 리스트 출력. front matter의 <code>draft = true</code>인 문서.</li><li><code>hugo --cleanDestinationDir</code> : 빌드를 하면 hugo는 새로운 파일에 대해서 추가만 한다. 쓰고 지우는 과정에서 구조가 바뀔 수 있는데 추가만 하므로 Destination Dir에 사용하지 않는 파일들이 쌓일 수가 있다. 항상 현재 구조와 동일하게 유지 하고 싶다면 이 옵션을 사용하자.</li></ul><h1 id=jekyll-포스트-가져오기>Jekyll 포스트 가져오기</h1><pre><code class=language-shell>$ hugo import jekyll jekyll_root_path target_path
+</code></pre><h1 id=markdown>Markdown</h1><p>HUGO는 <a href=https://github.com/russross/blackfriday>BlackFriday</a> <a href=http://daringfireball.net/projects/markdown>Markdown</a> 렌더링 엔진을 사용한다.<br><a href=https://gohugo.io/overview/configuration/#configure-blackfriday-rendering>Blackfriday의 옵션을 사용해 Markdown 렌더링 기능을 조금 수정</a>할 수 있으며 config.toml(or yaml)에 다음과 같은 형식으로 설정해야 한다.</p><p>config.toml</p><pre><code class=language-toml>[blackfriday]
     fractions = true
     hrefTargetBlank = true # default 'false', true opens external links in a new window or tab.
     extensions = [&quot;&quot;]

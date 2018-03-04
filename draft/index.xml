@@ -22,20 +22,6 @@ $ setterm -cursor off $ setterm -cursor on  :)</description>
     </item>
     
     <item>
-      <title>CRLF</title>
-      <link>http://blog.kiyeon.net/2017/12/12/crlf/</link>
-      <pubDate>Tue, 12 Dec 2017 10:46:46 +0900</pubDate>
-      
-      <guid>http://blog.kiyeon.net/2017/12/12/crlf/</guid>
-      <description>CRLF는 새줄 문자를 말한다. New Line, Line Break, Line Separators, EOL(End-Of-Line)라고도 한다.
-CR(Carrige Return)
- 현재 라인에서 캐리지(커서)를 제일 앞으로 이동하는 동작 아스키(13, 0x0D), \r  LF(Line Feed)
- 종이를 한 라인 위로 올리는 동작 아스키(10, 0x0A), \n  운영체제별 줄바꿈 문자 OS별로 줄바꿈 문자가 다르다.
- 역사
-ISO와 ASA(ANSI의 전신)는 동시에 ASCII를 개발했다. 1963년부터 1968년까지 ISO 초안은 CR+LF와 LF를 새줄 문자로 정했다. ASA의 초안은 CR+LF만 지원했다. CR+LF는 텔레타이프, ASR33을 콘솔 장치로 사용한 초기 컴퓨터 시스템에서 널리 쓰였다.</description>
-    </item>
-    
-    <item>
       <title>Diamond Ring</title>
       <link>http://blog.kiyeon.net/2017/12/09/diamond-ring/</link>
       <pubDate>Sat, 09 Dec 2017 22:24:28 +0900</pubDate>
@@ -93,6 +79,18 @@ PowerShell requires an execution policy of &#39;RemoteSigned&#39; to run Scoop. 
     </item>
     
     <item>
+      <title>macOS에서의 rsync</title>
+      <link>http://blog.kiyeon.net/2016/07/17/rsync-for-macos/</link>
+      <pubDate>Sun, 17 Jul 2016 13:00:02 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2016/07/17/rsync-for-macos/</guid>
+      <description>macOS에서 rsync를 사용할때 싱크가 잘 맞지 않는 문제가 있다.
+rsync -avh --progress --delete src dst  보통 위와 같이 사용하면 항상 싱크가 맞아야 한다. 하지만 맥에서 위와 같이 했을때 두가지 문제가 있었다. 1. 폴더아이콘과 태그가 복사되지 않는다. (-xrlptgoEvh 옵션으로 해결) 2. 한글로된 폴더는 &amp;ndash;delete 옵션이 먹지 않는다. (영문명은 잘됨)
+1의 경우 -xrlptgoEvh 옵션을 사용하면 해결할 수 있다. OS X의 rsync는 애플이 리소스도 함께 rsync되도록 -E 옵션을 커스터마이징한거라고 한다.
+2의 경우 OS X에서 내부적으로 사용하는 UTF-8-MAC 인코딩이 문제인거 같다.</description>
+    </item>
+    
+    <item>
       <title>Jekyll</title>
       <link>http://blog.kiyeon.net/2016/02/10/jekyll/</link>
       <pubDate>Wed, 10 Feb 2016 14:28:00 +0900</pubDate>
@@ -141,7 +139,9 @@ sudo dpkg -i sqlite3_3.9.2-1_amd64.deb 의존성 관련 패키지가 필요하�
       <pubDate>Tue, 23 Jun 2015 17:19:42 +0900</pubDate>
       
       <guid>http://blog.kiyeon.net/2015/06/23/zsh/</guid>
-      <description> Why Zsh is cooler than your shell My Extravagant Zsh Prompt A Beautifully Productive Terminal Experience Hey Prezto - Zsh for Command Line Heaven  </description>
+      <description> Z셸(Z shell, zsh)은 상호작용 로그인 셸이자 셸 스크립트를 위한 강력한 명령 줄 인터프리터로 사용할 수 있는 유닉스 셸이다. Zsh는 bash, ksh, tcsh의 일부 기능을 포함하여 수많은 개선 사항이 갖추어진 확장형 본 셸이다. - wiki
+ 기본적으로 역사가 오래된 bash는 대부분의 시스템에 기본적으로 설치가 되어있는 반면 zsh은 그렇지 않으므로 스스로 설치해야한다. 그래서 그런지 검색순위는 높지 않다j.
+ 공식사이트 http://www.zsh.org What are the best UNIX shells? Why Zsh is cooler than your shell My Extravagant Zsh Prompt A Beautifully Productive Terminal Experience Hey Prezto - Zsh for Command Line Heaven  </description>
     </item>
     
     <item>

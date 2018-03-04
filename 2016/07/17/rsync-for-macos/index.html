@@ -1,0 +1,23 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1"><title>Kiyeon&#39;s Blog</title><link rel=stylesheet type=text/css href=/css/ybasic.css><link rel=stylesheet href=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-heath-dark.min.css><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js></script><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/dos.min.js></script><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js></script><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/lisp.min.js></script><script>hljs.initHighlightingOnLoad();</script></head><body><div class=content><h1 class=title title="July 17, 2016 13:00:02">macOS에서의 rsync</h1><p>macOS에서 rsync를 사용할때 싱크가 잘 맞지 않는 문제가 있다.</p><pre><code class=language-shell>rsync -avh --progress --delete src dst
+</code></pre><p>보통 위와 같이 사용하면 항상 싱크가 맞아야 한다. 하지만 맥에서 위와 같이 했을때 두가지 문제가 있었다. 1. 폴더아이콘과 태그가 복사되지 않는다. (-xrlptgoEvh 옵션으로 해결) 2. 한글로된 폴더는 &ndash;delete 옵션이 먹지 않는다. (영문명은 잘됨)</p><p>1의 경우 -xrlptgoEvh 옵션을 사용하면 해결할 수 있다. <a href=https://kldp.org/node/110956>OS X의 rsync는 애플이 리소스도 함께 rsync되도록 -E 옵션을 커스터마이징한거라고 한다.</a></p><p>2의 경우 OS X에서 내부적으로 사용하는 UTF-8-MAC 인코딩이 문제인거 같다.(<a href=http://egloos.zum.com/mcchae/v/11170664>iconv의 UTF-8-MAC이라는 것이 풀어쓰기처럼 되어있는(decomposed된) UTF-8 인코딩</a>) 이로인해 find로 한글파일도 검색이 되지 않는다. 내부적으로 UTF-8-MAC인코딩이고 터미널에서의 검색어는 UTF-8이라 서로 인코딩이 달라 검색이 안된다.(<a href=http://mcchae.egloos.com/10686522>http://mcchae.egloos.com/10686522</a>, alias hfind=&lsquo;find . -type d | iconv -c -f UTF-8-MAC -t UTF-8 | grep -i &lsquo;)</p><p>애플에서 rsync를 업데이트하는지 모르겠지만 brew를 통해 최신버전의 rsync를 받을 수 있다. 그런데 맥과 동작방식이 호환되지 않는다. 이 rsync를 사용하면 &ndash;delete 옵션이 잘 먹는다.(사실 두번 명령을 날려야 delete가 제대로 먹는다&hellip; 버그인듯&hellip; &ndash;) 하지만 맥과 호환이 안되어 -E 옵션은 먹지 않는다.</p><p>지금까지 알아본봐로 정리하면 1. 일단 rsync -avhE &ndash;progress &ndash;delete 로 복사한다. 2. brew의 rsync -avh &ndash;progress &ndash;delete 로 한번더 명령을 날린다. 그럼 delete가 적용된다.</p><div id=disqus_thread></div><script type=text/javascript>
+        (function() {
+            
+            
+            if (window.location.hostname == "localhost")
+                return;
+
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            var disqus_shortname = 'kiyeon';
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href=http://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href="http://disqus.com/" class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div><footer>Kiyeon&#39;s Blog</footer><script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-79101-12', 'auto');
+    ga('send', 'pageview');
+
+</script></body></html>

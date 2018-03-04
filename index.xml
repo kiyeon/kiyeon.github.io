@@ -24,14 +24,13 @@ $ ssh-keygen -t rsa Generating public/private rsa key pair. Enter file in which 
     </item>
     
     <item>
-      <title>무료 HTTPS, Let&#39;s Encrypt</title>
-      <link>http://blog.kiyeon.net/2018/02/17/letsencrypt/</link>
+      <title>HTTPS 사용하기</title>
+      <link>http://blog.kiyeon.net/2018/02/17/https/</link>
       <pubDate>Sat, 17 Feb 2018 20:41:26 +0900</pubDate>
       
-      <guid>http://blog.kiyeon.net/2018/02/17/letsencrypt/</guid>
-      <description>보안을 위해 웹에서도 https를 사용하는 추세다. openssl로 사설인증서를 만들어 간단하게 적용할 수도 있지만 브라우저에의해 신뢰할 수 없는 SSL 인증서를 사용함으로써 기본적으로 차단된다. 그러므로 개발용이 아닌 서비스용으로 https를 사용하기 위해서는 공인된 인증기관에서 SSL을 구매해야하는데 개인용으로 사용하기에는 비용이 만만치 않다.
-Let&amp;rsquo;s Encrypt는 SSL 구매가 HTTPS 보급에 방해된다고 생각해 SSL을 무료로 발급해준다. 발급후 유효기간이 90일로 90일마다 갱신해줘야 하지만 갱신을 자동으로 하는 방법이 있어 개인용이나 소규모 프로젝트에서 사용하기에 무리가 없을듯 하다.
-이 문서에서는 우분투(14.</description>
+      <guid>http://blog.kiyeon.net/2018/02/17/https/</guid>
+      <description>보안을 위해 웹에서도 https를 사용하는 추세다. openssl로 사설인증서를 만들어 간단하게 적용할 수도 있지만 브라우저에의해 신뢰할 수 없는 SSL 인증서를 사용함으로써 기본적으로 차단된다. 그러므로 개발용이 아닌 서비스용으로 https를 사용하기 위해서는 공인된 인증기관에서 SSL을 구매하거나 무료 SSL 발급서비스를 사용할 수 있다.
+ SSL 인증서는 글로벌 인증 기관에서 도메인을 특정하여 발행하는 민간 인증 회사입니다. 여러분의 웹 사이트에 인증서를 취득하고자 할 경우, 인증 회사(Certificate Authority)는 해당 도메인 소유 확인 책임을 담당합니다. 그리고, 일정 기간 유효한 인증서를 발급하고 특정 도메인의 웹 사이트 암호화를 보장합니다.</description>
     </item>
     
     <item>
@@ -173,6 +172,20 @@ Key Pair 사용 접속 인스턴스 생성 마지막단계에서 Key Pair를 생
     </item>
     
     <item>
+      <title>Oracle</title>
+      <link>http://blog.kiyeon.net/2017/03/22/oracle/</link>
+      <pubDate>Wed, 22 Mar 2017 17:14:44 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2017/03/22/oracle/</guid>
+      <description>RDBMS 오라클 유용한 팁모음
+숫자에 comma 넣기 to_char(col,&amp;lsquo;Fm999,999,999,990&amp;rsquo;)
+REGEXP_REPLACE
+SELECT NO ,REVERSE(TO_CHAR(no)) AS REVERSE_NO ,REGEXP_REPLACE(REVERSE(REGEXP_REPLACE( REVERSE(TO_CHAR(no)), &#39;([0-9]{3})&#39;,&#39;\1,&#39;)), &#39;^,&#39;,&#39;&#39;) AS COMMA_NO FROM ( SELECT 123456789 AS no FROM dual ) V1 ; &amp;lt;&amp;lt;결과&amp;gt;&amp;gt; NO REVERSE_NO COMMA_NO --- ------------- ------------- 123456789 987654321 123,456,789  숫자+문자 조합문자열에서 문자만 추출하는법 문자로만 이루어진 문자열인지 확인
+SELECT C FROM (SELECT &#39;ABCDE&#39; C FROM DUAL) WHERE TRANSLATE(C, &#39;0123456789&#39;, &#39;A&#39;) = C;  숫자로만 이루어진 문자열인지
+SELECT C FROM (SELECT &#39;12345&#39; C FROM DUAL) WHERE TRANSLATE(C, &#39;0123456789&#39; || C, &#39;0123456789&#39;) = C;  숫자+문자 조합문자열에서 숫자만 추출</description>
+    </item>
+    
+    <item>
       <title>macOS에 스타크래프트 설치하고 실행하기</title>
       <link>http://blog.kiyeon.net/2017/03/07/running-starcraft-on-macos/</link>
       <pubDate>Tue, 07 Mar 2017 19:00:13 +0900</pubDate>
@@ -186,6 +199,15 @@ Key Pair 사용 접속 인스턴스 생성 마지막단계에서 Key Pair를 생
     </item>
     
     <item>
+      <title>MySql</title>
+      <link>http://blog.kiyeon.net/2017/02/28/mysql/</link>
+      <pubDate>Tue, 28 Feb 2017 17:14:44 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2017/02/28/mysql/</guid>
+      <description>사용자 생성 쿼리 CREATE DATABASE MYAPP; CREATE USER &#39;HOMESTEAD&#39; IDENTIFIED BY &#39;SECRET&#39;; GRANT ALL PRIVILEGES ON MYAPP.* TO &#39;HOMESTEAD&#39;; FLUSH PRIVILEGES;  테이블 생성 CREATE TABLE POSTS ( ID INT(11) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY, TITLE VARCHAR(255), BODY TEXT ) ENGINE=INNODB DEFAULT CHARSET=UTF8 COLLATE=UTF8_UNICODE_CI; CREATE TABLE AUTHORS( ID INT(11) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY , EMAIL VARCHAR(255) NOT NULL, PASSWORD VARCHAR(60) NOT NULL ) ENGINE=INNODB DEFAULT CHARSET=UTF8 COLLATE=UTF8_UNICODE_CI;  순위 구하기 MySQL에는 랭킹을 구하는 함수가 없어 꼼수를 사용해야 한다.</description>
+    </item>
+    
+    <item>
       <title>HUGO</title>
       <link>http://blog.kiyeon.net/2017/02/13/hugo/</link>
       <pubDate>Mon, 13 Feb 2017 10:37:15 +0900</pubDate>
@@ -194,6 +216,51 @@ Key Pair 사용 접속 인스턴스 생성 마지막단계에서 Key Pair를 생
       <description>&lt;p&gt;&lt;a href=&#34;http://gohugo.io/&#34;&gt;HUGO&lt;/a&gt;&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;는 &lt;a href=&#34;https://golang.org/&#34;&gt;Go언어&lt;/a&gt;로 만들어진 Octopress나 jekyll과 비슷한 &lt;a href=&#34;http://nilclass.com/courses/what-is-a-static-website/#1&#34;&gt;Static website&lt;/a&gt;(&lt;a href=&#34;https://en.wikipedia.org/wiki/Static_web_page&#34;&gt;wiki&lt;/a&gt;) generator 로 현재 Jekyll과 더불러 &lt;a href=&#34;https://www.staticgen.com/&#34;&gt;급속도로 인기를 얻고 있다&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Hosts</title>
+      <link>http://blog.kiyeon.net/2016/11/04/hosts/</link>
+      <pubDate>Fri, 04 Nov 2016 13:00:02 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2016/11/04/hosts/</guid>
+      <description> 로컬에서 HOST파일을 수정하여 도메인에 매핑되는 IP주소를 수정할 수 있다. 제일 처음 도메인이 입력됐을때 로컬의 HOST파일을 참조하고 그 이후에는 DNS Server를 참조하여 IP주소를 찾아간다.
+아래는 각 OS별 HOST 파일의 위치다.
+Windows  win+r notepad c:\windows\system32\drivers\etc\hosts  Linux, UNIX, OSX  vi /etc/hosts  </description>
+    </item>
+    
+    <item>
+      <title>Toad for Oracle</title>
+      <link>http://blog.kiyeon.net/2016/11/04/toad-for-oracle/</link>
+      <pubDate>Fri, 04 Nov 2016 13:00:02 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2016/11/04/toad-for-oracle/</guid>
+      <description> SELECT문에서 컬럼값 직접 수정하기 이 내용은 Oracle에만 해당되며 Toad에서만 확인됐다.
+테이블에 있는 데이터를 수정하려면 당연히 UPDATE문을 사용해야 한다. Toad에서는 조회시 rowid를 사용하면 &amp;lsquo;Data Grid&amp;rsquo;에서 바로 수정할 수 있다. 물론 수정후 Commit을 해줘야 한다.
+SELECT ROWID, A.* FROM TABLE_NAME A;  </description>
+    </item>
+    
+    <item>
+      <title>데이터가 숫자인 문자형타입 컬럼 정렬방법</title>
+      <link>http://blog.kiyeon.net/2016/11/04/order-by/</link>
+      <pubDate>Fri, 04 Nov 2016 13:00:02 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2016/11/04/order-by/</guid>
+      <description>컬럼의 타입은 문자형이다. 문자형 타입에는 어떤 데이터값이라도 들어올 수 있다. 이런 컬럼으로 정렬(order by)를 하는 경우가 있는데 어떻게 보면 테이블 설계가 잘못 됐다고 볼 수 있다. 원래 해당 컬럼의 숫자데이터로 정렬할 목적이였다면 숫자타입으로 컬럼을 만들어야 한다. 이런 상황에서 정렬을 해보면 잘되는것 처럼 보이지만 10단위에서 문제가 생긴다. 즉 오름차순일 경우 아래와 같이 정렬된다.
+1 10 2 26 276483 3 ...  숫자가 아닌 문자이기때문에 순서대로 정렬되지 않는다.
+해결방법 Oracle ORDER BY TO_NUMBER(ORD)</description>
+    </item>
+    
+    <item>
+      <title>macOS에서의 rsync</title>
+      <link>http://blog.kiyeon.net/2016/07/17/rsync-for-macos/</link>
+      <pubDate>Sun, 17 Jul 2016 13:00:02 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2016/07/17/rsync-for-macos/</guid>
+      <description>macOS에서 rsync를 사용할때 싱크가 잘 맞지 않는 문제가 있다.
+rsync -avh --progress --delete src dst  보통 위와 같이 사용하면 항상 싱크가 맞아야 한다. 하지만 맥에서 위와 같이 했을때 두가지 문제가 있었다. 1. 폴더아이콘과 태그가 복사되지 않는다. (-xrlptgoEvh 옵션으로 해결) 2. 한글로된 폴더는 &amp;ndash;delete 옵션이 먹지 않는다. (영문명은 잘됨)
+1의 경우 -xrlptgoEvh 옵션을 사용하면 해결할 수 있다. OS X의 rsync는 애플이 리소스도 함께 rsync되도록 -E 옵션을 커스터마이징한거라고 한다.
+2의 경우 OS X에서 내부적으로 사용하는 UTF-8-MAC 인코딩이 문제인거 같다.</description>
     </item>
     
     <item>
@@ -328,7 +395,9 @@ LC_ALL=                        # LC_*의 값들이 override 된다.
       <pubDate>Tue, 23 Jun 2015 17:19:42 +0900</pubDate>
       
       <guid>http://blog.kiyeon.net/2015/06/23/zsh/</guid>
-      <description> Why Zsh is cooler than your shell My Extravagant Zsh Prompt A Beautifully Productive Terminal Experience Hey Prezto - Zsh for Command Line Heaven  </description>
+      <description> Z셸(Z shell, zsh)은 상호작용 로그인 셸이자 셸 스크립트를 위한 강력한 명령 줄 인터프리터로 사용할 수 있는 유닉스 셸이다. Zsh는 bash, ksh, tcsh의 일부 기능을 포함하여 수많은 개선 사항이 갖추어진 확장형 본 셸이다. - wiki
+ 기본적으로 역사가 오래된 bash는 대부분의 시스템에 기본적으로 설치가 되어있는 반면 zsh은 그렇지 않으므로 스스로 설치해야한다. 그래서 그런지 검색순위는 높지 않다j.
+ 공식사이트 http://www.zsh.org What are the best UNIX shells? Why Zsh is cooler than your shell My Extravagant Zsh Prompt A Beautifully Productive Terminal Experience Hey Prezto - Zsh for Command Line Heaven  </description>
     </item>
     
     <item>

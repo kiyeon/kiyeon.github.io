@@ -12,14 +12,13 @@
     
     
     <item>
-      <title>무료 HTTPS, Let&#39;s Encrypt</title>
-      <link>http://blog.kiyeon.net/2018/02/17/letsencrypt/</link>
+      <title>HTTPS 사용하기</title>
+      <link>http://blog.kiyeon.net/2018/02/17/https/</link>
       <pubDate>Sat, 17 Feb 2018 20:41:26 +0900</pubDate>
       
-      <guid>http://blog.kiyeon.net/2018/02/17/letsencrypt/</guid>
-      <description>보안을 위해 웹에서도 https를 사용하는 추세다. openssl로 사설인증서를 만들어 간단하게 적용할 수도 있지만 브라우저에의해 신뢰할 수 없는 SSL 인증서를 사용함으로써 기본적으로 차단된다. 그러므로 개발용이 아닌 서비스용으로 https를 사용하기 위해서는 공인된 인증기관에서 SSL을 구매해야하는데 개인용으로 사용하기에는 비용이 만만치 않다.
-Let&amp;rsquo;s Encrypt는 SSL 구매가 HTTPS 보급에 방해된다고 생각해 SSL을 무료로 발급해준다. 발급후 유효기간이 90일로 90일마다 갱신해줘야 하지만 갱신을 자동으로 하는 방법이 있어 개인용이나 소규모 프로젝트에서 사용하기에 무리가 없을듯 하다.
-이 문서에서는 우분투(14.</description>
+      <guid>http://blog.kiyeon.net/2018/02/17/https/</guid>
+      <description>보안을 위해 웹에서도 https를 사용하는 추세다. openssl로 사설인증서를 만들어 간단하게 적용할 수도 있지만 브라우저에의해 신뢰할 수 없는 SSL 인증서를 사용함으로써 기본적으로 차단된다. 그러므로 개발용이 아닌 서비스용으로 https를 사용하기 위해서는 공인된 인증기관에서 SSL을 구매하거나 무료 SSL 발급서비스를 사용할 수 있다.
+ SSL 인증서는 글로벌 인증 기관에서 도메인을 특정하여 발행하는 민간 인증 회사입니다. 여러분의 웹 사이트에 인증서를 취득하고자 할 경우, 인증 회사(Certificate Authority)는 해당 도메인 소유 확인 책임을 담당합니다. 그리고, 일정 기간 유효한 인증서를 발급하고 특정 도메인의 웹 사이트 암호화를 보장합니다.</description>
     </item>
     
   </channel>

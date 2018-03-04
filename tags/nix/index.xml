@@ -145,7 +145,9 @@ LC_ALL=                        # LC_*의 값들이 override 된다.
       <pubDate>Tue, 23 Jun 2015 17:19:42 +0900</pubDate>
       
       <guid>http://blog.kiyeon.net/2015/06/23/zsh/</guid>
-      <description> Why Zsh is cooler than your shell My Extravagant Zsh Prompt A Beautifully Productive Terminal Experience Hey Prezto - Zsh for Command Line Heaven  </description>
+      <description> Z셸(Z shell, zsh)은 상호작용 로그인 셸이자 셸 스크립트를 위한 강력한 명령 줄 인터프리터로 사용할 수 있는 유닉스 셸이다. Zsh는 bash, ksh, tcsh의 일부 기능을 포함하여 수많은 개선 사항이 갖추어진 확장형 본 셸이다. - wiki
+ 기본적으로 역사가 오래된 bash는 대부분의 시스템에 기본적으로 설치가 되어있는 반면 zsh은 그렇지 않으므로 스스로 설치해야한다. 그래서 그런지 검색순위는 높지 않다j.
+ 공식사이트 http://www.zsh.org What are the best UNIX shells? Why Zsh is cooler than your shell My Extravagant Zsh Prompt A Beautifully Productive Terminal Experience Hey Prezto - Zsh for Command Line Heaven  </description>
     </item>
     
     <item>

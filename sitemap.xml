@@ -8,7 +8,7 @@
   </url>
   
   <url>
-    <loc>http://blog.kiyeon.net/2018/02/17/letsencrypt/</loc>
+    <loc>http://blog.kiyeon.net/2018/02/17/https/</loc>
     <lastmod>2018-02-17T20:41:26+09:00</lastmod>
   </url>
   
@@ -73,13 +73,43 @@
   </url>
   
   <url>
+    <loc>http://blog.kiyeon.net/2017/03/22/oracle/</loc>
+    <lastmod>2017-03-22T17:14:44+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://blog.kiyeon.net/2017/03/07/running-starcraft-on-macos/</loc>
     <lastmod>2017-03-07T19:00:13+09:00</lastmod>
   </url>
   
   <url>
+    <loc>http://blog.kiyeon.net/2017/02/28/mysql/</loc>
+    <lastmod>2017-02-28T17:14:44+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://blog.kiyeon.net/2017/02/13/hugo/</loc>
     <lastmod>2017-02-13T10:37:15+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.kiyeon.net/2016/11/04/hosts/</loc>
+    <lastmod>2016-11-04T13:00:02+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.kiyeon.net/2016/11/04/toad-for-oracle/</loc>
+    <lastmod>2016-11-04T13:00:02+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.kiyeon.net/2016/11/04/order-by/</loc>
+    <lastmod>2016-11-04T13:00:02+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.kiyeon.net/2016/07/17/rsync-for-macos/</loc>
+    <lastmod>2016-07-17T13:00:02+09:00</lastmod>
   </url>
   
   <url>
@@ -305,6 +335,18 @@
   </url>
   
   <url>
+    <loc>http://blog.kiyeon.net/tags/mysql/</loc>
+    <lastmod>2017-02-28T17:14:44+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.kiyeon.net/tags/network/</loc>
+    <lastmod>2016-11-04T13:00:02+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.kiyeon.net/tags/nix/</loc>
     <lastmod>2017-12-06T09:44:54+09:00</lastmod>
     <priority>0</priority>
@@ -323,6 +365,12 @@
   </url>
   
   <url>
+    <loc>http://blog.kiyeon.net/tags/oracle/</loc>
+    <lastmod>2017-03-22T17:14:44+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.kiyeon.net/post/</loc>
     <lastmod>2018-02-22T16:37:26+09:00</lastmod>
     <priority>0</priority>
@@ -331,6 +379,12 @@
   <url>
     <loc>http://blog.kiyeon.net/tags/regex/</loc>
     <lastmod>2015-06-23T09:06:39+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.kiyeon.net/tags/rsync/</loc>
+    <lastmod>2016-07-17T13:00:02+09:00</lastmod>
     <priority>0</priority>
   </url>
   

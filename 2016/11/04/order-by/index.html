@@ -1,0 +1,29 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1"><title>Kiyeon&#39;s Blog</title><link rel=stylesheet type=text/css href=/css/ybasic.css><link rel=stylesheet href=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-heath-dark.min.css><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js></script><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/dos.min.js></script><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js></script><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/lisp.min.js></script><script>hljs.initHighlightingOnLoad();</script></head><body><div class=content><h1 class=title title="November 4, 2016 13:00:02">데이터가 숫자인 문자형타입 컬럼 정렬방법</h1><nav id=TableOfContents><ul><li><a href=#해결방법>해결방법</a><ul><li><a href=#oracle>Oracle</a></li><li><a href=#mysql>MySQL</a></li></ul></li></ul></nav><p>컬럼의 타입은 문자형이다. 문자형 타입에는 어떤 데이터값이라도 들어올 수 있다. 이런 컬럼으로 정렬(order by)를 하는 경우가 있는데 어떻게 보면 테이블 설계가 잘못 됐다고 볼 수 있다. 원래 해당 컬럼의 숫자데이터로 정렬할 목적이였다면 숫자타입으로 컬럼을 만들어야 한다. 이런 상황에서 정렬을 해보면 잘되는것 처럼 보이지만 10단위에서 문제가 생긴다. 즉 오름차순일 경우 아래와 같이 정렬된다.</p><pre><code>1
+10
+2
+26
+276483
+3
+...
+</code></pre><p>숫자가 아닌 문자이기때문에 순서대로 정렬되지 않는다.</p><h1 id=해결방법>해결방법</h1><h2 id=oracle>Oracle</h2><p>ORDER BY TO_NUMBER(ORD)</p><h2 id=mysql>MySQL</h2><p>ORDER BY ORD + 0</p><p>Oracle에서는 문자형을 숫자형으로 변환해주는 함수를 사용해 숫자정렬을 한것이고 MySQL은 단순히 숫자를 더해 문자형을 숫자형을 형변환하여 정렬시킨다. MySQL에도 문자형을 숫자형으로 형변환해주는 CAST()라는 함수가 있지만 위 방법이 간결해 보인다.</p><div id=disqus_thread></div><script type=text/javascript>
+        (function() {
+            
+            
+            if (window.location.hostname == "localhost")
+                return;
+
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            var disqus_shortname = 'kiyeon';
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href=http://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href="http://disqus.com/" class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div><footer>Kiyeon&#39;s Blog</footer><script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-79101-12', 'auto');
+    ga('send', 'pageview');
+
+</script></body></html>

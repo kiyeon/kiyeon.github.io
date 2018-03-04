@@ -21,5 +21,50 @@
   Altibase 가이드 Altibase Manuals  암호화 알티베이스에서 몇가지 암호화 함수를 제공한다. 다른 RDBMS의 암호화 함수는 암호화할 값을 넘기면 자동으로 암호화해주는데 반해 알티베이스 암호화함수는 사용하기가 조금 까다롭다.</description>
     </item>
     
+    <item>
+      <title>Oracle</title>
+      <link>http://blog.kiyeon.net/2017/03/22/oracle/</link>
+      <pubDate>Wed, 22 Mar 2017 17:14:44 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2017/03/22/oracle/</guid>
+      <description>RDBMS 오라클 유용한 팁모음
+숫자에 comma 넣기 to_char(col,&amp;lsquo;Fm999,999,999,990&amp;rsquo;)
+REGEXP_REPLACE
+SELECT NO ,REVERSE(TO_CHAR(no)) AS REVERSE_NO ,REGEXP_REPLACE(REVERSE(REGEXP_REPLACE( REVERSE(TO_CHAR(no)), &#39;([0-9]{3})&#39;,&#39;\1,&#39;)), &#39;^,&#39;,&#39;&#39;) AS COMMA_NO FROM ( SELECT 123456789 AS no FROM dual ) V1 ; &amp;lt;&amp;lt;결과&amp;gt;&amp;gt; NO REVERSE_NO COMMA_NO --- ------------- ------------- 123456789 987654321 123,456,789  숫자+문자 조합문자열에서 문자만 추출하는법 문자로만 이루어진 문자열인지 확인
+SELECT C FROM (SELECT &#39;ABCDE&#39; C FROM DUAL) WHERE TRANSLATE(C, &#39;0123456789&#39;, &#39;A&#39;) = C;  숫자로만 이루어진 문자열인지
+SELECT C FROM (SELECT &#39;12345&#39; C FROM DUAL) WHERE TRANSLATE(C, &#39;0123456789&#39; || C, &#39;0123456789&#39;) = C;  숫자+문자 조합문자열에서 숫자만 추출</description>
+    </item>
+    
+    <item>
+      <title>MySql</title>
+      <link>http://blog.kiyeon.net/2017/02/28/mysql/</link>
+      <pubDate>Tue, 28 Feb 2017 17:14:44 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2017/02/28/mysql/</guid>
+      <description>사용자 생성 쿼리 CREATE DATABASE MYAPP; CREATE USER &#39;HOMESTEAD&#39; IDENTIFIED BY &#39;SECRET&#39;; GRANT ALL PRIVILEGES ON MYAPP.* TO &#39;HOMESTEAD&#39;; FLUSH PRIVILEGES;  테이블 생성 CREATE TABLE POSTS ( ID INT(11) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY, TITLE VARCHAR(255), BODY TEXT ) ENGINE=INNODB DEFAULT CHARSET=UTF8 COLLATE=UTF8_UNICODE_CI; CREATE TABLE AUTHORS( ID INT(11) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY , EMAIL VARCHAR(255) NOT NULL, PASSWORD VARCHAR(60) NOT NULL ) ENGINE=INNODB DEFAULT CHARSET=UTF8 COLLATE=UTF8_UNICODE_CI;  순위 구하기 MySQL에는 랭킹을 구하는 함수가 없어 꼼수를 사용해야 한다.</description>
+    </item>
+    
+    <item>
+      <title>Toad for Oracle</title>
+      <link>http://blog.kiyeon.net/2016/11/04/toad-for-oracle/</link>
+      <pubDate>Fri, 04 Nov 2016 13:00:02 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2016/11/04/toad-for-oracle/</guid>
+      <description> SELECT문에서 컬럼값 직접 수정하기 이 내용은 Oracle에만 해당되며 Toad에서만 확인됐다.
+테이블에 있는 데이터를 수정하려면 당연히 UPDATE문을 사용해야 한다. Toad에서는 조회시 rowid를 사용하면 &amp;lsquo;Data Grid&amp;rsquo;에서 바로 수정할 수 있다. 물론 수정후 Commit을 해줘야 한다.
+SELECT ROWID, A.* FROM TABLE_NAME A;  </description>
+    </item>
+    
+    <item>
+      <title>데이터가 숫자인 문자형타입 컬럼 정렬방법</title>
+      <link>http://blog.kiyeon.net/2016/11/04/order-by/</link>
+      <pubDate>Fri, 04 Nov 2016 13:00:02 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2016/11/04/order-by/</guid>
+      <description>컬럼의 타입은 문자형이다. 문자형 타입에는 어떤 데이터값이라도 들어올 수 있다. 이런 컬럼으로 정렬(order by)를 하는 경우가 있는데 어떻게 보면 테이블 설계가 잘못 됐다고 볼 수 있다. 원래 해당 컬럼의 숫자데이터로 정렬할 목적이였다면 숫자타입으로 컬럼을 만들어야 한다. 이런 상황에서 정렬을 해보면 잘되는것 처럼 보이지만 10단위에서 문제가 생긴다. 즉 오름차순일 경우 아래와 같이 정렬된다.
+1 10 2 26 276483 3 ...  숫자가 아닌 문자이기때문에 순서대로 정렬되지 않는다.
+해결방법 Oracle ORDER BY TO_NUMBER(ORD)</description>
+    </item>
+    
   </channel>
 </rss>

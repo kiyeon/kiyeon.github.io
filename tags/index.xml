@@ -147,6 +147,24 @@
     </item>
     
     <item>
+      <title>Mysql</title>
+      <link>http://blog.kiyeon.net/tags/mysql/</link>
+      <pubDate>Tue, 28 Feb 2017 17:14:44 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/tags/mysql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Network</title>
+      <link>http://blog.kiyeon.net/tags/network/</link>
+      <pubDate>Fri, 04 Nov 2016 13:00:02 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/tags/network/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Nix</title>
       <link>http://blog.kiyeon.net/tags/nix/</link>
       <pubDate>Wed, 06 Dec 2017 09:44:54 +0900</pubDate>
@@ -174,11 +192,29 @@
     </item>
     
     <item>
+      <title>Oracle</title>
+      <link>http://blog.kiyeon.net/tags/oracle/</link>
+      <pubDate>Wed, 22 Mar 2017 17:14:44 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/tags/oracle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Regex</title>
       <link>http://blog.kiyeon.net/tags/regex/</link>
       <pubDate>Tue, 23 Jun 2015 09:06:39 +0900</pubDate>
       
       <guid>http://blog.kiyeon.net/tags/regex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rsync</title>
+      <link>http://blog.kiyeon.net/tags/rsync/</link>
+      <pubDate>Sun, 17 Jul 2016 13:00:02 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/tags/rsync/</guid>
       <description></description>
     </item>
     
