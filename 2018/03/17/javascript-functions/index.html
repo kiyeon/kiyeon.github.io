@@ -1,0 +1,74 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1"><title>Kiyeon&#39;s Blog</title><link rel=stylesheet type=text/css href=/css/ybasic.css><link rel=stylesheet href=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-heath-dark.min.css><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js></script><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/dos.min.js></script><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js></script><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/lisp.min.js></script><script>hljs.initHighlightingOnLoad();</script></head><body><div class=content><h1 class=title title="March 17, 2018 10:54:26">Javascript 함수 모음</h1><nav id=TableOfContents><ul><li><a href=#브라우저-처리-과정>브라우저 처리 과정</a></li><li><a href=#html에-javascript-사용하기>HTML에 Javascript 사용하기</a></li><li><a href=#javascript>Javascript</a><ul><li><ul><li><a href=#bookmarklet>Bookmarklet</a></li><li><a href=#동적-로딩>동적 로딩</a></li></ul></li></ul></li><li><a href=#jquery>jQuery</a><ul><li><a href=#cdn>CDN</a></li><li><a href=#안전한-jquery-영역-만들기>안전한 jQuery 영역 만들기</a></li><li><a href=#jquery-version>jQuery Version</a></li><li><a href=#element에-걸려있는-이벤트-펑셩-확인>Element에 걸려있는 이벤트 펑셩 확인</a></li><li><a href=#jquery-plugins>jQuery Plugins</a></li></ul></li></ul></nav><p>프로젝트를 진행하다보면 중복을 피하거나 효율성을 위해 또는 특정한 기능이 필요할때가 많고 그때그때 구현해서 사용하던가 인터넷을 뒤져서 참조하거나 오픈소스를 사용하게 된다. 여기 저기 흩어져 나중에는 관리가 잘 안되고 시간이 흐르면 가물가물해지는 경우가 허다해서 코드리뷰겸 알고리즘 연습겸 관리겸, 겸사겸사 이 페이지를 만들었다.</p><p>공통으로 묶을까도 생각했지만 그러면 일이 너무 커지고 손이 많이 갈거같아 개별로 나열하고 필요한 부분에 집중하는 방식이 더 효율적일거 같았다.</p><p>Javascript는 JS로 단축해서 표현한다.</p><h1 id=브라우저-처리-과정>브라우저 처리 과정</h1><p>브라우저는 파일의 확장자로 문서타입을 확인하는것이 아니라 MIME TYPE으로 확인한다. 다시말해, 확장자가 html이든 htm이든 h든 x던 상관없이 MIME TYPE으로 타입을 확인하고 처리한다.</p><p>처리 순서는 위에서부터 순차적으로 처리한다. js를 만나면 js를 처리하고 css를 만나면 css를 처리한다. HTML은 <code>&lt;body&gt;</code>를 만나면서 렌더링이 시작된다.</p><p>과거에는 일반적으로 js를 css와 같이 한곳에서 관리하자는 취지로 문서 상단 <code>&lt;head&gt;</code>에 모아뒀는데 브라우저는 위에서 부터 순차적으로 처리하므로 head에 처리할 내용이 많아지면 모든 처리가 끝날때까지 사용자는 멍때리고 빈페이지를 보고있어야 한다.</p><p>이런이유로 최근에는 js를 <code>&lt;/body&gt;</code>위에 모아둔다. 대부분의 js는 DOM이 로딩되어야하므로 먼저 로딩되어봐야 할게 없다. 이렇게 함으로써 브라우저는 빠르게 페이지를 렌더링할 수 있고 사용자는 페이지가 빠르다고 느끼게 된다.</p><h1 id=html에-javascript-사용하기>HTML에 Javascript 사용하기</h1><p>HTML에 JS를 삽입할때 <code>&lt;script&gt;</code> 태그를 사용하며 6개의 속성이 있다.</p><ol><li><strong>async</strong> - 스크립트를 비동기로 처리한다. 즉, 원래 브라우저는 순차적으로 처리하는데 이 속성을 만나면 스크립트처리가 끝날때까지 기다리지 않고 다음 일을한다. 페이지 렌더링속도가 빨라질 수 있지만 위에 설명한바와 같이 페이지 하단에서 호출하는편이 좋다. 다른 스크립트나 DOM과의 의존성이 있다면 사용해선 안된며 특별히 사용할일도 없다.</li><li><strong>defer</strong> - async와 비슷하게 코드를 즉시 내려받지만 처리는 렌더링이 끝날때까지 지연시킨다. 페이지 렌더링이 빨라질 수 있지만 처리순서가 명확하지 않으므로 지연시킬 스크립트는 페이지 하단에 위치시키는것이 최상의 방법이다.</li><li><strong>language</strong> - <strong>폐기</strong>됐다. 대부분의 브라우저에서 이 속성을 무시한다 쓰지말자. 원래 용도는 코드 블록에 사용한 스크립트 언어를 나타낼 목적이었다.</li><li><strong>charset</strong> - src속성으로 명시한 코드의 문자셋을 지정하지만 대부분 브라우저가 이 속성을 무시하므로 잘 쓰지 않는다.</li><li><strong>type</strong> - language 속성을 대체할 의도로 만들어졌다. 스크립트 컨텐츠의 마임 타입을 지정한다. <strong>text/javascript</strong>와 <strong>text/ecmascript</strong>는 구식이지만 아직 이렇게 명시하는 사례가 많다. JS는 일반적으로 <strong>application/x-javascript</strong> 마임 타입으로 전송되므로 type을 명시적으로 지정하면 스크립트가 무시될 수도있다. type속성은 <strong>습관적으로</strong> 또는 <strong>브라우저 호환성</strong>을 위해 <strong>text/javascript</strong>라고 표기하지만 사실 이 속성을 생략해도 기본 값이 <strong>text/javascript</strong>임으로 사용하지 않아도 된다.</li><li><strong>src</strong> - 외부 파일의 위치를 지정한다.</li></ol><p>속성중 1~5는 거의 사용하지 않아도 된다는걸 알 수 있다. 자주 사용할만한 속성은 src와 호환성을 위한 type 2개 밖에 없다.</p><p>두가지 방법으로 사용할 수 있다.</p><ol><li><p>인라인 자바스크립트(페이지에 코드를 직접 작성)</p><pre><code class=language-html>&lt;script&gt;
+console.log(&quot;인라인 자바스크립트&quot;);
+&lt;/script&gt;
+</code></pre></li><li><p>외부 파일 호출</p><pre><code class=language-html>&lt;script src=&quot;example.js&quot;&gt;&lt;/script&gt;
+</code></pre><p>이 파일에는 오직 JS 코드만 들어가야 한다. <code>&lt;script&gt;</code>같은 태그를 사용하면 안된다. 외부 파일을 내려받고 해석하는 동안 페이지 처리가 멈춘다.</p></li></ol><p>일반적으로 가능한 한 <strong>자바스크립트</strong>는 <strong>외부파일</strong>로 분리하는 방법을 <strong>모범 사례</strong>로 간주한다. 다음과 같은 이점이 있다.</p><ol><li>유지보수성 - 한 폴더에 모아 마크업과 분리하는 것이 관리하기 좋다.</li><li>캐싱 - 외부자원은 브라우저에의해 캐시되므로 페이지 로딩시간이 짧아진다.</li><li>호환성 - HTML과 XHTML 모두 외부 파일을 불러오는 문법이 동일하며 인라인 스크립트에서 호환성을 위해 사용해야하는 CDATA 섹션이나 주석등의 편법을 사용하지 않아도 된다.</li></ol><h1 id=javascript>Javascript</h1><h3 id=bookmarklet>Bookmarklet</h3><p>자바스크립트 코드를 북마크해놓고 원클릭으로 코드를 불러다 쓰는것을 <a href=https://en.wikipedia.org/wiki/Bookmarklet>북마클릿</a>이라고 한다.</p><p>만드는 방법은 간단하다. 다음과 같이 html파일을 만들어 a태그를 사용해 JS 코드링크를 만든다.</p><pre><code class=language-html>&lt;a href=&quot;javascript:(function(){alert('이게 북마클릿 입니다.');})();&quot;&gt;북마클릿&lt;/a&gt;
+</code></pre><p>브라우저로 열어보면 링크하나가 있을텐데 이걸 북마크한다.(링크를 드래그해서 북마크바에 드랍하면 된다.)</p><p>그리고 해당 버튼을 클릭하면 스크립트가 실행된다. 자 이제 구현하고싶은것을 코드로 작성해 위와 같은 구조에 코드를 넣어놓고 북마크하면 이게 북마클릿이다.</p><p>북마클릿을 활용한 다양한 서비스들이 있다.</p><ul><li><a href=http://subsimple.com/bookmarklets/jsbuilder.htm>Bookmarklet Builder</a></li><li><a href="http://marklets.com/">Bookmarklet Search</a></li><li><a href="https://www.quixapp.com/">quix</a> - 유용한 기능을 모아놓은 북마클릿 유틸같은 도구</li><li><a href=https://www.learningjquery.com/2009/04/better-stronger-safer-jquerify-bookmarklet>Better, Stronger, Safer jQuerify Bookmarklet</a> - jQuery를 로딩해준다.</li><li><a href="http://mir.aculo.us/dom-monster/">DOM Monster</a> - 현제 페이지의 상태를 분석해주는 툴</li><li><a href=http://www.sprymedia.co.uk/article/Design>Design</a> - 웹디지인을 도와주는 북마클릿</li><li><a href="http://somadesign.ca/projects/fontfriend/">Font Friend</a> - 현제 페이지에 적용된 폰트 정보를 확인할 수 있게 변경해보면서 폰트의 느낌을 확인할 수 있는 도구</li><li><a href=http://www.whatfonttool.com/designs/5aacb21feaefc22903000046>WhatFont</a> - 요소를 클릭하면 어떤 폰트가 적용되었는지 확인 할 수 있다.</li><li><a href="https://iosbookmarklets.com/">iOS Bookmarklets</a></li><li><a href=http://www.smashingmagazine.com/2010/05/make-your-own-bookmarklets-with-jquery>Make Your Own Bookmarklets With jQuery</a></li></ul><h3 id=동적-로딩>동적 로딩</h3><p>외부 자원을 코드를 이용해 동적으로 로딩하는 방법이다. 처음에는 다른 사이트를 분석하려는데 Vanilla JS가 불편해 jQuery를 사용하려했는데 해당 사이트에서 jQuery를 사용하지 않아 어떻게할까 고민하다 알아낸방법이다.</p><p>이렇게 코드로 동적으로 외부자원을 로딩하는 방법이 있다. 만약 실무에서 적용하려고 할때 문제가 있다. 동적로딩은 비동기로 처리된다. 즉 동적로딩후 바로 다음코드가 비동기로 실행되므로 로딩한 자원을 사용할 수 없다. 물론 꼼수는 있다. <a href=http://unixpapa.com/js/dyna.html>JavaScript Madness: Dynamic Script Loading</a> 좀더 쉽게는 <a href="http://requirejs.org/">requireJS</a>에 맡기는 방법이다.</p><p>참조</p><ul><li><a href=http://www.javascriptkit.com/javatutors/loadjavascriptcss.shtml>Dynamically loading an external JavaScript or CSS file</a><br><br></li></ul><pre><code class=language-javascript>javascript: (function() {
+    function loadCDN(name) {
+        var CDN = {
+            'jquery': 'https://code.jquery.com/jquery-1.11.3.min.js',
+            'jqueryui': 'https://code.jquery.com/ui/1.11.4/jquery-ui.min.js',
+            'jquerymobile': 'https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js',
+            'jquerycolor': 'https://code.jquery.com/color/jquery.color-2.1.2.min.js',
+        };
+        var loadFile = function(url) { /* Get file Extension */
+            var filetype = url.substr(url.lastIndexOf('.') + 1);
+            switch (filetype) {
+                case 'js':
+                    /* if url is a external JavaScript file */ var fileref = document.createElement('script');
+                    fileref.setAttribute('type', 'text/javascript');
+                    fileref.setAttribute('src', url);
+                    break;
+                case 'css':
+                    /* if url is an external CSS file */ var fileref = document.createElement('link');
+                    fileref.setAttribute('rel', 'stylesheet');
+                    fileref.setAttribute('type', 'text/css');
+                    fileref.setAttribute('href', url);
+                    break;
+            }
+            if (typeof fileref != 'undefined') document.getElementsByTagName('head')[0].appendChild(fileref);
+        };
+        loadFile(CDN[name]);
+    }
+    loadCDN('jquery');
+    loadCDN('jqueryui');
+})();
+</code></pre><h1 id=jquery>jQuery</h1><h2 id=cdn>CDN</h2><ul><li><a href=https://code.jquery.com>https://code.jquery.com</a></li><li><a href=https://cdnjs.com/libraries/jquery>https://cdnjs.com/libraries/jquery</a></li><li><a href=https://unpkg.com/jquery>https://unpkg.com/jquery</a></li></ul><h2 id=안전한-jquery-영역-만들기>안전한 jQuery 영역 만들기</h2><script src=//gist.github.com/kiyeon/228e9e8056e846d97791d700f2890306.js></script><h2 id=jquery-version>jQuery Version</h2><p>현재 사용중인 <a href=http://jquery-howto.blogspot.kr/2009/02/how-to-check-jquery-version.html>jQuery Version</a>을 확인해보자.</p><pre><code class=language-javascript>jQuery.fn.jquery
+=&gt; &quot;1.11.3&quot;
+
+$.fn.jquery
+=&gt; &quot;1.11.3&quot;
+
+jQuery().jquery
+=&gt; &quot;1.11.3&quot;
+
+$().jquery
+=&gt; &quot;1.11.3&quot;
+</code></pre><p><a href=http://jquery-howto.blogspot.kr/2010/07/how-to-check-loaded-jquery-ui-version.html>jQuery UI</a></p><pre><code class=language-javascript>jQuery.ui.version
+&quot;1.11.0&quot;
+
+$.ui.version
+&quot;1.11.0&quot;
+</code></pre><h2 id=element에-걸려있는-이벤트-펑셩-확인>Element에 걸려있는 이벤트 펑셩 확인</h2><p><a href=http://stackoverflow.com/questions/2518421/jquery-find-events-handlers-registered-with-an-object>Element에 어떤 이벤트 펑셩(Handler)이 걸려있는지 보고 싶을때</a>가 있다.</p><p>크롬을 사용해서 개발자도구를 열고 Element를 선택한다. 아래 코드중 <strong>$0</strong> 현재 선택된 Element 다.</p><pre><code class=language-javascript>$._data($($0).get(0), &quot;events&quot;)
+</code></pre><h2 id=jquery-plugins>jQuery Plugins</h2><ul><li><a href="http://demos.jquerymobile.com/1.4.1/navigation-linking-pages/">Link 클릭시 로딩 이미지 보여주는 플러그인</a> - external 이나 internal 링크 클릭시 로딩 이미지를 보여주는 플러그인</li><li><a href=http://www.appelsiini.net/projects/lazyload>Lazy Load Plugin for jQuery</a> - 페이지 이미지가 많으면 페이지가 로딩이 오래 걸린다. 이 플러그인은 해당 이미지가 viewport에 있을때 이미지를 로드한다. 즉 페이지 요청시 페이지내의 모든 이미지를 불러들이지 않고 사용자가 보는시점(viewport)에 이미지를 로드하여 페이지 로딩을 빠르게 도와준다.</li><li><a href=http://www.appelsiini.net/2007/sequentially-preloading-images>Preload Images Sequentially With jQuery</a> - 이건 위와 반대로 이미지를 미리 불러들인다.</li></ul><div id=disqus_thread></div><script type=text/javascript>
+        (function() {
+            
+            
+            if (window.location.hostname == "localhost")
+                return;
+
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            var disqus_shortname = 'kiyeon';
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href=http://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href="http://disqus.com/" class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div><footer>Kiyeon&#39;s Blog</footer><script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-79101-12', 'auto');
+    ga('send', 'pageview');
+
+</script></body></html>
