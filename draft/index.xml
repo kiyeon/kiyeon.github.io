@@ -6,10 +6,22 @@
     <description>Recent content in Drafts on Kiyeon&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Wed, 10 Jan 2018 15:33:26 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 17 Mar 2018 10:54:26 +0900</lastBuildDate>
     
 	<atom:link href="http://blog.kiyeon.net/draft/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Javascript 함수 모음</title>
+      <link>http://blog.kiyeon.net/2018/03/17/javascript-functions/</link>
+      <pubDate>Sat, 17 Mar 2018 10:54:26 +0900</pubDate>
+      
+      <guid>http://blog.kiyeon.net/2018/03/17/javascript-functions/</guid>
+      <description>프로젝트를 진행하다보면 중복을 피하거나 효율성을 위해 또는 특정한 기능이 필요할때가 많고 그때그때 구현해서 사용하던가 인터넷을 뒤져서 참조하거나 오픈소스를 사용하게 된다. 여기 저기 흩어져 나중에는 관리가 잘 안되고 시간이 흐르면 가물가물해지는 경우가 허다해서 코드리뷰겸 알고리즘 연습겸 관리겸, 겸사겸사 이 페이지를 만들었다.
+공통으로 묶을까도 생각했지만 그러면 일이 너무 커지고 손이 많이 갈거같아 개별로 나열하고 필요한 부분에 집중하는 방식이 더 효율적일거 같았다.
+Javascript는 JS로 단축해서 표현한다.
+브라우저 처리 과정 브라우저는 파일의 확장자로 문서타입을 확인하는것이 아니라 MIME TYPE으로 확인한다.</description>
+    </item>
     
     <item>
       <title>터미널 화면 정리</title>

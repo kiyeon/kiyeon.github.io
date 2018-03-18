@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://blog.kiyeon.net/2018/03/17/javascript-functions/</loc>
+    <lastmod>2018-03-17T10:54:26+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://blog.kiyeon.net/2018/02/22/ssh-autologin/</loc>
     <lastmod>2018-02-22T16:37:26+09:00</lastmod>
   </url>
@@ -270,7 +275,7 @@
   
   <url>
     <loc>http://blog.kiyeon.net/draft/</loc>
-    <lastmod>2018-01-10T15:33:26+09:00</lastmod>
+    <lastmod>2018-03-17T10:54:26+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -305,6 +310,12 @@
   </url>
   
   <url>
+    <loc>http://blog.kiyeon.net/tags/javascript/</loc>
+    <lastmod>2018-03-17T10:54:26+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.kiyeon.net/tags/jekyll/</loc>
     <lastmod>2016-02-10T14:28:00+09:00</lastmod>
     <priority>0</priority>
@@ -312,7 +323,7 @@
   
   <url>
     <loc>http://blog.kiyeon.net/</loc>
-    <lastmod>2018-02-22T16:37:26+09:00</lastmod>
+    <lastmod>2018-03-17T10:54:26+09:00</lastmod>
     <priority>0</priority>
   </url>
   
